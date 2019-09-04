@@ -1,8 +1,13 @@
 # metadata
 
 1. [metadata](#metadata)
-   1. [Updating VSCode Extensions List](#updating-vscode-extensions-list)
-   2. [License](#license)
+   1. [Overview](#overview)
+   2. [Updating VSCode Extensions List](#updating-vscode-extensions-list)
+   3. [License](#license)
+
+## Overview
+
+Engineering and development notes, snippets, configurations, links, lists, etc.
 
 ## Updating VSCode Extensions List
 
