@@ -53,11 +53,8 @@
     +-- @angular/cli
     +-- @vue/cli
     +-- david
-    +-- eslint
     +-- gh-pages
     +-- http-server
-    +-- jshint
-    `-- jslint
     +-- @gridsome/cli
     +-- compressjs
     +-- create-react-app
