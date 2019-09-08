@@ -7,7 +7,7 @@
 - [Java SDK](https://adoptopenjdk.net/)
   - Ubuntu
 
-    ```text
+    ```plaintext
     sudo apt-get update
     sudo apt-get install default-jdk
     ```
@@ -15,15 +15,24 @@
 - Git
   - Ubuntu
 
-    ```text
+    ```plaintext
     sudo apt-get install git
     ```
 
 - kdiff3
+- gcc
+  - [Windows](http://www.msys2.org/)
+
+    ```plaintext
+    pacman -Syu
+    pacman make
+    ```
+
+
 - Python
   - Ubuntu
 
-    ```text
+    ```plaintext
     sudo apt-get python3.6
 
     // This does not seem to work
@@ -41,7 +50,7 @@
 - nodejs
   - Ubuntu
 
-    ```text
+    ```plaintext
     curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
     sudo apt-get install -y nodejs
     sudo apt-get install -y build-essential
@@ -49,7 +58,7 @@
 
   - npm global packages (`npm list -g --depth 0`)
 
-    ```text
+    ```plaintext
     +-- @angular/cli
     +-- @vue/cli
     +-- david
@@ -80,7 +89,7 @@
 - Sublime Text
   - Ubuntu [ref](https://www.sublimetext.com/docs/3/linux_repositories.html)
 
-    ```text
+    ```plaintext
     wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
     sudo apt-get install apt-transport-https
     echo "deb https://download.sublimetext.com/ apt/stable" | sudo tee /etc/apt/sources.list.d/sublime-text.list
@@ -91,7 +100,7 @@
 - Sublime Merge
   - Ubuntu [ref](https://www.sublimemerge.com/docs/linux_repositories)
 
-    ```text
+    ```plaintext
     wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
     sudo apt-get install apt-transport-https
     echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
@@ -102,7 +111,7 @@
 - R
   - Ubuntu
 
-    ```text
+    ```plaintext
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
     deb http://cran.r-project.org/bin/linux/ubuntu zesty/
     sudo apt-get update
@@ -113,7 +122,7 @@
 - R Studio
   - Ubuntu
 
-    ```text
+    ```plaintext
     sudo apt --fix-broken install
     sudo apt-get install libjpeg62
     wget http://ftp.ca.debian.org/debian/pool/main/g/gstreamer0.10/libgstreamer0.10-0_0.10.36-1.5_amd64.deb
@@ -122,14 +131,14 @@
 
     *Now install with dpkg*
 
-    ```text
+    ```plaintext
     sudo dpkg -i libgstreamer0.10-0_0.10.36-1.5_amd64.deb
     sudo dpkg -i libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
     ```
 
     *We’ve purposefully installed old packages and don’t want Ubuntu’s package manager to enthusiastically upgrade them next time we update. To resolve that problem will put a hold on them with apt-mark:*
 
-    ```text
+    ```plaintext
     sudo apt-mark hold libgstreamer-plugins-base0.10-0
     sudo apt-mark hold libgstreamer0.10
     sudo apt-mark showhold
@@ -141,7 +150,7 @@
 - Latex (MikTex on Windows)
   - Ubuntu
 
-    ```text
+    ```plaintext
     sudo apt-get install texlive-full
     ```
 
@@ -153,7 +162,7 @@
 
     *May have to install libqt5scripts*
 
-    ```text
+    ```plaintext
     sudo dpkg -i texstudio_*_amd64.deb
     sudo apt --fix-broken install
     ```
@@ -163,13 +172,13 @@
 - gradle
   - Ubuntu
 
-    ```text
+    ```plaintext
     sdk install gradle 4.2.1
     ```
 
   - Windows
 
-    ```text
+    ```plaintext
     gradle.org/install/
     ```
 
@@ -190,14 +199,14 @@
 
     *If you want an older version of KeePass 2.x*
 
-    ```text
+    ```plaintext
     sudo apt-get update
     sudo apt-get install keepass2
     ```
 
     *If you want the most recent verion of KeePass 2.x*
 
-     ```text
+     ```plaintext
      sudo apt-add-repository ppa:jtaylor/keepass
      sudo apt-get update
      sudo apt-get install keepass2
@@ -205,7 +214,7 @@
 
      *If you want something compatible with KeePass 1.x but is not actually KeePass*
 
-     ```text
+     ```plaintext
      sudo apt-get update
      sudo apt-get install keepassx
      ```
@@ -242,7 +251,7 @@
 - Calibre
 - FreeCommander XE
 
-    ```text
+    ```plaintext
     Add new toolbar, then add following items
     Hyper -> Define Favorite Toolbars
         Name: Hyper
@@ -278,7 +287,7 @@
 - [Peek](https://github.com/phw/peek)
 - redshift
 
-    ```text
+    ```plaintext
     sudo apt install redshift
     sudo apt install redshift-gtk
     ```
@@ -287,7 +296,7 @@
 - Spyder
 - sdkman 
 
-    ```text
+    ```plaintext
     http://sdkman.io/install.html
     ```
 
@@ -301,7 +310,7 @@
   - Ubuntu
       *Fetch and unpack*
 
-      ```text
+      ```plaintext
       curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
       unzip rclone-current-linux-amd64.zip
       cd rclone-*-linux-amd64
@@ -309,7 +318,7 @@
 
       *Copy binary file*
 
-      ```text
+      ```plaintext
       sudo cp rclone /usr/bin/
       sudo chown root:root /usr/bin/rclone
       sudo chmod 755 /usr/bin/rclone
@@ -317,7 +326,7 @@
 
       *Install manpage*
 
-      ```text
+      ```plaintext
       sudo mkdir -p /usr/local/share/man/man1
       sudo cp rclone.1 /usr/local/share/man/man1/
       sudo mandb
@@ -338,7 +347,7 @@
 
     *Set up the repository: Set up the Docker CE repository on Ubuntu. The lsb_release -cs sub-command prints the name of your Ubuntu version, like xenial or trusty.*
 
-    ```text
+    ```plaintext
     sudo apt-get -y install \
       apt-transport-https \
       ca-certificates \
@@ -353,13 +362,13 @@
 
     *Get Docker CE: Install the latest version of Docker CE on Ubuntu.*
 
-    ```text
+    ```plaintext
     sudo apt-get -y install docker-ce
     ```
 
     *Test your Docker CE installation: Test your installation.*
 
-    ```text
+    ```plaintext
     sudo docker run hello-world
     ```
 
@@ -400,7 +409,7 @@
 - Openshot video editor
   - Ubuntu
 
-    ```text
+    ```plaintext
     sudo add-apt-repository ppa:openshot.developers/ppa
     sudo apt-get update
     sudo apt-get install openshot-qt
@@ -409,7 +418,7 @@
 - IntelliJ IDEA Community Edition
   - Ubuntu
 
-    ```text
+    ```plaintext
     sudo tar xf <ideaIC or ideaIU>-*.tar.gz -C /opt/
     cd opt/<ideaIC or ideaIU>-*/bin
     ./idea.sh
@@ -461,7 +470,7 @@
 - Android Studio
   - Ubuntu
 
-    ```text
+    ```plaintext
     sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
     sudo apt-get install unzip
     sudo unzip <filename.zip> -d /opt/
@@ -478,7 +487,7 @@
 2. Find and open the file: /usr/share/X11/xorg.conf.d/70-synaptics.conf
 3. Locate the paragraph:
 
-    ```text
+    ```plaintext
     # This option enables the bottom right corner to be a right button on clickpads
     # and the right and middle top areas to be right / middle buttons on clickpads
     # with a top button area.
@@ -493,7 +502,7 @@
 
 4. Add two extra lines before `Option "SoftButtonAreas" "50% 0 82% 0 0 0 0 0"` :
 
-    ```text
+    ```plaintext
     Option "ClickPad"         "true"
     Option "EmulateMidButtonTime" "0"
     ```
@@ -518,13 +527,13 @@ Install the getdeb package.
 Or configure the repository manually:
 Go to System-Administration-Software Sources, Third-Party Software tab, Add:
 
-```text
+```plaintext
 deb http://archive.getdeb.net/ubuntu zesty-getdeb apps
 ```
 
 Add the repository GPG key, open a terminal window and type:
 
-```text
+```plaintext
 wget -q -O- http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
 ```
 
@@ -543,7 +552,7 @@ For installation and launching run: `sudo apt install tlp tlp-rdw && sudo tlp st
 
 ### Installing gnome on top of Ubuntu
 
-```text
+```plaintext
 sudo apt-get install ubuntu-gnome-desktop
 ```
 
@@ -554,7 +563,7 @@ If you need to change the login manager later on you can do that with `dpkg-reco
 
 ### Removing Unity
 
-```text
+```plaintext
 sudo apt purge unity8 ubuntu-system-settings && sudo apt autoremove
 ```
 
