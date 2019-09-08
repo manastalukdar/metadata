@@ -20,6 +20,7 @@
     ```
 
 - kdiff3
+- [clang](https://clang.llvm.org/)
 - gcc
   - [Windows](http://www.msys2.org/)
 
