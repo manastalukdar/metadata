@@ -34,6 +34,11 @@
     optional: pacman -S mingw-w64-x86_64-qt5
     ```
 
+    Add to `PATH`:
+
+     - C:\msys64\mingw64\bin
+     - C:\msys64\usr\bin
+
 
 - Python
   - Ubuntu
