@@ -114,45 +114,6 @@
     sudo apt-get install sublime-merge
     ```
 
-- R
-  - Ubuntu
-
-    ```plaintext
-    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
-    deb http://cran.r-project.org/bin/linux/ubuntu zesty/
-    sudo apt-get update
-    sudo apt-get install r-base
-    sudo apt-get install r-base-dev
-    ```
-
-- R Studio
-  - Ubuntu
-
-    ```plaintext
-    sudo apt --fix-broken install
-    sudo apt-get install libjpeg62
-    wget http://ftp.ca.debian.org/debian/pool/main/g/gstreamer0.10/libgstreamer0.10-0_0.10.36-1.5_amd64.deb
-    wget http://ftp.ca.debian.org/debian/pool/main/g/gst-plugins-base0.10/libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
-    ```
-
-    *Now install with dpkg*
-
-    ```plaintext
-    sudo dpkg -i libgstreamer0.10-0_0.10.36-1.5_amd64.deb
-    sudo dpkg -i libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
-    ```
-
-    *We’ve purposefully installed old packages and don’t want Ubuntu’s package manager to enthusiastically upgrade them next time we update. To resolve that problem will put a hold on them with apt-mark:*
-
-    ```plaintext
-    sudo apt-mark hold libgstreamer-plugins-base0.10-0
-    sudo apt-mark hold libgstreamer0.10
-    sudo apt-mark showhold
-    sudo dpkg -i rstudio-***-amd64.deb
-    ```
-
-    *[Reference](https://mikewilliamson.wordpress.com/2016/11/14/installing-r-studio-on-ubuntu-16-10/)*
-
 - Latex (MikTex on Windows)
   - Ubuntu
 
@@ -380,7 +341,49 @@
 
     [Reference1](https://store.docker.com/editions/community/docker-ce-server-ubuntu?tab=description), [Reference2](https://askubuntu.com/questions/909691/how-to-install-docker-on-ubuntu-17-04)
 - yarn
+- R
+  - Ubuntu
+
+    ```plaintext
+    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+    deb http://cran.r-project.org/bin/linux/ubuntu zesty/
+    sudo apt-get update
+    sudo apt-get install r-base
+    sudo apt-get install r-base-dev
+    ```
+
+- R Studio
+  - Ubuntu
+
+    ```plaintext
+    sudo apt --fix-broken install
+    sudo apt-get install libjpeg62
+    wget http://ftp.ca.debian.org/debian/pool/main/g/gstreamer0.10/libgstreamer0.10-0_0.10.36-1.5_amd64.deb
+    wget http://ftp.ca.debian.org/debian/pool/main/g/gst-plugins-base0.10/libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
+    ```
+
+    *Now install with dpkg*
+
+    ```plaintext
+    sudo dpkg -i libgstreamer0.10-0_0.10.36-1.5_amd64.deb
+    sudo dpkg -i libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
+    ```
+
+    *We’ve purposefully installed old packages and don’t want Ubuntu’s package manager to enthusiastically upgrade them next time we update. To resolve that problem will put a hold on them with apt-mark:*
+
+    ```plaintext
+    sudo apt-mark hold libgstreamer-plugins-base0.10-0
+    sudo apt-mark hold libgstreamer0.10
+    sudo apt-mark showhold
+    sudo dpkg -i rstudio-***-amd64.deb
+    ```
+
+    *[Reference](https://mikewilliamson.wordpress.com/2016/11/14/installing-r-studio-on-ubuntu-16-10/)*
+
 - Qt SDK
+- Lua
+- [ZeroBrane Studio Lua IDE](https://studio.zerobrane.com/)
+- [SciTE](https://www.scintilla.org/SciTEDownload.html)
 - [geany](https://www.geany.org/)
 - [geany plugins](https://plugins.geany.org/downloads.html)
 - [CMake](https://cmake.org/)
