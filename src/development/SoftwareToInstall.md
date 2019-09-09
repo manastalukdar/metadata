@@ -18,14 +18,20 @@
     ```plaintext
     sudo apt-get install git
     ```
+
 - kdiff3
 - [clang](https://clang.llvm.org/)
 - gcc
   - [Windows](http://www.msys2.org/)
 
+    [Useful Link](https://www.devdungeon.com/content/how-setup-gcc-msys2-eclipse-windows-c-development)
+
     ```plaintext
     pacman -Syu
-    pacman make
+    pacman -S base-devel
+    pacman -S mingw-w64-x86_64-toolchain
+    pacman -S mingw-w64-x86_64-cmake
+    optional: pacman -S mingw-w64-x86_64-qt5
     ```
 
 
@@ -373,6 +379,7 @@
     ```
 
     [Reference1](https://store.docker.com/editions/community/docker-ce-server-ubuntu?tab=description), [Reference2](https://askubuntu.com/questions/909691/how-to-install-docker-on-ubuntu-17-04)
+- yarn
 - Qt SDK
 - [geany](https://www.geany.org/)
 - [geany plugins](https://plugins.geany.org/downloads.html)
