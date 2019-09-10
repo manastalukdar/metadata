@@ -62,6 +62,7 @@
     "shengchen.vscode-checkstyle",
     "jebbs.plantuml",
     "shd101wyy.markdown-preview-enhanced",
-    "chenxsan.vscode-standardjs"
+    "chenxsan.vscode-standardjs",
+    "zxh404.vscode-proto3"
   ]
 }
