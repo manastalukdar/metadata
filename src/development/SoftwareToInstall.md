@@ -401,6 +401,9 @@
 - MySQL Workbench
 - Evolus Pencil
 - Go lang
+	- Set GOTOOR to where Go was installed (C:\Go on windows)
+	- Be sure to set GOPATH env (user) variable (G:\dev\go as an example on Windows)
+	- GO projects will need to be under G:\dev\go, using the above example. Possibly under a folder call \_my-projects.
 - Dart lang
 - Scilab 
 - [GNU Octave](https://www.gnu.org/software/octave/)
