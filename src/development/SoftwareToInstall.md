@@ -18,7 +18,7 @@
     ```plaintext
     sudo apt-get install git
     ```
-
+- Protocol Buffers
 - kdiff3
 - [clang](https://clang.llvm.org/)
 - gcc
@@ -401,9 +401,10 @@
 - MySQL Workbench
 - Evolus Pencil
 - Go lang
-	- Set GOTOOR to where Go was installed (C:\Go on windows)
-	- Be sure to set GOPATH env (user) variable (G:\dev\go as an example on Windows)
-	- GO projects will need to be under G:\dev\go, using the above example. Possibly under a folder call \_my-projects.
+	- Set GOROOT to where Go was installed (`C:\Go` on windows)
+	- Be sure to set GOPATH env (user) variable (`G:\dev\go` as an example on Windows)
+	- GO projects will need to be under `G:\dev\go`, using the above example. Possibly under a folder call \_my-projects. Alternately, a different folder can also be used for personal Go projects.
+  - Add `G:\dev\go\bin` (using above example) to PATH.
 - Dart lang
 - Scilab 
 - [GNU Octave](https://www.gnu.org/software/octave/)
