@@ -2,7 +2,7 @@
     "globals" : 
     {
         "alwaysShowTabs" : true,
-        "defaultProfile" : "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "defaultProfile" : "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
         "initialCols" : 120,
         "initialRows" : 30,
         "keybindings" : 
@@ -218,6 +218,24 @@
             "historySize" : 9001,
             "icon" : "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
             "name" : "Windows PowerShell",
+            "padding" : "0, 0, 0, 0",
+            "snapOnInput" : true,
+            "startingDirectory" : "%USERPROFILE%",
+            "useAcrylic" : false
+        },
+        {
+            "acrylicOpacity" : 0.5,
+            "closeOnExit" : true,
+            "colorScheme" : "Campbell",
+            "commandline" : "C:\\Programs\\Neovim\\bin\\nvim.exe",
+            "cursorColor" : "#FFFFFF",
+            "cursorShape" : "bar",
+            "fontFace" : "Consolas",
+            "fontSize" : 10,
+            "guid" : "{80cbdc15-f4fe-49d2-a245-ec066b70848d}",
+            "historySize" : 9001,
+            "icon" : "",
+            "name" : "Neovim",
             "padding" : "0, 0, 0, 0",
             "snapOnInput" : true,
             "startingDirectory" : "%USERPROFILE%",
