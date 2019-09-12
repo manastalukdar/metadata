@@ -386,6 +386,7 @@
     *[Reference](https://mikewilliamson.wordpress.com/2016/11/14/installing-r-studio-on-ubuntu-16-10/)*
 
 - Qt SDK
+- Neovim
 - Lua
 - [ZeroBrane Studio Lua IDE](https://studio.zerobrane.com/)
 - [SciTE](https://www.scintilla.org/SciTEDownload.html)
