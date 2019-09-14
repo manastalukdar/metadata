@@ -386,6 +386,7 @@
     *[Reference](https://mikewilliamson.wordpress.com/2016/11/14/installing-r-studio-on-ubuntu-16-10/)*
 
 - Qt SDK
+- [Onivim2](https://github.com/onivim/oni2)
 - Neovim
 - Lua
 - [ZeroBrane Studio Lua IDE](https://studio.zerobrane.com/)
