@@ -155,6 +155,7 @@
     ```
 
 - FileZilla
+- [MarkText](https://github.com/marktext/marktext)
 - Vivaldi Browser
 - Pandoc
 - Audacity
