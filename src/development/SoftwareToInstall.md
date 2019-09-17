@@ -155,7 +155,6 @@
     ```
 
 - FileZilla
-- [MarkText](https://github.com/marktext/marktext)
 - Vivaldi Browser
 - Pandoc
 - Audacity
@@ -399,6 +398,7 @@
 - Ruby
 - Typora
 - Joplin
+- [MarkText](https://github.com/marktext/marktext)
 - Bitnami Wordpress stack installer
 - Aptana plugin for Eclipse Java IDE
 - MySQL Workbench
