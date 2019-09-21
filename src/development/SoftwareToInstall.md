@@ -196,6 +196,7 @@
 ### 1.2 Windows only
 
 - 7zip
+- [Rufus](https://rufus.ie/)
 - Microsoft OneDrive
 - Visual Studio Community Edition
 - Android SDK
