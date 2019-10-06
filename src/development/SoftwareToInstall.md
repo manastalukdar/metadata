@@ -474,6 +474,7 @@
 - yWriter6
 - Manuskript
 - Notepad++
+    http://setup-steps.blogspot.com/2013/05/notepad-nppexec-add-java-compiler.html
 - ImageGlass
 - Adobe Photoshop
 - Nodepad3
