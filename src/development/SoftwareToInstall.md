@@ -98,6 +98,7 @@
 
 - [Boostnote](https://boostnote.io/)
 - Sublime Text
+  To open command prompt at file root: ctrl + alt + t
   - Ubuntu [ref](https://www.sublimetext.com/docs/3/linux_repositories.html)
 
     ```plaintext
