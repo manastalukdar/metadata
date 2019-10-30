@@ -35,6 +35,5 @@
   "standard.enable": false,
   "markdown.extension.toc.levels": "2..6",
   "markdown.extension.list.indentationSize": "inherit",
-  "markdown.extension.toc.githubCompatibility": true,
-  "vetur.format.options.tabSize": 4
+  "markdown.extension.toc.githubCompatibility": true
 }
