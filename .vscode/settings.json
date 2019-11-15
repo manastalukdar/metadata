@@ -1,35 +1,39 @@
 {
-    "eslint.validate": [{
-            "language": "html",
-            "autoFix": true
-        },
-        {
-            "language": "javascript",
-            "autoFix": true
-        },
-        {
-            "language": "markdown",
-            "autoFix": true
-        },
-        {
-            "language": "json",
-            "autoFix": true
-        }
-    ],
-    "eslint.autoFixOnSave": true,
-    "editor.formatOnSave": true,
-    "eslint.workingDirectories": [{
-            "directory": "./",
-            "changeProcessCWD": true
-        },
-        {
-            "directory": "./website",
-            "changeProcessCWD": true
-        }
-    ],
-    "markdown.extension.print.onFileSave": false,
-    "markdown.extension.toc.orderedList": true,
-    "javascript.validate.enable": true,
-    "standard.enable": false,
-    "markdown.extension.toc.levels": "2..6"
+  "eslint.validate": [
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "markdown",
+      "autoFix": true
+    },
+    {
+      "language": "json",
+      "autoFix": true
+    }
+  ],
+  "eslint.autoFixOnSave": true,
+  "editor.formatOnSave": true,
+  "eslint.workingDirectories": [
+    {
+      "directory": "./",
+      "changeProcessCWD": true
+    },
+    {
+      "directory": "./website",
+      "changeProcessCWD": true
+    }
+  ],
+  "markdown.extension.print.onFileSave": false,
+  "markdown.extension.toc.orderedList": true,
+  "javascript.validate.enable": true,
+  "standard.enable": false,
+  "markdown.extension.toc.levels": "2..6",
+  "markdown.extension.list.indentationSize": "inherit",
+  "markdown.extension.toc.githubCompatibility": true
 }
