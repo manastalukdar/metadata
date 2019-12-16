@@ -37,7 +37,7 @@
     "christian-kohler.npm-intellisense",
     "ms-vscode.powershell",
     "esbenp.prettier-vscode",
-    "alefragnani.project-manager",
+    "fabiospampinato.vscode-projects-plus",
     "ms-python.python",
     "humao.rest-client",
     "remcoros.startanyshell",
