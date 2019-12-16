@@ -432,6 +432,7 @@
 - Bleachbit
 - RedNotebook
 - [Open Broadcaster Software](https://obsproject.com/)
+- [ReaPlugs VST](https://www.reaper.fm/reaplugs/)
 - Openshot video editor
   - Ubuntu
 
