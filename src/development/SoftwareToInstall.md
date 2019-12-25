@@ -5,7 +5,7 @@
 ### 1.1 Any OS
 
 - [Java SDK](https://adoptopenjdk.net/)
-  - Ubuntu
+    - Ubuntu
 
     ```plaintext
     sudo apt-get update
@@ -13,16 +13,17 @@
     ```
 
 - Git
-  - Ubuntu
+    - Ubuntu
 
     ```plaintext
     sudo apt-get install git
     ```
+
 - Protocol Buffers
 - kdiff3
 - [clang](https://clang.llvm.org/)
 - gcc
-  - [Windows](http://www.msys2.org/)
+    - [Windows](http://www.msys2.org/)
 
     [Useful Link](https://www.devdungeon.com/content/how-setup-gcc-msys2-eclipse-windows-c-development)
 
@@ -36,12 +37,11 @@
 
     Add to `PATH`:
 
-     - C:\msys64\mingw64\bin
-     - C:\msys64\usr\bin
-
+    - C:\msys64\mingw64\bin
+    - C:\msys64\usr\bin
 
 - Python
-  - Ubuntu
+    - Ubuntu
 
     ```plaintext
     sudo apt-get python3.6
@@ -59,7 +59,7 @@
     [Reference](https://scipy.org/install.html)
 
 - nodejs
-  - Ubuntu
+    - Ubuntu
 
     ```plaintext
     curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
@@ -67,7 +67,7 @@
     sudo apt-get install -y build-essential
     ```
 
-  - npm global packages (`npm list -g --depth 0`)
+    - npm global packages (`npm list -g --depth 0`)
 
     ```plaintext
     +-- @angular/cli
@@ -99,7 +99,7 @@
 - [Boostnote](https://boostnote.io/)
 - Sublime Text
   To open command prompt at file root: ctrl + alt + t
-  - Ubuntu [ref](https://www.sublimetext.com/docs/3/linux_repositories.html)
+    - Ubuntu [ref](https://www.sublimetext.com/docs/3/linux_repositories.html)
 
     ```plaintext
     wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -110,7 +110,7 @@
     ```
 
 - Sublime Merge
-  - Ubuntu [ref](https://www.sublimemerge.com/docs/linux_repositories)
+    - Ubuntu [ref](https://www.sublimemerge.com/docs/linux_repositories)
 
     ```plaintext
     wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -121,7 +121,7 @@
     ```
 
 - Latex (MikTex on Windows)
-  - Ubuntu
+    - Ubuntu
 
     ```plaintext
     sudo apt-get install texlive-full
@@ -131,7 +131,7 @@
     [Reference](https://tex.stackexchange.com/questions/372130/how-to-install-a-more-minimal-but-complete-texlive-on-ubuntu#comment919440_372130)*
 
 - TexStudio
-  - Ubuntu
+    - Ubuntu
 
     *May have to install libqt5scripts*
 
@@ -143,13 +143,13 @@
 - DotNet Core
 - Visual Studio Code editor
 - gradle
-  - Ubuntu
+    - Ubuntu
 
     ```plaintext
     sdk install gradle 4.2.1
     ```
 
-  - Windows
+    - Windows
 
     ```plaintext
     gradle.org/install/
@@ -168,16 +168,16 @@
 - Opera Browser (for free VPN)
 - [Graphviz](https://graphviz.gitlab.io)
 - KeePass Password Safe
-  - Ubuntu
+    - Ubuntu
 
-    *If you want an older version of KeePass 2.x*
+    _*If you want an older version of KeePass 2.x*_
 
     ```plaintext
     sudo apt-get update
     sudo apt-get install keepass2
     ```
 
-    *If you want the most recent verion of KeePass 2.x*
+    _*If you want the most recent verion of KeePass 2.x*_
 
      ```plaintext
      sudo apt-add-repository ppa:jtaylor/keepass
@@ -185,7 +185,7 @@
      sudo apt-get install keepass2
      ```
 
-     *If you want something compatible with KeePass 1.x but is not actually KeePass*
+     _*If you want something compatible with KeePass 1.x but is not actually KeePass*_
 
      ```plaintext
      sudo apt-get update
@@ -251,6 +251,7 @@
 - CDisplayEx
 - f.lux
 - Discord
+- DaVinci Resolve
 - Powershell Core
 - Windows Terminal
 - [Screen to Gif](https://www.screentogif.com/)
@@ -275,13 +276,13 @@
     ```
 
 - gdebi
-  - Ubuntu
+    - Ubuntu
     `sudo apt install gdebi`
 - snapd
-  - Ubuntu
+    - Ubuntu
     `sudo apt install snapd` or `sudo snap install`
 - rclone (for Microsoft OneDrive)
-  - Ubuntu
+    - Ubuntu
       *Fetch and unpack*
 
       ```plaintext
@@ -317,7 +318,7 @@
 ### 2.1 Any OS
 
 - Docker
-  - Ubuntu
+    - Ubuntu
 
     *Set up the repository: Set up the Docker CE repository on Ubuntu. The lsb_release -cs sub-command prints the name of your Ubuntu version, like xenial or trusty.*
 
@@ -349,7 +350,7 @@
     [Reference1](https://store.docker.com/editions/community/docker-ce-server-ubuntu?tab=description), [Reference2](https://askubuntu.com/questions/909691/how-to-install-docker-on-ubuntu-17-04)
 - yarn
 - R
-  - Ubuntu
+    - Ubuntu
 
     ```plaintext
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
@@ -360,7 +361,7 @@
     ```
 
 - R Studio
-  - Ubuntu
+    - Ubuntu
 
     ```plaintext
     sudo apt --fix-broken install
@@ -406,12 +407,12 @@
 - MySQL Workbench
 - Evolus Pencil
 - Go lang
-	- Set GOROOT to where Go was installed (`C:\Go` on windows)
-	- Be sure to set GOPATH env (user) variable (`G:\dev\go` as an example on Windows)
-	- GO projects will need to be under `G:\dev\go`, using the above example. Possibly under a folder call \_my-projects. Alternately, a different folder can also be used for personal Go projects.
-  - Add `G:\dev\go\bin` (using above example) to PATH.
+    - Set GOROOT to where Go was installed (`C:\Go` on windows)
+    - Be sure to set GOPATH env (user) variable (`G:\dev\go` as an example on Windows)
+    - GO projects will need to be under `G:\dev\go`, using the above example. Possibly under a folder call \_my-projects. Alternately, a different folder can also be used for personal Go projects.
+    - Add `G:\dev\go\bin` (using above example) to PATH.
 - Dart lang
-- Scilab 
+- Scilab
 - [GNU Octave](https://www.gnu.org/software/octave/)
 - [SageMath](http://www.sagemath.org)
 - [Junolab for Julia](http://junolab.org)
@@ -421,7 +422,7 @@
 - Pencil animation
 - Synfig Studio
 - Krita
-- Scribus 
+- Scribus
 - plume-creator
 - Ren'Py
 - Freemind
@@ -434,7 +435,7 @@
 - [Open Broadcaster Software](https://obsproject.com/)
 - [ReaPlugs VST](https://www.reaper.fm/reaplugs/)
 - Openshot video editor
-  - Ubuntu
+    - Ubuntu
 
     ```plaintext
     sudo add-apt-repository ppa:openshot.developers/ppa
@@ -443,7 +444,7 @@
     ```
 
 - IntelliJ IDEA Community Edition
-  - Ubuntu
+    - Ubuntu
 
     ```plaintext
     sudo tar xf <ideaIC or ideaIU>-*.tar.gz -C /opt/
@@ -455,7 +456,7 @@
 - Jetbrains PyCharm IDE Community Edition
 - [Vectr](https://vectr.com)
 - Lua
-  - Windows
+    - Windows
 
     [Installing Lua on a Windows system](http://www.thijsschreijer.nl/blog/?p=863)
 - ZeroBrane Studio Lua IDE
@@ -488,7 +489,7 @@
 - Open Live Writer
 - Eclipse Installer
 - Eclipse Java IDE (Latest Released and Latest)
-  - PyDev
+    - PyDev
 
 ### 2.3 Linux only
 
@@ -496,7 +497,7 @@
 - [Stacer](https://github.com/oguzhaninan/Stacer)
 - GitKraken
 - Android Studio
-  - Ubuntu
+    - Ubuntu
 
     ```plaintext
     sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386
