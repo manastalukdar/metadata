@@ -1,6 +1,5 @@
 // Step1: Get extensions json data from sync gist.
 // Step2: https://jsonformatter.org/json-parser to get metadata.publisherId
-
 {
   "recommendations": [
     "njpwerner.autodocstring",
@@ -11,7 +10,7 @@
     "Shan.code-settings-sync",
     "streetsidesoftware.code-spell-checker",
     "ms-vscode.cpptools",
-    "ms-vscode.csharp",
+    "ms-dotnettools.csharp",
     "msjsdiag.debugger-for-chrome",
     "joelday.docthis",
     "EditorConfig.EditorConfig",
