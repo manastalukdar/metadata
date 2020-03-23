@@ -144,7 +144,7 @@
     sudo apt-get install texlive-full
     ```
 
-    *After you installed texlive-full you can list all the installed language packs with dpkg -l texlive-lang-\*. Then you can remove the unneeded ones with sudo apt-get purge -y texlive-lang-... (where ... is the language). 
+    *After you installed texlive-full you can list all the installed language packs with dpkg -l texlive-lang-\*. Then you can remove the unneeded ones with sudo apt-get purge -y texlive-lang-... (where ... is the language).
     [Reference](https://tex.stackexchange.com/questions/372130/how-to-install-a-more-minimal-but-complete-texlive-on-ubuntu#comment919440_372130)*
 
 - TexStudio
@@ -502,6 +502,8 @@
 - PdfEscape
 - Freac Audio Converter
 - EaseUS Partition Master
+- EaseUS Data Recovery
+- Acronis Disk Director
 - Search and Replace
 - yWriter6
 - Manuskript
@@ -516,6 +518,8 @@
 - Twitch
 - [Terminus](https://github.com/Eugeny/terminus)
 - Open Live Writer
+- Samsung Data Migration
+- Brother printer driver (MFC-J835DW)
 - Eclipse Installer
 - Eclipse Java IDE (Latest Released and Latest)
   - PyDev
