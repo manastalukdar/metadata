@@ -44,6 +44,11 @@
 
     [Useful Link](https://www.devdungeon.com/content/how-setup-gcc-msys2-eclipse-windows-c-development)
 
+    Add to `PATH`:
+
+    - C:\msys64\mingw64\bin
+    - C:\msys64\usr\bin
+
     ```plaintext
     pacman -Syu
     pacman -S base-devel
@@ -51,11 +56,6 @@
     pacman -S mingw-w64-x86_64-cmake
     optional: pacman -S mingw-w64-x86_64-qt5
     ```
-
-    Add to `PATH`:
-
-    - C:\msys64\mingw64\bin
-    - C:\msys64\usr\bin
 
 - Python
   - Ubuntu
@@ -490,6 +490,7 @@
     [Installing Lua on a Windows system](http://www.thijsschreijer.nl/blog/?p=863)
 - ZeroBrane Studio Lua IDE
 - Pomodoro based productivity app - [Pomotroid](https://github.com/Splode/pomotroid)
+- Spotify
 
 ### 2.2 Windows only
 
@@ -520,6 +521,7 @@
 - Open Live Writer
 - Samsung Data Migration
 - Brother printer driver (MFC-J835DW)
+- Pocketcasts
 - Eclipse Installer
 - Eclipse Java IDE (Latest Released and Latest)
   - PyDev
