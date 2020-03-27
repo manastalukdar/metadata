@@ -257,17 +257,14 @@
     ```
 
 - BurnAware Free
-- Gom Audio
+- [AIM player](http://aimp2.us/)
 - Google\Nik Collection
-- Recuva
 - Speccy
 - ProcessHacker
-- Wox
 - Greenshot
 - Winscp
 - CDisplayEx
 - f.lux
-- Discord
 - DaVinci Resolve
 - Powershell Core
 - Windows Terminal
@@ -505,6 +502,8 @@
 - EaseUS Partition Master
 - EaseUS Data Recovery
 - Acronis Disk Director
+- Recuva
+- Wox
 - Search and Replace
 - yWriter6
 - Manuskript
@@ -512,6 +511,7 @@
     http://setup-steps.blogspot.com/2013/05/notepad-nppexec-add-java-compiler.html
 - ImageGlass
 - Adobe Photoshop
+- Irfanview
 - Nodepad3
 - ffmpeg
 - Hyper.is
@@ -522,6 +522,7 @@
 - Samsung Data Migration
 - Brother printer driver (MFC-J835DW)
 - Pocketcasts
+- Discord
 - Eclipse Installer
 - Eclipse Java IDE (Latest Released and Latest)
   - PyDev
