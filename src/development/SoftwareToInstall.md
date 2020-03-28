@@ -230,6 +230,7 @@
 - Lame For Audacity
 - Not Another Pdf Scanner 2
 - Paint.NET
+- [dnGrep](https://github.com/dnGrep/dnGrep)
 - Scrivener
 - Popc*** T***
 - qBittorrent
