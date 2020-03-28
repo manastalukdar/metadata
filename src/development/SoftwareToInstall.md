@@ -338,6 +338,7 @@
   ```
 
 - Pine media player
+- [Lightshot](https://app.prntscr.com/en/index.html)
 
 ## 2. Optional
 
@@ -459,6 +460,25 @@
 - Bleachbit
 - RedNotebook
 - [Open Broadcaster Software](https://obsproject.com/)
+  - [Dark screen on windows issue](https://obsproject.com/forum/threads/laptop-black-screen-when-capturing-read-here-first.5965/)
+
+    ```plaintext
+    Open Settings and search for "Graphics Settings". Select "Classic App" and browse to C:\Program Files\obs-studio\bin\64bit\obs64.exe (or wherever you have installed OBS). Click "Options".
+
+    If you want to use display capture to capture your screen / desktop, select "Power Saving".
+    If you want to use game capture to capture a game or use the NVENC encoder, select "High Performance".
+    ```
+
+  - Audio filter:
+    - <https://medium.com/@Wootpeanuts/removing-background-noise-with-obs-studio-17214d967fe0>
+    - <https://helping-squad.com/obs-studio-how-to-configure-your-microphone-noise-suppression-noise-gate-and-gain-filter/>
+
+    ```plaintext
+    Noise suppression
+    Noise Gate
+    Gain
+    ```
+
 - [ReaPlugs VST](https://www.reaper.fm/reaplugs/)
 - Openshot video editor
   - Ubuntu
