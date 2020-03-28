@@ -227,12 +227,12 @@
 - Adobe Lightroom
 - Putty
 - Tor browser
-- Lame For Audacity
+- Lame For Audacity (bundled in Windows and Mac versions)
 - Not Another Pdf Scanner 2
 - Paint.NET
 - [dnGrep](https://github.com/dnGrep/dnGrep)
 - Scrivener
-- Popc*** T***
+- [Popc*** T***](https://github.com/popcorn-official/popcorn-desktop)
 - qBittorrent
 - QTTabBar
 - ZoneAlarm Free Firewall
@@ -258,7 +258,7 @@
     ```
 
 - BurnAware Free
-- [AIM player](http://aimp2.us/)
+- [AIM player](https://www.aimp.ru/)
 - Google\Nik Collection
 - Speccy
 - ProcessHacker
