@@ -524,7 +524,7 @@
 - Acronis Disk Director
 - Recuva
 - Wox
-- Search and Replace
+- [Search and Replace](http://searchandreplace.com/)
 - yWriter6
 - Manuskript
 - Notepad++
