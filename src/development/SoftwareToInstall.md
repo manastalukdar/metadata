@@ -437,7 +437,7 @@
 - Evolus Pencil
 - Go lang
   - Set GOROOT to where Go was installed (`C:\Go` on windows)
-  - Be sure to set GOPATH env (user) variable (`G:\dev\go` as an example on Windows)
+  - Be sure to set GOPATH env (user) variable (`G:\dev\go` as an example on Windows; default: `%USERPROFILE%\go`)
   - GO projects will need to be under `G:\dev\go`, using the above example. Possibly under a folder call \_my-projects. Alternately, a different folder can also be used for personal Go projects.
   - Add `G:\dev\go\bin` (using above example) to PATH.
 - Dart lang
