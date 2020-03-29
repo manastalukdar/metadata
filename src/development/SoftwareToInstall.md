@@ -234,7 +234,8 @@
 - Scrivener
 - [Popc*** T***](https://github.com/popcorn-official/popcorn-desktop)
 - qBittorrent
-- QTTabBar
+- [QTTabBar](http://qttabbar.wikidot.com/)
+  - <https://www.raymond.cc/blog/how-to-have-tabs-in-your-windows-explorer/>
 - ZoneAlarm Free Firewall
 - SumatraPdf
 - XnViewMP
