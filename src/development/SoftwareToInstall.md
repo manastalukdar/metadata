@@ -525,12 +525,13 @@
 - EaseUS Data Recovery
 - Acronis Disk Director
 - Recuva
+- Lockhunter
 - Wox
 - [Search and Replace](http://searchandreplace.com/)
 - yWriter6
 - Manuskript
 - Notepad++
-    http://setup-steps.blogspot.com/2013/05/notepad-nppexec-add-java-compiler.html
+    <http://setup-steps.blogspot.com/2013/05/notepad-nppexec-add-java-compiler.html>
 - ImageGlass
 - Adobe Photoshop
 - Irfanview
