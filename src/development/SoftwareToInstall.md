@@ -268,6 +268,7 @@
 - CDisplayEx
 - f.lux
 - DaVinci Resolve
+- RoslynPad
 - Powershell Core
 - Windows Terminal
 - [Screen to Gif](https://www.screentogif.com/)
