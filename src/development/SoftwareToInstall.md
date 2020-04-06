@@ -535,6 +535,7 @@
 - ImageGlass
 - Adobe Photoshop
 - Irfanview
+- WinCatalog
 - Nodepad3
 - ffmpeg
 - Hyper.is
