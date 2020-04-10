@@ -137,6 +137,7 @@
     sudo apt-get install sublime-merge
     ```
 
+- Postman
 - Latex (MikTex on Windows)
   - Ubuntu
 
@@ -461,6 +462,8 @@
 - Atom code editor
 - Brackets code editor
 - Bleachbit
+- [Insomnia](https://insomnia.rest/)
+- [Advanced REST client](https://github.com/advanced-rest-client/arc-electron)
 - RedNotebook
 - [Open Broadcaster Software](https://obsproject.com/)
   - [Dark screen on windows issue](https://obsproject.com/forum/threads/laptop-black-screen-when-capturing-read-here-first.5965/)
