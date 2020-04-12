@@ -549,6 +549,7 @@
 - Open Live Writer
 - Samsung Data Migration
 - Brother printer driver (MFC-J835DW)
+- Autodesk Sketchbook
 - Pocketcasts
 - Discord
 - Eclipse Installer
