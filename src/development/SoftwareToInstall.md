@@ -90,6 +90,7 @@
     +-- @angular/cli
     +-- @vue/cli
     +-- david
+    +-- npm-check-updates
     +-- gh-pages
     +-- http-server
     +-- @gridsome/cli
