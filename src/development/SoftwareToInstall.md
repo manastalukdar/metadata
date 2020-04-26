@@ -178,6 +178,7 @@
 - Vivaldi Browser
 - Pandoc
 - Audacity
+- Google Chrome
 - Libre Office
 - DB Browser for SQLite
 - GIMP
