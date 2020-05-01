@@ -111,6 +111,7 @@
     +-- rimraf
     +-- serve
     +-- @marp-team/marp-cli
+    +-- markdownlint-cli
     `-- windows-build-tools
     ```
 
