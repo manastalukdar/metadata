@@ -98,12 +98,8 @@
     +-- create-react-app
     +-- electron-packager
     +-- markdown
-    +-- markpress
-    +-- md2gslides
-    +-- md2slides
     +-- node-gyp
     +-- npm
-    +-- reveal-md
     +-- rxjs-tslint
     +-- webpack
     +-- webpack-cli
