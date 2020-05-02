@@ -276,6 +276,13 @@
 - Powershell Core
 - Windows Terminal
 - [Screen to Gif](https://www.screentogif.com/)
+- Linux Subsystem for Windows
+  - [How to Install zsh and Oh My Zsh in Windows 10](https://www.maketecheasier.com/install-zsh-and-oh-my-zsh-windows10/)
+
+  ```plaintext
+  sudo apt-get install zsh
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ```
 
 ### 1.3 Linux only
 
