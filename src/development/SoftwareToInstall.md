@@ -98,12 +98,8 @@
     +-- create-react-app
     +-- electron-packager
     +-- markdown
-    +-- markpress
-    +-- md2gslides
-    +-- md2slides
     +-- node-gyp
     +-- npm
-    +-- reveal-md
     +-- rxjs-tslint
     +-- webpack
     +-- webpack-cli
@@ -351,9 +347,14 @@
   Reference: https://superuser.com/questions/174297/how-can-i-get-an-address-bar-in-finder
   ```
 
+- [iterm2](https://iterm2.com/)
+- [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 - [AppCleaner](http://freemacsoft.net/appcleaner/)
 - Pine media player
 - [Lightshot](https://app.prntscr.com/en/index.html)
+- [nvm](https://github.com/nvm-sh/nvm)
+
+  [Installing Multiple Versions of Node.js Using nvm](https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/)
 
 ## 2. Optional
 
