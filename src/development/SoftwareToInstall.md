@@ -177,7 +177,7 @@
 - Audacity
 - Google Chrome
 - Libre Office
-- DB Browser for SQLite
+- [Beekeeper Studio](https://github.com/beekeeper-studio/beekeeper-studio)
 - GIMP
 - Inkscape
 - VLC Media player
@@ -444,6 +444,7 @@
 - Scala
 - Ruby
 - Typora
+- DB Browser for SQLite
 - [Boostnote](https://boostnote.io/)
 - Joplin
 - [MarkText](https://github.com/marktext/marktext)
