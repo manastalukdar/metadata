@@ -356,6 +356,7 @@
 - Pine media player
 - [Lightshot](https://app.prntscr.com/en/index.html)
 - [nvm](https://github.com/nvm-sh/nvm)
+- [pyenv](https://github.com/pyenv/pyenv)
 
   [Installing Multiple Versions of Node.js Using nvm](https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/)
 
