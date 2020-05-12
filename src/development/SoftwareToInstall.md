@@ -171,6 +171,7 @@
     gradle.org/install/
     ```
 
+- [q](https://github.com/harelba/q)
 - FileZilla
 - Vivaldi Browser
 - Pandoc
