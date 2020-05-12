@@ -342,6 +342,7 @@
 
 - [iterm2](https://iterm2.com/)
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
+- [Antigen](https://github.com/zsh-users/antigen)
 - [AppCleaner](http://freemacsoft.net/appcleaner/)
 - Pine media player
 - [Lightshot](https://app.prntscr.com/en/index.html)
