@@ -1,21 +1,21 @@
 # A list of software to install
 
 1. [1. Compulsory](#1-compulsory)
-  1. [1.1 Any OS](#11-any-os)
-  2. [1.2 Windows only](#12-windows-only)
-  3. [1.3 Linux only](#13-linux-only)
-  4. [1.3 MacOS only](#13-macos-only)
+   1. [1.1 Any OS](#11-any-os)
+   2. [1.2 Windows only](#12-windows-only)
+   3. [1.3 Linux only](#13-linux-only)
+   4. [1.3 MacOS only](#13-macos-only)
 2. [2. Optional](#2-optional)
-  1. [2.1 Any OS](#21-any-os)
-  2. [2.2 Windows only](#22-windows-only)
-  3. [2.3 Linux only](#23-linux-only)
+   1. [2.1 Any OS](#21-any-os)
+   2. [2.2 Windows only](#22-windows-only)
+   3. [2.3 Linux only](#23-linux-only)
 3. [Linux related](#linux-related)
-  1. [Enabling right mouse click option for a Synaptics mousepad](#enabling-right-mouse-click-option-for-a-synaptics-mousepad)
-  2. [Configuring GetDeb](#configuring-getdeb)
-  3. [Make battery last longer](#make-battery-last-longer)
-  4. [Installing gnome on top of Ubuntu](#installing-gnome-on-top-of-ubuntu)
-  5. [Removing Unity](#removing-unity)
-  6. [Stuck at login manager](#stuck-at-login-manager)
+   1. [Enabling right mouse click option for a Synaptics mousepad](#enabling-right-mouse-click-option-for-a-synaptics-mousepad)
+   2. [Configuring GetDeb](#configuring-getdeb)
+   3. [Make battery last longer](#make-battery-last-longer)
+   4. [Installing gnome on top of Ubuntu](#installing-gnome-on-top-of-ubuntu)
+   5. [Removing Unity](#removing-unity)
+   6. [Stuck at login manager](#stuck-at-login-manager)
 
 ## 1. Compulsory
 
@@ -171,13 +171,14 @@
     gradle.org/install/
     ```
 
+- [q](https://github.com/harelba/q)
 - FileZilla
 - Vivaldi Browser
 - Pandoc
 - Audacity
 - Google Chrome
 - Libre Office
-- DB Browser for SQLite
+- [Beekeeper Studio](https://github.com/beekeeper-studio/beekeeper-studio)
 - GIMP
 - Inkscape
 - VLC Media player
@@ -272,6 +273,14 @@
 - Powershell Core
 - Windows Terminal
 - [Screen to Gif](https://www.screentogif.com/)
+- Linux Subsystem for Windows
+  - [How to Install zsh and Oh My Zsh in Windows 10](https://www.maketecheasier.com/install-zsh-and-oh-my-zsh-windows10/)
+  - [How to change the dark blue in wsl to something brighter](https://superuser.com/a/1409856/783826)
+
+  ```plaintext
+  sudo apt-get install zsh
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ```
 
 ### 1.3 Linux only
 
@@ -437,6 +446,7 @@
 - Scala
 - Ruby
 - Typora
+- DB Browser for SQLite
 - [Boostnote](https://boostnote.io/)
 - Joplin
 - [MarkText](https://github.com/marktext/marktext)
