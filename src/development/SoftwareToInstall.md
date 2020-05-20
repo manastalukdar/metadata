@@ -537,6 +537,7 @@
 ### 2.2 Windows only
 
 - Microsoft Threat Modeling Tool
+- [winget](https://github.com/microsoft/winget-cli)
 - Atlassian SourceTree
 - Autodesk Pixlr
 - FotoSketcher
