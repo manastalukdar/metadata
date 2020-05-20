@@ -215,6 +215,7 @@
 ### 1.2 Windows only
 
 - 7zip
+- [Windows PowerToys](https://github.com/microsoft/PowerToys)
 - [Rufus](https://rufus.ie/)
 - Microsoft OneDrive
 - Visual Studio Community Edition
