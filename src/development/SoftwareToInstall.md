@@ -38,6 +38,10 @@
 
 - Protocol Buffers
 - kdiff3
+  - macos
+
+    `git config --global mergetool.kdiff3.path /Applications/kdiff3.app/Contents/MacOS/kdiff3`
+    
 - [clang](https://clang.llvm.org/)
 - gcc
   - [Windows](http://www.msys2.org/)
