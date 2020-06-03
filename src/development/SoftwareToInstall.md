@@ -533,6 +533,8 @@
 - ZeroBrane Studio Lua IDE
 - Pomodoro based productivity app - [Pomotroid](https://github.com/Splode/pomotroid)
 - Spotify
+  - [Ad blocking](https://github.com/x0uid/SpotifyAdBlock)
+- [ytmdesktop-plus](https://github.com/manastalukdar/ytmdesktop-plus)
 
 ### 2.2 Windows only
 
