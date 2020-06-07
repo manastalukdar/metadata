@@ -578,6 +578,7 @@
 - Autodesk Sketchbook
 - Pocketcasts
 - Discord
+- [Multi Commander](http://multicommander.com/)
 - Eclipse Installer
 - Eclipse Java IDE (Latest Released and Latest)
   - PyDev
