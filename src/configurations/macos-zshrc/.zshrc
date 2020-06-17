@@ -202,3 +202,4 @@ export PYTHON_INSTALL_LOC=/Users/manastalukdar/.pyenv/versions/3.8.2/bin/python
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+eval "$(jenv enable-plugin export)"
