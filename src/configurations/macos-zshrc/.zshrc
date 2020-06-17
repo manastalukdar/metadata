@@ -108,7 +108,7 @@ export C3_APPS_ROOT=/Users/manastalukdar/data/c3dev/c3apps
 
 export C3_ECLIPSE=/Users/manastalukdar/Eclipse/java-2019-12/Eclipse.app
 export PATH="$PATH:/Users/manastalukdar/.dotnet/tools"
- 
+
 alias typ='find . -name *.c3typ | xargs grep'
 alias json='find . -name *.json | xargs grep'
 alias js='find . -name *.js | xargs grep'
@@ -198,3 +198,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 export PYTHON_INSTALL_LOC=/Users/manastalukdar/.pyenv/versions/3.8.2/bin/python
+
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"

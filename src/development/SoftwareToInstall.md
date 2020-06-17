@@ -9,6 +9,7 @@
    1. [2.1 Any OS](#21-any-os)
    2. [2.2 Windows only](#22-windows-only)
    3. [2.3 Linux only](#23-linux-only)
+   4. [2.4 MacOS only](#24-macos-only)
 3. [Linux related](#linux-related)
    1. [Enabling right mouse click option for a Synaptics mousepad](#enabling-right-mouse-click-option-for-a-synaptics-mousepad)
    2. [Configuring GetDeb](#configuring-getdeb)
@@ -361,9 +362,16 @@
 - Pine media player
 - [Lightshot](https://app.prntscr.com/en/index.html)
 - [nvm](https://github.com/nvm-sh/nvm)
-- [pyenv](https://github.com/pyenv/pyenv)
 
   [Installing Multiple Versions of Node.js Using nvm](https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/)
+
+- [pyenv](https://github.com/pyenv/pyenv)
+- [jenv](https://github.com/jenv/jenv)
+
+  <https://github.com/AdoptOpenJDK/homebrew-openjdk>
+  `/usr/libexec/java_home -V`
+
+`brew list`, `brew cask list`, `brew leaves`.
 
 ## 2. Optional
 
@@ -598,6 +606,10 @@
 
     *Navigate to the android-studio/bin/ directory, and execute studio.sh.
     To make Android Studio available in your list of applications, select Tools > Create Desktop Entry from the Android Studio menu bar.*
+
+### 2.4 MacOS only
+
+- [jabba](https://github.com/shyiko/jabba)
 
 ## Linux related
 
