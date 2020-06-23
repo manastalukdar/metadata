@@ -42,7 +42,7 @@
   - macos
 
     `git config --global mergetool.kdiff3.path /Applications/kdiff3.app/Contents/MacOS/kdiff3`
-    
+
 - [clang](https://clang.llvm.org/)
 - gcc
   - [Windows](http://www.msys2.org/)
@@ -177,6 +177,7 @@
     ```
 
 - [q](https://github.com/harelba/q)
+- [nushell](https://github.com/nushell/nushell)
 - FileZilla
 - Vivaldi Browser
 - Pandoc
@@ -249,6 +250,7 @@
 - NitroPdf
 - DisplayFusion
 - Calibre
+- [yori](https://github.com/malxau/yori)
 - FreeCommander XE
 
     ```plaintext
@@ -371,7 +373,7 @@
   <https://github.com/AdoptOpenJDK/homebrew-openjdk>
   `/usr/libexec/java_home -V`
 
-`brew list`, `brew cask list`, `brew leaves`.
+`brew list`, `brew cask list`, `brew leaves`, `port installed`
 
 ## 2. Optional
 
