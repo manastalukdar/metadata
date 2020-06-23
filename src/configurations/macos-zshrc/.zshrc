@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export PATH=$JAVA_HOME/bin:$PATH
-export C3_SERVER_ROOT=/Users/manastalukdar/data/c3dev/v8/c3server
+export C3_SERVER_ROOT=/Users/manastalukdar/data/c3dev/c3server
 export C3_APPS_ROOT=/Users/manastalukdar/data/c3dev/c3apps
 
 export C3_ECLIPSE=/Users/manastalukdar/Eclipse/java-2019-12/Eclipse.app
@@ -203,3 +203,6 @@ export PYTHON_INSTALL_LOC=/Users/manastalukdar/.pyenv/versions/3.8.2/bin/python
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 eval "$(jenv enable-plugin export)"
+
+# direnv
+eval "$(direnv hook zsh)"
