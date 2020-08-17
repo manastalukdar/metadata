@@ -113,6 +113,7 @@
     +-- serve
     +-- @marp-team/marp-cli
     +-- markdownlint-cli
+    +-- npm-check-updates
     `-- windows-build-tools
     ```
 
@@ -176,6 +177,7 @@
     gradle.org/install/
     ```
 
+- [RBQL](https://github.com/mechatroner/RBQL)
 - [q](https://github.com/harelba/q)
 - [nushell](https://github.com/nushell/nushell)
 - FileZilla
