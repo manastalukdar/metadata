@@ -63,6 +63,7 @@
     ```
 
 - Python
+
   - Ubuntu
 
     ```plaintext
@@ -79,6 +80,10 @@
     ```
 
     [Reference](https://scipy.org/install.html)
+
+  pip packages to install:
+
+  - Cython
 
 - nodejs
   - Ubuntu
