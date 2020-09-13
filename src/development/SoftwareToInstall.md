@@ -364,6 +364,7 @@
   Reference: https://superuser.com/questions/174297/how-can-i-get-an-address-bar-in-finder
   ```
 
+- [kap](https://getkap.co)
 - [iterm2](https://iterm2.com/)
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 - [Antigen](https://github.com/zsh-users/antigen)
