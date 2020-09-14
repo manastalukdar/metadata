@@ -125,6 +125,8 @@
 - MarkText
 - Sublime Text
   To open command prompt at file root: ctrl + alt + t
+  MarkdownEditing Settings
+  `"color_scheme": "Packages/MonokaiC/themes/ME-MonokaiC.tmTheme"`
   - Ubuntu [ref](https://www.sublimetext.com/docs/3/linux_repositories.html)
 
     ```plaintext
