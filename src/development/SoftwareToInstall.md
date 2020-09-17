@@ -125,6 +125,8 @@
 - MarkText
 - Sublime Text
   To open command prompt at file root: ctrl + alt + t
+  MarkdownEditing Settings
+  `"color_scheme": "Packages/MonokaiC/themes/ME-MonokaiC.tmTheme"`
   - Ubuntu [ref](https://www.sublimetext.com/docs/3/linux_repositories.html)
 
     ```plaintext
@@ -365,6 +367,7 @@
   Reference: https://superuser.com/questions/174297/how-can-i-get-an-address-bar-in-finder
   ```
 
+- [kap](https://getkap.co)
 - [iterm2](https://iterm2.com/)
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 - [Antigen](https://github.com/zsh-users/antigen)
