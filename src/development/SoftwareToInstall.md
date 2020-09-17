@@ -189,6 +189,7 @@
 - Vivaldi Browser
 - Pandoc
 - Audacity
+- GitHub CLI
 - Google Chrome
 - Libre Office
 - [Beekeeper Studio](https://github.com/beekeeper-studio/beekeeper-studio)
