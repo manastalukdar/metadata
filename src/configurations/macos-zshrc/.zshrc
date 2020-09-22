@@ -197,6 +197,8 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+eval "$(pyenv init -)"
+
 export PYTHON_INSTALL_LOC=/Users/manastalukdar/.pyenv/versions/3.8.2/bin/python
 
 # jenv
