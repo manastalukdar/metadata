@@ -197,6 +197,8 @@
 - GIMP
 - Inkscape
 - VLC Media player
+- [Telegram Desktop](https://telegram.org)
+- [Tor browser](https://www.torproject.org)
 - [Virtual Volumes View](http://vvvapp.sourceforge.net/)
 - Opera Browser (for free VPN)
 - [Graphviz](https://graphviz.gitlab.io)
@@ -243,7 +245,6 @@
 - Windows Media Player classic
 - Adobe Lightroom
 - Putty
-- Tor browser
 - Lame For Audacity (bundled in Windows and Mac versions)
 - Not Another Pdf Scanner 2
 - Paint.NET
