@@ -187,6 +187,7 @@
 - [RBQL](https://github.com/mechatroner/RBQL)
 - [q](https://github.com/harelba/q)
 - [nushell](https://github.com/nushell/nushell)
+- [yenv](https://github.com/pyenv/pyenv)
 - FileZilla
 - Vivaldi Browser
 - Pandoc
@@ -379,7 +380,6 @@
 
   [Installing Multiple Versions of Node.js Using nvm](https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/)
 
-- [pyenv](https://github.com/pyenv/pyenv)
 - [jenv](https://github.com/jenv/jenv)
 
   <https://github.com/AdoptOpenJDK/homebrew-openjdk>
