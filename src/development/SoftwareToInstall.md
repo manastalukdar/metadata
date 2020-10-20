@@ -187,7 +187,16 @@
 - [RBQL](https://github.com/mechatroner/RBQL)
 - [q](https://github.com/harelba/q)
 - [nushell](https://github.com/nushell/nushell)
-- [yenv](https://github.com/pyenv/pyenv)
+- pyenv
+
+  - [MacOS / Linux](https://github.com/pyenv/pyenv)
+
+  - [Windows](https://github.com/pyenv-win/pyenv-win/issues/153)
+
+     ```plaintext
+     After installing run `pyenv update` (https://github.com/pyenv-win/pyenv-win/issues/153)
+     ```
+
 - FileZilla
 - Vivaldi Browser
 - Pandoc
