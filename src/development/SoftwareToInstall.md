@@ -84,6 +84,7 @@
   pip packages to install:
 
   - Cython
+  - [Rummage](https://github.com/facelessuser/Rummage/)
 
 - nodejs
   - Ubuntu
@@ -519,6 +520,8 @@
 - [Insomnia](https://insomnia.rest/)
 - [Advanced REST client](https://github.com/advanced-rest-client/arc-electron)
 - RedNotebook
+- [glogg](https://glogg.bonnefon.org/index.html)
+- [sift](https://github.com/svent/sift)
 - [Open Broadcaster Software](https://obsproject.com/)
   - [Dark screen on windows issue](https://obsproject.com/forum/threads/laptop-black-screen-when-capturing-read-here-first.5965/)
 
@@ -608,6 +611,7 @@
 - Brother printer driver (MFC-J835DW)
 - Autodesk Sketchbook
 - Pocketcasts
+- [GrepWin](https://github.com/stefankueng/grepWin)
 - Discord
 - [Multi Commander](http://multicommander.com/)
 - Eclipse Installer
