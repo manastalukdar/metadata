@@ -55,7 +55,7 @@
     - C:\msys64\usr\bin
 
     ```plaintext
-    pacman -Syu
+    pacman -Syu --disable-download-timeout --needed
     pacman -S --disable-download-timeout --needed base-devel
     pacman -S --disable-download-timeout --needed mingw-w64-x86_64-toolchain
     pacman -S --disable-download-timeout --needed mingw-w64-x86_64-cmake
