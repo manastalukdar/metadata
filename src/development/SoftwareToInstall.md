@@ -45,7 +45,7 @@
 
 - [clang](https://clang.llvm.org/)
 - gcc
-  - [Windows](http://www.msys2.org/)
+  - [Windows](https://www.msys2.org/wiki/MSYS2-installation/)
 
     [Useful Link](https://www.devdungeon.com/content/how-setup-gcc-msys2-eclipse-windows-c-development)
 
@@ -55,7 +55,8 @@
     - C:\msys64\usr\bin
 
     ```plaintext
-    pacman -Syu --disable-download-timeout --needed
+    pacman -Syuu
+    optional: pacman -Syu --disable-download-timeout --needed
     pacman -S --disable-download-timeout --needed base-devel
     pacman -S --disable-download-timeout --needed mingw-w64-x86_64-toolchain
     pacman -S --disable-download-timeout --needed mingw-w64-x86_64-cmake
