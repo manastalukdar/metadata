@@ -171,6 +171,10 @@
     sudo apt --fix-broken install
     ```
 
+    dark mode:
+
+    - <https://github.com/thatlittleboy/TeXstudio-Qt-Stylesheet>
+
 - DotNet Core
 - Visual Studio Code editor
 - gradle
@@ -269,6 +273,20 @@
   - <https://www.raymond.cc/blog/how-to-have-tabs-in-your-windows-explorer/>
 - ZoneAlarm Free Firewall
 - SumatraPdf
+
+  Advanced Options (for _dark_ mode):
+
+  ```plaintext
+  FixedPageUI [
+    TextColor = #000000
+    BackgroundColor = #eeeeee
+    SelectionColor = #f5fc0c
+    WindowMargin = 2 4 2 4
+    PageSpacing = 4 4
+    GradientColors = #000000
+  ]
+  ```
+
 - XnViewMP
 - NitroPdf
 - DisplayFusion
