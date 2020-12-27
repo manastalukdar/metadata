@@ -177,6 +177,10 @@
 
 - DotNet Core
 - Visual Studio Code editor
+- Powershell Core
+- [Oh My Posh](https://ohmyposh.dev/docs/installation)
+- [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
+  - <https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip>
 - gradle
   - Ubuntu
 
@@ -319,7 +323,6 @@
 - f.lux
 - DaVinci Resolve
 - RoslynPad
-- Powershell Core
 - Windows Terminal
 - [Screen to Gif](https://www.screentogif.com/)
 - Linux Subsystem for Windows
@@ -494,6 +497,7 @@
 - Qt SDK
 - [Onivim2](https://github.com/onivim/oni2)
 - Neovim
+- [starship](https://github.com/starship/starship)
 - Lua
 - [ZeroBrane Studio Lua IDE](https://studio.zerobrane.com/)
 - [SciTE](https://www.scintilla.org/SciTEDownload.html)
@@ -537,6 +541,7 @@
 - Brackets code editor
 - Bleachbit
 - [Insomnia](https://insomnia.rest/)
+- [Nightingle](https://nightingale.rest)
 - [Advanced REST client](https://github.com/advanced-rest-client/arc-electron)
 - RedNotebook
 - [glogg](https://glogg.bonnefon.org/index.html)
@@ -592,6 +597,7 @@
 - Spotify
   - [Ad blocking](https://github.com/x0uid/SpotifyAdBlock)
 - [ytmdesktop-plus](https://github.com/manastalukdar/ytmdesktop-plus)
+- [ueli](https://github.com/oliverschwendener/ueli)
 
 ### 2.2 Windows only
 
@@ -629,6 +635,7 @@
 - Samsung Data Migration
 - Brother printer driver (MFC-J835DW)
 - Autodesk Sketchbook
+- [Windows Power Toys](https://github.com/microsoft/PowerToys/releases/)
 - Pocketcasts
 - [GrepWin](https://github.com/stefankueng/grepWin)
 - Discord
