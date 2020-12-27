@@ -19,5 +19,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "powershell.codeFormatting.addWhitespaceAroundPipe": true
 }

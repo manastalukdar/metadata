@@ -179,8 +179,12 @@
 - Visual Studio Code editor
 - Powershell Core
 - [Oh My Posh](https://ohmyposh.dev/docs/installation)
-- [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
   - <https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip>
+- [starship](https://github.com/starship/starship)
+  - <https://starship.rs/guide/>
+  - <https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip>
+  - VSCode: `terminal.integrated.fontFamily`: `FiraCode NF`
+- [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 - gradle
   - Ubuntu
 
@@ -497,7 +501,6 @@
 - Qt SDK
 - [Onivim2](https://github.com/onivim/oni2)
 - Neovim
-- [starship](https://github.com/starship/starship)
 - Lua
 - [ZeroBrane Studio Lua IDE](https://studio.zerobrane.com/)
 - [SciTE](https://www.scintilla.org/SciTEDownload.html)
