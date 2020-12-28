@@ -20,5 +20,9 @@
     "source.fixAll.eslint": true
   },
   "editor.tabSize": 2,
-  "powershell.codeFormatting.addWhitespaceAroundPipe": true
+  "powershell.codeFormatting.addWhitespaceAroundPipe": true,
+  "files.watcherExclude": {
+    "**/target": true
+  },
+  "c3.rootPackage": ""
 }
