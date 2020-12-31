@@ -201,6 +201,12 @@
 - [RBQL](https://github.com/mechatroner/RBQL)
 - [q](https://github.com/harelba/q)
 - [nushell](https://github.com/nushell/nushell)
+- [yq](https://github.com/mikefarah/yq)
+- [jq](https://github.com/stedolan/jq)
+- Fonts
+  - Computer Modern: [here](https://www.fontsquirrel.com/fonts/computer-modern), [here](https://www.1001fonts.com/cmu-font.html)
+  - Latin Mdoern Sans Serif: [here](https://www.fontsquirrel.com/fonts/Latin-Modern-Sans), [here](https://www.1001fonts.com/latin-modern-sans-font.html)
+
 - pyenv
 
   - [MacOS / Linux](https://github.com/pyenv/pyenv)
