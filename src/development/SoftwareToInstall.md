@@ -205,7 +205,7 @@
 - [jq](https://github.com/stedolan/jq)
 - Fonts
   - Computer Modern: [here](https://www.fontsquirrel.com/fonts/computer-modern), [here](https://www.1001fonts.com/cmu-font.html)
-  - Latin Mdoern Sans Serif: [here](https://www.fontsquirrel.com/fonts/Latin-Modern-Sans), [here](https://www.1001fonts.com/latin-modern-sans-font.html)
+  - Latin Modern Sans Serif: [here](https://www.fontsquirrel.com/fonts/Latin-Modern-Sans), [here](https://www.1001fonts.com/latin-modern-sans-font.html)
 
 - pyenv
 
