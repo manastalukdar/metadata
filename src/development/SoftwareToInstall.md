@@ -537,6 +537,7 @@
 - GNU Plot
 - [ImageMagick](https://imagemagick.org/)
 - Blender
+- [TexMaker](https://www.xm1math.net/texmaker/)
 - Pencil animation
 - Synfig Studio
 - Krita
