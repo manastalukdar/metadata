@@ -419,6 +419,14 @@
 - Pine media player
 - [Lightshot](https://app.prntscr.com/en/index.html)
 - [nvm](https://github.com/nvm-sh/nvm)
+  
+  ```shell
+  nvm install node --reinstall-packages-from=node
+  echo "node" > .nvmrc
+  nvm use node
+  nvm ls
+  nvm versions
+  ```
 
   [Installing Multiple Versions of Node.js Using nvm](https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/)
 
