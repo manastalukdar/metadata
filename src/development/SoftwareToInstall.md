@@ -82,10 +82,11 @@
 
     [Reference](https://scipy.org/install.html)
 
-  pip packages to install:
+  pip packages to install: (`pip list`)
 
   - Cython
   - [Rummage](https://github.com/facelessuser/Rummage/)
+  - [git-filter-repo](https://github.com/newren/git-filter-repo)
 
 - nodejs
   - Ubuntu
@@ -121,6 +122,9 @@
     +-- @marp-team/marp-cli
     +-- markdownlint-cli
     +-- npm-check-updates
+    +-- vsce
+    +-- yo
+    +-- generator-code
     `-- windows-build-tools
     ```
 
