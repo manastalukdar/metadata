@@ -104,6 +104,7 @@
     +-- @vue/cli
     +-- david
     +-- npm-check-updates
+    +-- standard
     +-- gh-pages
     +-- http-server
     +-- @gridsome/cli
