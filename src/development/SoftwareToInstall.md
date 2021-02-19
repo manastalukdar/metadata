@@ -92,7 +92,7 @@
   - Scikit-learn (o)
   - Gradio (o)
   - TensorFlow
-  - Keras
+    - Keras
   - SciPy
   - Statsmodels (o)
   - Plotly (o)
