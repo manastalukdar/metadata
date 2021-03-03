@@ -97,6 +97,8 @@
   - Statsmodels (o)
   - Plotly (o)
   - Seaborn (o)
+  - Dask (o)
+  - vaex (o)
 
 - nodejs
   - Ubuntu
