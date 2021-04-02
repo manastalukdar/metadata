@@ -158,7 +158,7 @@ load-nvmrc
 
 # Antigen Section starts here
 
-source /usr/local/share/antigen/antigen.zsh
+source ~/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
