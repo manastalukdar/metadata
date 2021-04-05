@@ -106,7 +106,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 export C3_SERVER_ROOT=/Users/manastalukdar/data/c3dev/v8/c3server
 export C3_APPS_ROOT=/Users/manastalukdar/data/c3dev/c3apps
 
-export C3_ECLIPSE=/Users/manastalukdar/Eclipse/java-2019-12/Eclipse.app
+export C3_ECLIPSE=/Users/manastalukdar/eclipse/java-2021-03/Eclipse.app
 export PATH="$PATH:/Users/manastalukdar/.dotnet/tools"
 
 alias typ='find . -name *.c3typ | xargs grep'
@@ -210,3 +210,4 @@ eval "$(jenv enable-plugin export)"
 eval "$(direnv hook zsh)"
 
 export IDEA_HOME="/Users/manastalukdar/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/202.7660.26/IntelliJ IDEA.app/Contents/bin"
+if [ -x ~/.zshrc_bootstrap ]; then . ~/.zshrc_bootstrap; fi
