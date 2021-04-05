@@ -429,6 +429,7 @@
   ```
 
 - [Rectangle](https://github.com/rxhanson/Rectangle)
+- [Stay](https://cordlessdog.com/stay/)
 - [kap](https://getkap.co)
 - [iterm2](https://iterm2.com/)
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
