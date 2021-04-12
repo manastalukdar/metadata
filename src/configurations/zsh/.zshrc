@@ -100,11 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Below content copied from bash_profile
-
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home
-#`/usr/libexec/java_home -v 1.8`
+# "/usr/libexec/java_home -v 1.8.0_281"
+# /Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home
+export JAVA_HOME=`"/usr/libexec/java_home -v 1.8.0_281"`
 export PATH=$JAVA_HOME/bin:$PATH
-export C3_SERVER_ROOT=/Users/manastalukdar/data/c3dev/v8/c3server
+export C3_SERVER_ROOT=/Users/manastalukdar/data/c3dev/v7/c3server
 export C3_APPS_ROOT=/Users/manastalukdar/data/c3dev/c3apps
 
 export C3_ECLIPSE=/Users/manastalukdar/eclipse/java-2021-03/Eclipse.app
@@ -200,7 +200,7 @@ fi
 
 eval "$(pyenv init -)"
 
-export PYTHON_INSTALL_LOC=/Users/manastalukdar/.pyenv/versions/3.8.2/bin/python
+export PYTHON_INSTALL_LOC=/Users/manastalukdar/.pyenv/versions/3.9.2/bin/python
 
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"

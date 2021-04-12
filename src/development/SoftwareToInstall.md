@@ -456,6 +456,10 @@
 
 `brew list`, `brew cask list`, `brew leaves`, `port installed`
 
+- JDK, java home, etc.:
+  - <https://medium.com/notes-for-geeks/java-home-and-java-home-on-macos-f246cab643bd>
+  - <https://mattshomepage.com/articles/2016/May/22/java_home_mac_os_x/>
+
 ## 2. Optional
 
 ### 2.1 Any OS
