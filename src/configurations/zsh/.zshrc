@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # Below content copied from bash_profile
 # "/usr/libexec/java_home -v 1.8.0_281"
 # /Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home
-export JAVA_HOME=`"/usr/libexec/java_home -v 1.8.0_281"`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_281`
 export PATH=$JAVA_HOME/bin:$PATH
 export C3_SERVER_ROOT=/Users/manastalukdar/data/c3dev/v7/c3server
 export C3_APPS_ROOT=/Users/manastalukdar/data/c3dev/c3apps
