@@ -546,6 +546,7 @@
 - [CMake](https://cmake.org/)
 - Scala
 - Ruby
+- [Pyzo](https://pyzo.org/index.html)
 - Typora
 - DB Browser for SQLite
 - [Boostnote](https://boostnote.io/)
@@ -674,6 +675,7 @@
 - [Terminus](https://github.com/Eugeny/terminus)
 - Open Live Writer
 - Samsung Data Migration
+- [Strawberry Perl](https://strawberryperl.com)
 - Brother printer driver (MFC-J835DW)
 - Autodesk Sketchbook
 - [Windows Power Toys](https://github.com/microsoft/PowerToys/releases/)
