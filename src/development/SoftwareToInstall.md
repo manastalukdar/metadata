@@ -640,6 +640,7 @@
   - [Ad blocking](https://github.com/x0uid/SpotifyAdBlock)
 - [ytmdesktop-plus](https://github.com/manastalukdar/ytmdesktop-plus)
 - [ueli](https://github.com/oliverschwendener/ueli)
+- [PyPy](https://www.pypy.org/index.html)
 
 ### 2.2 Windows only
 
