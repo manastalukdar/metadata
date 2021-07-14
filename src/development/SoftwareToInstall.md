@@ -373,7 +373,10 @@
     ```
 
 - Meld
-- Spyder
+- [Spyder](https://www.spyder-ide.org)
+  - <https://github.com/spyder-ide/spyder-notebook>
+  - <https://github.com/spyder-ide/spyder-terminal>
+  - <https://github.com/spyder-ide/spyder-unittest>
 - sdkman 
 
     ```plaintext
