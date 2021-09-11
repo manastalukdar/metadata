@@ -687,6 +687,7 @@
 - [GrepWin](https://github.com/stefankueng/grepWin)
 - Discord
 - [Multi Commander](http://multicommander.com/)
+- [Open Video Downloader](https://github.com/jely2002/youtube-dl-gui/releases)
 - Eclipse Installer
 - Eclipse Java IDE (Latest Released and Latest)
   - PyDev
