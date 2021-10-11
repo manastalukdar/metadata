@@ -644,6 +644,7 @@
 - [ytmdesktop-plus](https://github.com/manastalukdar/ytmdesktop-plus)
 - [ueli](https://github.com/oliverschwendener/ueli)
 - [PyPy](https://www.pypy.org/index.html)
+- [digiKam](https://www.digikam.org)
 
 ### 2.2 Windows only
 
