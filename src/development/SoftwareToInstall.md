@@ -644,6 +644,7 @@
 - [ytmdesktop-plus](https://github.com/manastalukdar/ytmdesktop-plus)
 - [ueli](https://github.com/oliverschwendener/ueli)
 - [PyPy](https://www.pypy.org/index.html)
+- [digiKam](https://www.digikam.org)
 
 ### 2.2 Windows only
 
@@ -688,6 +689,8 @@
 - Discord
 - [Multi Commander](http://multicommander.com/)
 - [Open Video Downloader](https://github.com/jely2002/youtube-dl-gui/releases)
+- [Thorium Reader](https://github.com/edrlab/thorium-reader/releases)
+- [freda epub ebook reader](https://www.microsoft.com/en-us/p/freda-epub-ebook-reader/9wzdncrfj43b)
 - Eclipse Installer
 - Eclipse Java IDE (Latest Released and Latest)
   - PyDev
