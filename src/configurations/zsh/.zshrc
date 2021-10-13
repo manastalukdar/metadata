@@ -180,6 +180,7 @@ antigen bundle sudo
 antigen bundle themes
 antigen bundle vscode
 antigen bundle web-search
+antigen bundle lukechilds/zsh-nvm
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
