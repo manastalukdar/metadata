@@ -694,6 +694,10 @@
 - Eclipse Installer
 - Eclipse Java IDE (Latest Released and Latest)
   - PyDev
+- [Epicgames](https://www.epicgames.com/account/transactions?lang=en&productName=epicgames#)
+- [Amazon Games](https://www.amazongames.com/en-us/games)
+- [Steam](https://store.steampowered.com/about/)
+- [Ubisoft Connect](https://www.ubisoft.com/en-us/)
 
 ### 2.3 Linux only
 
