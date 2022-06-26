@@ -195,10 +195,12 @@ antigen apply
 
 # Antigen section ends here
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-
 eval "$(pyenv init -)"
 
 export PYTHON_INSTALL_LOC=/Users/manastalukdar/.pyenv/versions/3.9.2/bin/python
