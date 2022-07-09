@@ -8,3 +8,6 @@
     sudo dnf install audacious
     sudo dnf install audacious-plugins-freeworld
     ```
+
+- [NotepadNext](https://github.com/dail8859/NotepadNext)
+- [lite-xl](https://github.com/lite-xl/lite-xl)

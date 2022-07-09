@@ -103,6 +103,8 @@ sudo dnf group upgrade --with-optional Multimedia
   - Option2 (recommended): `sudo dnf install gnome-extensions-app`
   - Installing specific extensions: The best way to install any specific extension is to install the (chrome) browser extension and then toggle the on/off switch when you go to a specific gnome extension page.
 
+- [Extensions Manager](https://github.com/mjakeman/extension-manager)
+
 ## Install Fedy
 
 [Fedy](https://github.com/rpmfusion-infra/fedy) can be used to install various third party software.
