@@ -291,6 +291,7 @@ systemctl status --user onedrive_tray.service
     Reset zoom: Ctrl-0
     ```
 
+- openssh-askpass: `sudo dnf install openssh-askpass`
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh/wiki): `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 - [antigen](https://github.com/zsh-users/antigen): `curl -L git.io/antigen > antigen.zsh`
 - [peek](https://github.com/phw/peek): `sudo dnf install peek`. This is a gif screen recorder.
