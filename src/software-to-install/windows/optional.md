@@ -1,0 +1,52 @@
+# Optional
+
+- Microsoft Threat Modeling Tool
+- [winget](https://github.com/microsoft/winget-cli)
+- Atlassian SourceTree
+- Autodesk Pixlr
+- FotoSketcher
+- Itranslator 2003 Beta
+- [Mp3tag](https://www.mp3tag.de/en/)
+- PdfEscape
+- Freac Audio Converter
+- EaseUS Partition Master
+- EaseUS Data Recovery
+- Acronis Disk Director
+- Recuva
+- Lockhunter
+- Wox
+- [Search and Replace](http://searchandreplace.com/)
+- yWriter6
+- Manuskript
+- Notepad++
+    <http://setup-steps.blogspot.com/2013/05/notepad-nppexec-add-java-compiler.html>
+- ImageGlass
+- Adobe Photoshop
+- Irfanview
+- WinCatalog
+- Nodepad3
+- ffmpeg
+- Hyper.is
+- cmder
+- Twitch
+- [Terminus](https://github.com/Eugeny/terminus)
+- Open Live Writer
+- Samsung Data Migration
+- [Strawberry Perl](https://strawberryperl.com)
+- Brother printer driver (MFC-J835DW)
+- Autodesk Sketchbook
+- [Windows Power Toys](https://github.com/microsoft/PowerToys/releases/)
+- Pocketcasts
+- [GrepWin](https://github.com/stefankueng/grepWin)
+- Discord
+- [Multi Commander](http://multicommander.com/)
+- [Open Video Downloader](https://github.com/jely2002/youtube-dl-gui/releases)
+- [Thorium Reader](https://github.com/edrlab/thorium-reader/releases)
+- [freda epub ebook reader](https://www.microsoft.com/en-us/p/freda-epub-ebook-reader/9wzdncrfj43b)
+- Eclipse Installer
+- Eclipse Java IDE (Latest Released and Latest)
+  - PyDev
+- [Epicgames](https://www.epicgames.com/account/transactions?lang=en&productName=epicgames#)
+- [Amazon Games](https://www.amazongames.com/en-us/games)
+- [Steam](https://store.steampowered.com/about/)
+- [Ubisoft Connect](https://www.ubisoft.com/en-us/)
