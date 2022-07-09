@@ -180,3 +180,7 @@
 - [digiKam](https://www.digikam.org)
 - [massCode](https://github.com/massCodeIO/massCode)
 - [ClamAV](https://www.clamav.net)
+- [Gaphor](https://github.com/gaphor/gaphor)
+- [Enve](https://github.com/MaurycyLiebner/enve)
+- [Zotero](https://www.zotero.org/)
+- [LazPaint](https://lazpaint.github.io/)

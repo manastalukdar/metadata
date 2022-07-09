@@ -11,3 +11,8 @@
 
 - [NotepadNext](https://github.com/dail8859/NotepadNext)
 - [lite-xl](https://github.com/lite-xl/lite-xl)
+- [system-monitoring-center](https://github.com/hakandundar34coding/system-monitoring-center)
+- [Blanket](https://github.com/rafaelmardojai/blanket): Ambient sounds.
+- [SysMonTask](https://github.com/KrispyCamel4u/SysMonTask)
+- [Plots](https://github.com/alexhuntley/Plots/)
+- [drawing](https://github.com/maoschanz/drawing)
