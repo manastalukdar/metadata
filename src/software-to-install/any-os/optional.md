@@ -184,3 +184,4 @@
 - [Enve](https://github.com/MaurycyLiebner/enve)
 - [Zotero](https://www.zotero.org/)
 - [LazPaint](https://lazpaint.github.io/)
+- [lite-xl](https://github.com/lite-xl/lite-xl)
