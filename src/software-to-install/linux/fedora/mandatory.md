@@ -188,7 +188,6 @@ systemctl status --user onedrive_tray.service
     sudo dnf install sublime-text
     ```
 
-- Geany: `sudo dnf install geany`
 - [TexStudio](https://www.texstudio.org).
 - [MikTex](https://miktex.org/download)
 

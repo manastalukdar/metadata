@@ -15,3 +15,4 @@
 - [SysMonTask](https://github.com/KrispyCamel4u/SysMonTask)
 - [Plots](https://github.com/alexhuntley/Plots/)
 - [drawing](https://github.com/maoschanz/drawing)
+- [Geany](https://www.geany.org): `sudo dnf install geany`
