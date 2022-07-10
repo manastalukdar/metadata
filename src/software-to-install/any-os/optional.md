@@ -104,24 +104,25 @@
 - [Junolab for Julia](http://junolab.org)
 - GNU Plot
 - [ImageMagick](https://imagemagick.org/)
-- Blender
+- [Blender](https://www.blender.org)
 - [TexMaker](https://www.xm1math.net/texmaker/)
-- Pencil animation
-- Synfig Studio
-- Krita
-- Scribus
-- plume-creator
-- Ren'Py
-- Freemind
-- VirtualBox
+- [Pencil animation](https://www.pencil2d.org), [code](https://github.com/pencil2d/pencil).
+- [Synfig Studio](https://www.synfig.org)
+- [Krita](https://krita.org/en/)
+- [HandBrake](https://handbrake.fr): video transcoder. [code](https://github.com/HandBrake/HandBrake).
+- [Scribus](https://www.scribus.net)
+- [skribisto](https://github.com/jacquetc/skribisto). Software for writers. Continuation of plume-creator.
+- [Ren'Py](https://www.renpy.org)
+- [Freeplane](https://github.com/freeplane/freeplane). Newer fork of Freemind.
+- [VirtualBox](https://www.virtualbox.org)
 - [Google Play Music Desktop Player](https://www.googleplaymusicdesktopplayer.com/)
-- Atom code editor
-- Brackets code editor
-- Bleachbit
+- [Brackets code editor](https://github.com/brackets-cont/brackets)
+- [Bleachbit](https://www.bleachbit.org)
+- [kdnlive](https://kdenlive.org/en/)
 - [Insomnia](https://insomnia.rest/)
 - [Nightingle](https://nightingale.rest)
 - [Advanced REST client](https://github.com/advanced-rest-client/arc-electron)
-- RedNotebook
+- [RedNotebook](https://rednotebook.sourceforge.io): desktop journal.
 - [glogg](https://glogg.bonnefon.org/index.html)
 - [sift](https://github.com/svent/sift)
 - [Open Broadcaster Software](https://obsproject.com/)
