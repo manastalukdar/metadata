@@ -73,8 +73,8 @@
 
 - Qt SDK
 - [Onivim2](https://github.com/onivim/oni2)
-- Neovim
-- Lua
+- [Neovim](https://github.com/neovim/neovim)
+- [Lua](http://www.lua.org)
 - [ZeroBrane Studio Lua IDE](https://studio.zerobrane.com/)
 - [SciTE](https://www.scintilla.org/SciTEDownload.html)
 - [geany](https://www.geany.org/)
@@ -83,26 +83,27 @@
 - Scala
 - Ruby
 - [Pyzo](https://pyzo.org/index.html)
-- Typora
-- DB Browser for SQLite
+- [Typora](https://typora.io)
+- [DB Browser for SQLite](https://github.com/sqlitebrowser/sqlitebrowser)
+- [beekeeper studio](https://github.com/beekeeper-studio/beekeeper-studio/)
 - [Boostnote](https://boostnote.io/)
-- Joplin
+- [Joplin](https://github.com/laurent22/joplin/)
 - [MarkText](https://github.com/marktext/marktext)
 - Bitnami Wordpress stack installer
 - Aptana plugin for Eclipse Java IDE
 - MySQL Workbench
-- Evolus Pencil
+- [Evolus Pencil](https://github.com/evolus/pencil)
 - Go lang
   - Set GOROOT to where Go was installed (`C:\Go` on windows)
   - Be sure to set GOPATH env (user) variable (`G:\dev\go` as an example on Windows; default: `%USERPROFILE%\go`)
   - GO projects will need to be under `G:\dev\go`, using the above example. Possibly under a folder call \_my-projects. Alternately, a different folder can also be used for personal Go projects.
   - Add `G:\dev\go\bin` (using above example) to PATH.
 - Dart lang
-- Scilab
+- [Scilab](https://www.scilab.org)
 - [GNU Octave](https://www.gnu.org/software/octave/)
 - [SageMath](http://www.sagemath.org)
 - [Junolab for Julia](http://junolab.org)
-- GNU Plot
+- [GNU Plot](http://www.gnuplot.info)
 - [ImageMagick](https://imagemagick.org/)
 - [Blender](https://www.blender.org)
 - [TexMaker](https://www.xm1math.net/texmaker/)
@@ -146,7 +147,7 @@
     ```
 
 - [ReaPlugs VST](https://www.reaper.fm/reaplugs/)
-- Openshot video editor
+- [Openshot video editor](https://github.com/OpenShot/openshot-qt)
   - Ubuntu
 
     ```plaintext
