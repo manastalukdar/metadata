@@ -16,3 +16,6 @@
 - [Plots](https://github.com/alexhuntley/Plots/)
 - [drawing](https://github.com/maoschanz/drawing)
 - [Geany](https://www.geany.org): `sudo dnf install geany`
+- [Guake Terminal](https://github.com/Guake/guake)
+- [Black Box Terminal](https://gitlab.gnome.org/raggesilver/blackbox)
+- [amberol](https://gitlab.gnome.org/World/amberol): sound and music player that is well integrated with GNOME.
