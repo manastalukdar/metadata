@@ -200,6 +200,14 @@ systemctl status --user onedrive_tray.service
 
 ## Git Related
 
+- [GitHub CLI](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
+
+    ```shell
+    sudo dnf install 'dnf-command(config-manager)'
+    sudo dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+    sudo dnf install gh
+    ```
+
 - [SublimeMerge](https://www.sublimemerge.com/docs/linux_repositories#dnf)
 
     Strongly recommend going with the stable channel (unless you have a license).
