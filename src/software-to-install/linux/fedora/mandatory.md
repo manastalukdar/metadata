@@ -30,6 +30,15 @@ sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfre
 
 If you get the error, `While opening repository /var/lib/flatpak/repo: opendir(objects): No such file or directory`, run `sudo rm -r /var/lib/flatpak/repo`, and then re-run above `flatpak` command.
 
+## Add Copr Repository
+
+[ref](https://copr.fedorainfracloud.org)
+[ref](https://docs.pagure.org/copr.copr/how_to_enable_repo.html#how-to-enable-repo)
+
+```shell
+dnf copr enable user/project
+```
+
 ## Configure DNF for Faster Downloads of Packages
 
 `sudo nano /etc/dnf/dnf.conf`

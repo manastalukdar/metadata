@@ -187,3 +187,10 @@
 - [Zotero](https://www.zotero.org/)
 - [LazPaint](https://lazpaint.github.io/)
 - [lite-xl](https://github.com/lite-xl/lite-xl)
+  - Linux->Fedora
+
+    ```shell
+    # https://lite-xl.com/?/downloads
+    # Packages: https://copr.fedorainfracloud.org/coprs/sentry/lite/packages/
+    sudo dnf copr enable sentry/lite && sudo dnf install lite-xl-nightly
+    ```
