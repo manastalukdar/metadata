@@ -19,3 +19,4 @@
 - [Guake Terminal](https://github.com/Guake/guake)
 - [Black Box Terminal](https://gitlab.gnome.org/raggesilver/blackbox)
 - [amberol](https://gitlab.gnome.org/World/amberol): sound and music player that is well integrated with GNOME.
+- [pass](https://www.passwordstore.org): `sudo dnf install pass`.
