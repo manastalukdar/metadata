@@ -20,3 +20,16 @@
 - [Black Box Terminal](https://gitlab.gnome.org/raggesilver/blackbox)
 - [amberol](https://gitlab.gnome.org/World/amberol): sound and music player that is well integrated with GNOME.
 - [pass](https://www.passwordstore.org): `sudo dnf install pass`.
+- [Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager/blob/main/docs/credstores.md)
+
+  ```shell
+  Download the latest [tarball](https://github.com/GitCredentialManager/git-credential-manager/releases/latest), and run the following:
+
+  tar -xvf <path-to-tarball> -C /usr/local/bin
+  git-credential-manager-core configure
+  
+  To uninstall:
+
+  git-credential-manager-core unconfigure
+  rm $(command -v git-credential-manager-core)
+  ```
