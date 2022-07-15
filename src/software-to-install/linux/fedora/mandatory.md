@@ -396,7 +396,7 @@ $ gh ssh-key add $HOME/.ssh/github.pub --title "${description}"
   - Potential Solution: <https://askubuntu.com/a/874701/696087>. Have not been able to get it to work, _yet_.
 - When bringing the laptop back and plugging it in, external monitors do not work immediately and of course the laptop itself does not wake up immediately. Need to open-close lid as described above. Also as previously mentioned, this likely has some solution, and the behavior may vary depending on firmware of the USB-C hub.
 - On plugging back external monitors, windows go not revert back to previous positions. On Mac there are applications to enable this (stay, etc.).
-  - Potential solution: <https://askubuntu.com/questions/411503/is-there-a-dynamic-multiple-monitor-friendly-desktop-environment-available-for-u>.
+  - Potential solution: <https://askubuntu.com/questions/411503/is-there-a-dynamic-multiple-monitor-friendly-desktop-environment-available-for-u>. Note: This is for X based compositor. Fedora defaults to Wayland.
 - Multiple Github accounts: If you have a personal GitHub account and would like to push code to repositories, in say, work and personal accounts, there is no straightforward way to accomplish that yet. There is an open [issue](https://github.com/cli/cli/issues/326) on the GitHub CLI repo to make this happen. For now, here are some options:
   - Using SSH keys: [How to configure a local Git repository to use a specific SSH key](https://dev.to/web3coach/how-to-configure-a-local-git-repository-to-use-a-specific-ssh-key-4aml)
   - Using GitHub CLI aliases: <https://gist.github.com/manastalukdar/64eacff05d460524deea16b22cbc8660>
