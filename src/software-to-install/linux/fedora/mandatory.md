@@ -217,6 +217,27 @@ systemctl status --user onedrive_tray.service
     sudo dnf install gh
     ```
 
+### GitHub SSH Access
+
+```shell
+$ description="$(id -un) ($(hostname -f))"
+$ ssh-keygen -t ed25519 -C "${description}"
+$ Generating public/private ed25519 key pair.
+Enter file in which to save the key ($HOME/.ssh/github): $HOME/.ssh/github
+...
+$ eval "$(ssh-agent -s)"
+$ ssh-add $HOME/.ssh/github
+$ # enter passphrase
+$ gh auth refresh -h github.com -s admin:public_key
+! First copy your one-time code: XXXX-XXXX
+Press Enter to open github.com in your browser... 
+Opening in existing browser session.
+[69494:69494:0100/000000.661538:ERROR:sandbox_linux.cc(377)] InitializeSandbox() called with multiple threads in process gpu-process.
+
+✓ Authentication complete.
+$ gh ssh-key add $HOME/.ssh/github.pub --title "${description}"
+```
+
 - [SublimeMerge](https://www.sublimemerge.com/docs/linux_repositories#dnf)
 
     Strongly recommend going with the stable channel (unless you have a license).
