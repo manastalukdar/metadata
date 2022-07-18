@@ -78,7 +78,8 @@
   - Linux-Fedora
 
     ```shell
-    `sudo dnf install -y neovim python3-neovim`
+    sudo dnf install -y neovim python3-neovim
+    sudo dnf install neovim-qt # [neovim-qt](https://github.com/equalsraf/neovim-qt)
     ```
 
 - [Lua](http://www.lua.org)
