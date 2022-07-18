@@ -35,7 +35,7 @@
   ```
 
 - <https://xmonad.org/>
-- <https://github.com/swaywm/sway> [[ref](https://computingforgeeks.com/setup-sway-tiling-window-manager-on-fedora-with-waybar/)] [[ref](https://thomas-leister.de/sway-window-manager/)]
+- <https://github.com/swaywm/sway> [[ref](https://computingforgeeks.com/setup-sway-tiling-window-manager-on-fedora-with-waybar/)] [[ref](https://thomas-leister.de/sway-window-manager/)] [[ref](https://www.techjunkie.com/tiling-window-managers/)] [[ref](https://www.greghilston.com/post/tiling-window-managers/)]
 - <https://github.com/Alexays/Waybar>
 - <https://sr.ht/~emersion/grim/>
 - <https://github.com/natpen/awesome-wayland>

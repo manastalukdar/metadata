@@ -170,6 +170,7 @@ sudo make install
 systemctl enable --user onedrive_tray.service
 systemctl start --user onedrive_tray.service
 systemctl status --user onedrive_tray.service
+systemctl disable --user onedrive_tray.service
 ```
 
 ## File Explorers
