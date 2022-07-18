@@ -33,3 +33,9 @@
   git-credential-manager-core unconfigure
   rm $(command -v git-credential-manager-core)
   ```
+
+- <https://xmonad.org/>
+- <https://github.com/swaywm/sway> [[ref](https://computingforgeeks.com/setup-sway-tiling-window-manager-on-fedora-with-waybar/)] [[ref](https://thomas-leister.de/sway-window-manager/)]
+- <https://github.com/Alexays/Waybar>
+- <https://sr.ht/~emersion/grim/>
+- <https://github.com/natpen/awesome-wayland>
