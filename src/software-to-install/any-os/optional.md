@@ -74,6 +74,13 @@
 - Qt SDK
 - [Onivim2](https://github.com/onivim/oni2)
 - [Neovim](https://github.com/neovim/neovim)
+
+  - Linux-Fedora
+
+    ```shell
+    `sudo dnf install -y neovim python3-neovim`
+    ```
+
 - [Lua](http://www.lua.org)
 - [ZeroBrane Studio Lua IDE](https://studio.zerobrane.com/)
 - [SciTE](https://www.scintilla.org/SciTEDownload.html)
