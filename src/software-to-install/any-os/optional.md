@@ -194,6 +194,7 @@
 - [Enve](https://github.com/MaurycyLiebner/enve)
 - [Zotero](https://www.zotero.org/)
 - [LazPaint](https://lazpaint.github.io/)
+- [Alacritty terminal emulator](https://alacritty.org). [source](https://github.com/alacritty/alacritty).
 - [lite-xl](https://github.com/lite-xl/lite-xl)
   - Linux->Fedora
 
