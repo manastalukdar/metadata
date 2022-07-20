@@ -171,6 +171,7 @@
     - <https://github.com/thatlittleboy/TeXstudio-Qt-Stylesheet>
 
 - DotNet Core
+  - Linux->Fedora: `sudo dnf install dotnet-sdk-6.0`
 - Visual Studio Code editor
 - Powershell Core
 - [Oh My Posh](https://ohmyposh.dev/docs/installation)
