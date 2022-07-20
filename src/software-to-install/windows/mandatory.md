@@ -71,6 +71,7 @@
 - f.lux
 - DaVinci Resolve
 - RoslynPad
+- [Microsoft PowerToys](https://github.com/microsoft/PowerToys)
 - Windows Terminal
 - [Screen to Gif](https://www.screentogif.com/)
 - Linux Subsystem for Windows
