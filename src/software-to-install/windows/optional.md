@@ -50,3 +50,4 @@
 - [Amazon Games](https://www.amazongames.com/en-us/games)
 - [Steam](https://store.steampowered.com/about/)
 - [Ubisoft Connect](https://www.ubisoft.com/en-us/)
+- [NVIDIA RTX Voice](https://www.nvidia.com/en-us/geforce/guides/nvidia-rtx-voice-setup-guide/) [[ref](https://www.windowscentral.com/how-enable-rtx-voice-all-nvidia-gpus-including-older-geforce-gtx-cards)]
