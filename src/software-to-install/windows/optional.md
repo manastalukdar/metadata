@@ -51,3 +51,5 @@
 - [Steam](https://store.steampowered.com/about/)
 - [Ubisoft Connect](https://www.ubisoft.com/en-us/)
 - [NVIDIA RTX Voice](https://www.nvidia.com/en-us/geforce/guides/nvidia-rtx-voice-setup-guide/) [[ref](https://www.windowscentral.com/how-enable-rtx-voice-all-nvidia-gpus-including-older-geforce-gtx-cards)]
+- [wget](https://www.gnu.org/software/wget/)
+- [HTTrack](http://www.httrack.com/page/2/en/index.html)
