@@ -170,6 +170,7 @@ antigen bundle lein
 antigen bundle command-not-found
 
 antigen bundle git
+antigen bundle git-prompt
 antigen bundle iterm2
 antigen bundle jsontools
 antigen bundle macports
