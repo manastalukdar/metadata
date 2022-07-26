@@ -358,6 +358,7 @@ $ gh ssh-key add $HOME/.ssh/github.pub --title "${description}"
 - Gnome Screenshot: `sudo dnf install gnome-screenshot`.
 - [Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/) (gnome extensions based) [[source code](https://github.com/OttoAllmendinger/gnome-shell-screenshot/)]
 - [Azure Storage Explorer](https://snapcraft.io/install/storage-explorer/fedora#install): Install snap using instruction above, then run `sudo snap install storage-explorer`. To update, run: `sudo snap refresh storage-explorer`.
+- [Text Pieces](https://github.com/liferooter/textpieces): Quick text processing.
 - pandoc: `sudo dnf install pandoc`.
 - [conky](https://github.com/brndnmtthws/conky)
 
