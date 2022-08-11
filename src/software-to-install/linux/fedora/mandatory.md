@@ -184,6 +184,21 @@ Adding Sharepoint shared libraries [ref](https://github.com/abraunegg/onedrive/b
 
 ```shell
 onedrive --confdir="~/.config/onedrive-work" --get-O365-drive-id "<name of library>"
+mkdir ~/.config/SharePoint_My_Library_Name
+mkdir ~/SharePoint_My_Library_Name
+wget https://raw.githubusercontent.com/abraunegg/onedrive/master/config -O ~/.config/SharePoint_My_Library_Name/config
+# Update your 'onedrive' configuration file (~/.config/SharePoint_My_Library_Name/config) with the local folder where you will store your data: sync_dir = "~/SharePoint_My_Library_Name"
+# Update your 'onedrive' configuration file(~/.config/SharePoint_My_Library_Name/config) with the 'drive_id' value obtained in the steps above: drive_id = "insert the drive_id value from above here"
+onedrive --confdir="~/.config/SharePoint_My_Library_Name" --display-config
+onedrive --confdir="~/.config/SharePoint_My_Library_Name" --synchronize --verbose --dry-run
+onedrive --confdir="~/.config/SharePoint_My_Library_Name" --synchronize --verbose
+sudo cp /usr/lib/systemd/user/onedrive.service /usr/lib/systemd/user/onedrive-SharePoint_My_Library_Name.service
+# Edit the new systemd file, updating the line beginning with ExecStart so that the confdir mirrors the one you used above:
+# ExecStart=/usr/local/bin/onedrive --monitor --confdir="/home/myusername/.config/SharePoint_My_Library_Name"
+systemctl --user enable onedrive-SharePoint_My_Library_Name
+systemctl --user start onedrive-SharePoint_My_Library_Name
+systemctl status --user onedrive-SharePoint_My_Library_Name
+systemctl --user restart onedrive-SharePoint_My_Library_Name # to restart onedrive service
 ```
 
 Tray icon:
