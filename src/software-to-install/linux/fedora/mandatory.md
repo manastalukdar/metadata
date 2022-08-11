@@ -146,7 +146,7 @@ Microsoft does not have an official Linux client for OneDrive. There is a pretty
 
 Note that OneDrive latest has not been updated in the dnf pkg repo. The one version older still works. If you want the latest and greatest, you can always build from source. The GUI for config management and tray icon add-ons do not work with the older version.
 
-OneDrive:
+OneDrive [ref](https://github.com/abraunegg/onedrive/blob/master/docs/USAGE.md#running-onedrive-as-a-system-service):
 
 ```shell
 onedrive --help
@@ -158,6 +158,32 @@ systemctl status --user onedrive
 journalctl --user-unit onedrive -f
 sudo systemctl restart SERVICE_NAME # to restart service
 systemctl --user restart onedrive # to restart onedrive service
+```
+
+Adding additional OneDrive accounts [ref](https://github.com/abraunegg/onedrive/blob/master/docs/advanced-usage.md#configuring-the-client-to-use-multiple-onedrive-accounts--configurations):
+
+```shell
+mkdir ~/.config/onedrive-work
+wget https://raw.githubusercontent.com/abraunegg/onedrive/master/config -O ~/.config/onedrive-work/config
+# set sync_dir in config file to ~/OneDrive-work
+onedrive --confdir="~/.config/onedrive-work"
+onedrive --confdir="~/.config/onedrive-work" --display-config
+onedrive --confdir="~/.config/onedrive-work" --synchronize --verbose --dry-run
+onedrive --confdir="~/.config/onedrive-work" --synchronize
+sudo cp /usr/lib/systemd/user/onedrive.service /usr/lib/systemd/user/onedrive-work.service
+# Edit the new systemd file, updating the line beginning with ExecStart so that the confdir mirrors the one you used above:
+# ExecStart=/usr/local/bin/onedrive --monitor --confdir="/full/path/to/config/dir"
+#Example: ExecStart=/usr/local/bin/onedrive --monitor --confdir="/home/myusername/.config/onedrive-work"
+systemctl --user enable onedrive-work
+systemctl --user start onedrive-work
+systemctl status --user onedrive-work
+systemctl --user restart onedrive-work # to restart onedrive service
+```
+
+Adding Sharepoint shared libraries [ref](https://github.com/abraunegg/onedrive/blob/master/docs/SharePoint-Shared-Libraries.md):
+
+```shell
+onedrive --confdir="~/.config/onedrive-work" --get-O365-drive-id "<name of library>"
 ```
 
 Tray icon:
