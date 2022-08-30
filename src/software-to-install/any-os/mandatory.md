@@ -72,7 +72,9 @@
   - TensorFlow
     - Keras
   - SciPy
+  - scikit-image
   - jupyterlab
+  - cv2
   - opencv-python
   - opencv-contrib-python
   - Statsmodels (o)
