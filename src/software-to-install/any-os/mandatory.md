@@ -65,13 +65,16 @@
   - Cython
   - [Rummage](https://github.com/facelessuser/Rummage/)
   - [git-filter-repo](https://github.com/newren/git-filter-repo)
-  - Pandas
+  - pandas
   - NumPy
   - Scikit-learn (o)
   - Gradio (o)
   - TensorFlow
     - Keras
   - SciPy
+  - jupyterlab
+  - opencv-python
+  - opencv-contrib-python
   - Statsmodels (o)
   - Plotly (o)
   - Seaborn (o)
