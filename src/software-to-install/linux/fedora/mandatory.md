@@ -201,6 +201,8 @@ systemctl status --user onedrive-SharePoint_My_Library_Name
 systemctl --user restart onedrive-SharePoint_My_Library_Name # to restart onedrive service
 ```
 
+Note: You may have to do a synchronize with --reauth if your token has expired.
+
 Tray icon:
 
 ```shell
