@@ -195,6 +195,8 @@
 - [Zotero](https://www.zotero.org/)
 - [LazPaint](https://lazpaint.github.io/)
 - [Alacritty terminal emulator](https://alacritty.org). [source](https://github.com/alacritty/alacritty).
+- [Obsidian](https://obsidian.md)
+- [novelWriter](https://novelwriter.io). [source](https://github.com/vkbo/novelWriter)
 - [lite-xl](https://github.com/lite-xl/lite-xl)
   - Linux->Fedora
 
