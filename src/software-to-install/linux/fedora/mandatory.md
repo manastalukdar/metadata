@@ -131,9 +131,18 @@ sudo dnf install fedy -y
 
 ## Reduce Battery Usage
 
+TLP is an alternative power management solution to the default GNOME power-profiles-daemon. It’s supposed to work better for laptops, and choosing to install TLP will require turning off power-profiles-daemon since they are conflicting.
+
 ```shell
 sudo dnf install tlp tlp-rdw
 sudo systemctl enable tlp
+```
+
+```shell
+sudo dnf install tlp tlp-rdw
+sudo dnf remove power-profiles-daemon
+sudo systemctl enable tlp
+sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 ```
 
 ## OneDrive
