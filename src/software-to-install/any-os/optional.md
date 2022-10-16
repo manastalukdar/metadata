@@ -197,7 +197,7 @@
 - [Alacritty terminal emulator](https://alacritty.org). [source](https://github.com/alacritty/alacritty).
 - [Obsidian](https://obsidian.md)
 - [novelWriter](https://novelwriter.io). [source](https://github.com/vkbo/novelWriter)
-- [glanced](https://github.com/nicolargo/glances)
+- [glances](https://github.com/nicolargo/glances)
 - [lite-xl](https://github.com/lite-xl/lite-xl)
   - Linux->Fedora
 
