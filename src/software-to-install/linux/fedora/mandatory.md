@@ -447,7 +447,8 @@ $ gh ssh-key add $HOME/.ssh/github.pub --title "${description}"
 
 - Dual external monitors through a single USB-C hub does not work out of box. There seems to be some sort of issue with Wayland (X configuration is simpler, but you will have to first switch the default compositor to X. I am not planning to do that.). I am still investigating a solution with Wayland. As a workaround, please connect one of the external monitors directly to one of the USB-C ports on the laptop.
 - MS Teams:
-  - MS Teams screen sharing does not work when using the desktop app. Open Teams using your browser of choice to share screen. Note that sharing the entire desktop/screen does not work even when using the web app. Only sharing windows seems to work as of now.
+  - MS Teams screen sharing does not work when using the desktop app. Open Teams using your browser of choice to share screen.
+  - Note that by default sharing the entire desktop/screen does not work even when using the web app. To get around this, enable WebRTC with pipewire on Chrome based browsers: `chrome://flags/#enable-webrtc-pipewire-capturer` in browser and change "WebRTC PipeWire support" to Enabled. [[ref](https://askubuntu.com/questions/1293394/screen-sharing-under-wayland#:~:text=Enabling%20WebRTC%20with%20pipewire%20works,WebRTC%20PipeWire%20support%22%20to%20Enabled)]
   - Background images and blurring not available on Linux.
   - Status does not automatically change from away to available.
 - Keyboard and Mouse: Getting the Apple keyboard and mouse to work is not straight-forward. Recommend using a Windows keyboard and mouse as workaround.
