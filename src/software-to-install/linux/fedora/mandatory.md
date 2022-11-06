@@ -437,6 +437,7 @@ $ gh ssh-key add $HOME/.ssh/github.pub --title "${description}"
   - Own for Exchange.
   - Thunderbird Conversations (disabled).
 - Fractional scaling: `gsettings set org.gnome.desktop.interface text-scaling-factor 1.5`
+- Shortwave (Radio)
 - `sudo dnf upgrade && sudo dnf update`
 
 ## Other
