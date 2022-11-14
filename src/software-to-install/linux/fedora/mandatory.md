@@ -438,7 +438,10 @@ $ gh ssh-key add $HOME/.ssh/github.pub --title "${description}"
   - Thunderbird Conversations (disabled).
 - Fractional scaling: `gsettings set org.gnome.desktop.interface text-scaling-factor 1.5`
 - Shortwave (Radio)
+- Ensure all packages up-to-date: `sudo dnf upgrade --refresh`
+- Remove old packages: `sudo dnf autoremove`
 - `sudo dnf upgrade && sudo dnf update`
+- Note: [Upgrading Fedora](https://www.linuxcapable.com/how-to-upgrade-fedora-release/)
 
 ## Other
 
