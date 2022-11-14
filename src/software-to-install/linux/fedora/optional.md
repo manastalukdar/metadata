@@ -40,6 +40,7 @@
 - <https://github.com/Alexays/Waybar>
 - <https://sr.ht/~emersion/grim/>
 - <https://github.com/natpen/awesome-wayland>
+- [Blanket](https://github.com/rafaelmardojai/blanket)
 - [qtile](http://www.qtile.org/). [Source](https://github.com/qtile/qtile).
 
   [Installing from source](http://docs.qtile.org/en/stable/manual/install/index.html#installing-from-source).
