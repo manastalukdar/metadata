@@ -356,9 +356,13 @@ $ gh ssh-key add $HOME/.ssh/github.pub --title "${description}"
 
 - [polybar](https://github.com/polybar/polybar): `sudo dnf install polybar`
 - [gTile](https://extensions.gnome.org/extension/28/gtile/) [[source code](https://github.com/gTile/gTile)]
+    - Gnome extension 
+- [Search Light](https://github.com/icedman/search-light)
+    - Gnome extension 
 - Blueman-manager: `sudo dnf install blueman`
 - [Ulauncher](https://github.com/Ulauncher/Ulauncher/): `sudo dnf install ulauncher`
 - Gnome Dock
+    - Gnome extension
 
     [How to Bring out Bottom Dock Launcher from Activities View in Fedora Gnome 40](https://fostips.com/bring-out-bottom-dock-fedora-gnome/)
 
@@ -409,6 +413,7 @@ $ gh ssh-key add $HOME/.ssh/github.pub --title "${description}"
 
 - Gnome Screenshot: `sudo dnf install gnome-screenshot`.
 - [Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/) (gnome extensions based) [[source code](https://github.com/OttoAllmendinger/gnome-shell-screenshot/)]
+    - Gnome extension
 - [Azure Storage Explorer](https://snapcraft.io/install/storage-explorer/fedora#install): Install snap using instruction above, then run `sudo snap install storage-explorer`. To update, run: `sudo snap refresh storage-explorer`.
 - [Text Pieces](https://github.com/liferooter/textpieces): Quick text processing.
 - pandoc: `sudo dnf install pandoc`.
