@@ -54,3 +54,4 @@
 - [wget](https://www.gnu.org/software/wget/)
 - [HTTrack](http://www.httrack.com/page/2/en/index.html)
 - [simplewall](https://www.henrypp.org/product/simplewall)
+- ZoneAlarm Free Firewall
