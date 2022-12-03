@@ -23,7 +23,7 @@
 - qBittorrent
 - [QTTabBar](http://qttabbar.wikidot.com/)
   - <https://www.raymond.cc/blog/how-to-have-tabs-in-your-windows-explorer/>
-- ZoneAlarm Free Firewall
+- [Tinywall free firewall](https://tinywall.pados.hu)
 - SumatraPdf
 
   Advanced Options (for _dark_ mode):
