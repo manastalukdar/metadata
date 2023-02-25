@@ -32,6 +32,8 @@
 - [Terminus](https://github.com/Eugeny/terminus)
 - Open Live Writer
 - Samsung Data Migration
+- <https://www.strawberrymusicplayer.org>
+- [foobar audio player](https://www.foobar2000.org)
 - [Strawberry Perl](https://strawberryperl.com)
 - Brother printer driver (MFC-J835DW)
 - Autodesk Sketchbook
