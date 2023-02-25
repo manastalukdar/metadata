@@ -119,6 +119,12 @@ sudo dnf group upgrade --with-optional Multimedia
   - Installing specific extensions: The best way to install any specific extension is to install the (chrome) browser extension and then toggle the on/off switch when you go to a specific gnome extension page.
 
 - [Extensions Manager](https://github.com/mjakeman/extension-manager)
+- Extensions:
+  - gTile
+  - Screenshot Tool
+  - Search Light
+  - Background Logo
+  - Dash to Dock
 
 ## Install Fedy
 
