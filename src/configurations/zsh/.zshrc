@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/manastalukdar/.oh-my-zsh"
+export ZSH="$HOME/manastalukdar/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -71,7 +71,7 @@ export ZSH="/Users/manastalukdar/.oh-my-zsh"
 plugins=(
 )
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -102,13 +102,15 @@ source $ZSH/oh-my-zsh.sh
 # Below content copied from bash_profile
 # "/usr/libexec/java_home -v 1.8.0_281"
 # /Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_281`
-export PATH=$JAVA_HOME/bin:$PATH
-export C3_SERVER_ROOT=/Users/manastalukdar/data/c3dev/v7/c3server
-export C3_APPS_ROOT=/Users/manastalukdar/data/c3dev/c3apps
+export JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto
+# export PATH=$JAVA_HOME/bin:$PATH
+export C3_SERVER_ROOT=$HOME/manastalukdar/data/c3dev/v8/c3server
+export C3_APPS_ROOT=$HOME/manastalukdar/data/c3dev/c3apps
 
-export C3_ECLIPSE=/Users/manastalukdar/eclipse/java-2021-03/Eclipse.app
-export PATH="$PATH:/Users/manastalukdar/.dotnet/tools"
+export PATH="$PATH:$HOME/bin"
+
+export C3_ECLIPSE=$HOME/manastalukdar/eclipse/java-2021-12/eclipse
+export PATH="$PATH:$HOME/manastalukdar/.dotnet/tools"
 
 alias typ='find . -name *.c3typ | xargs grep'
 alias json='find . -name *.json | xargs grep'
@@ -198,21 +200,29 @@ antigen apply
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PIPENV_PYTHON="$PYENV_ROOT/shims/python"
+# if command -v pyenv 1>/dev/null 2>&1; then
+#   eval "$(pyenv init -)"
+# fi
 eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
 
-export PYTHON_INSTALL_LOC=/Users/manastalukdar/.pyenv/versions/3.9.2/bin/python
+export PYTHON_INSTALL_LOC=/home/manastalukdar/.pyenv/versions/3.9.2/bin/python
 
 # jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-eval "$(jenv enable-plugin export)"
+#export PATH="$HOME/.jenv/bin:$PATH"
+#eval "$(jenv init -)"
+#eval "$(jenv enable-plugin export)"
 
 # direnv
 eval "$(direnv hook zsh)"
 
-export IDEA_HOME="/Users/manastalukdar/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/202.7660.26/IntelliJ IDEA.app/Contents/bin"
+export IDEA_HOME="$HOME/manastalukdar/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/202.7660.26/IntelliJ IDEA.app/Contents/bin"
 if [ -x ~/.zshrc_bootstrap ]; then . ~/.zshrc_bootstrap; fi
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+#export PATH="$HOME/.nvm/versions/node/v16.15.1/bin/node:$PATH"
+nvm use 16.15.1
