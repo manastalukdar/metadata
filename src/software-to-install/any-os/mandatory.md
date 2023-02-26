@@ -82,6 +82,7 @@
   - Seaborn (o)
   - Dask (o)
   - vaex (o)
+  - ruff
 
 - nodejs
   - Ubuntu
@@ -121,6 +122,10 @@
     +-- vsce
     +-- yo
     +-- generator-code
+    +-- ts-node@latest
+    +-- typescript@latest
+    +-- @types/node
+    +-- less
     `-- windows-build-tools
     ```
 
