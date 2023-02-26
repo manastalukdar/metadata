@@ -83,6 +83,7 @@
   - Dask (o)
   - vaex (o)
   - ruff
+  - black
 
 - nodejs
   - Ubuntu
