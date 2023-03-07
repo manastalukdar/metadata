@@ -198,6 +198,7 @@
 - [Obsidian](https://obsidian.md)
 - [novelWriter](https://novelwriter.io). [source](https://github.com/vkbo/novelWriter)
 - [glances](https://github.com/nicolargo/glances)
+- [Zettlr](https://www.zettlr.com/)
 - [lite-xl](https://github.com/lite-xl/lite-xl)
   - Linux->Fedora
 
