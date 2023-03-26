@@ -15,8 +15,11 @@
 - Recuva
 - Lockhunter
 - Wox
+- Greenshot
+- [Screen to Gif](https://www.screentogif.com/)
 - [Search and Replace](http://searchandreplace.com/)
 - yWriter6
+- [Flameshot](https://flameshot.org)
 - Manuskript
 - Notepad++
     <http://setup-steps.blogspot.com/2013/05/notepad-nppexec-add-java-compiler.html>

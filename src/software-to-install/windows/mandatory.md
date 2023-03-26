@@ -65,7 +65,7 @@
 - Google\Nik Collection
 - Speccy
 - ProcessHacker
-- Greenshot
+- [ShareX](https://getsharex.com)
 - Winscp
 - CDisplayEx
 - f.lux
@@ -73,7 +73,6 @@
 - RoslynPad
 - [Microsoft PowerToys](https://github.com/microsoft/PowerToys)
 - Windows Terminal
-- [Screen to Gif](https://www.screentogif.com/)
 - Linux Subsystem for Windows
   - [How to Install zsh and Oh My Zsh in Windows 10](https://www.maketecheasier.com/install-zsh-and-oh-my-zsh-windows10/)
   - [How to change the dark blue in wsl to something brighter](https://superuser.com/a/1409856/783826)
