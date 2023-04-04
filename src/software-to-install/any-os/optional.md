@@ -196,6 +196,7 @@
 - [LazPaint](https://lazpaint.github.io/)
 - [Alacritty terminal emulator](https://alacritty.org). [source](https://github.com/alacritty/alacritty).
 - [Obsidian](https://obsidian.md)
+- [Logseq](https://logseq.com) 
 - [novelWriter](https://novelwriter.io). [source](https://github.com/vkbo/novelWriter)
 - [glances](https://github.com/nicolargo/glances)
 - [Zettlr](https://www.zettlr.com/)
