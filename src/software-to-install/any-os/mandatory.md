@@ -38,7 +38,7 @@
     pacman -S --disable-download-timeout --needed base-devel
     pacman -S --disable-download-timeout --needed mingw-w64-x86_64-toolchain
     pacman -S --disable-download-timeout --needed mingw-w64-x86_64-cmake
-    optional: pacman -S --disable-download-timeout --needed mingw-w64-x86_64-qt5
+    optional: pacman -S --disable-download-timeout --needed mingw-w64-x86_64-qt6
     ```
 
 - Python
