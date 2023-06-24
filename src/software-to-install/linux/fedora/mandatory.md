@@ -451,6 +451,8 @@ $ gh ssh-key add $HOME/.ssh/github.pub --title "${description}"
 - Shortwave (Radio)
 - Ensure all packages up-to-date: `sudo dnf upgrade --refresh`
 - Remove old packages: `sudo dnf autoremove`
+- `sudo dnf --refresh`
+- `sudo flatpak update`
 - `sudo dnf upgrade && sudo dnf update`
 - Note: [Upgrading Fedora](https://www.linuxcapable.com/how-to-upgrade-fedora-release/)
 

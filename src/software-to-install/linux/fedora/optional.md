@@ -50,3 +50,6 @@
   dnf install qtile
   dnf install qtile-extras
   ```
+
+
+- [pop shell](https://github.com/pop-os/shell): `sudo dnf install gnome-shell-extension-pop-shell xprop`
