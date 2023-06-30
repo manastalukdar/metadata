@@ -53,3 +53,4 @@
 
 
 - [pop shell](https://github.com/pop-os/shell): `sudo dnf install gnome-shell-extension-pop-shell xprop`
+- [lnav](https://lnav.org/): `sudo snap install lnav`. [Source](https://github.com/tstack/lnav).
