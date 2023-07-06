@@ -478,6 +478,18 @@ $ gh ssh-key add $HOME/.ssh/github.pub --title "${description}"
 - Multiple Github accounts: If you have a personal GitHub account and would like to push code to repositories, in say, work and personal accounts, there is no straightforward way to accomplish that yet. There is an open [issue](https://github.com/cli/cli/issues/326) on the GitHub CLI repo to make this happen. For now, here are some options:
   - Using SSH keys: [How to configure a local Git repository to use a specific SSH key](https://dev.to/web3coach/how-to-configure-a-local-git-repository-to-use-a-specific-ssh-key-4aml)
   - Using GitHub CLI aliases: <https://gist.github.com/manastalukdar/64eacff05d460524deea16b22cbc8660>
+- Enabling "Right Click -> Create new document": [ref](https://askubuntu.com/questions/777711/create-new-document-right-click-option-missing-in-ubuntu-gnome)
+
+    ```plaintext
+    See if you have ~/Templates folder2. Create one if it is missing using command:
+
+    mkdir ~/Templates
+    
+    Now create an empty file from command prompt:1
+
+    touch ~/Templates/Text\ File.txt
+    ```
+
 - How to remove applications in the app grid that are already uninstalled? [ref](https://www.reddit.com/r/gnome/comments/ko53pd/how_to_remove_applications_in_the_app_grid_that/)
 
     ```plaintext
