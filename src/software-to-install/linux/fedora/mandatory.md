@@ -497,3 +497,10 @@ $ gh ssh-key add $HOME/.ssh/github.pub --title "${description}"
     $HOME/.local/share/applications/
     $HOME/Desktop
     ```
+
+- Going back to Nvidia display drivers
+
+    ```
+    sudo dnf remove \*nvidia\* --exclude=nvidia-gpu-firmware
+    sudo dnf install akmod-nvidia
+    ```
