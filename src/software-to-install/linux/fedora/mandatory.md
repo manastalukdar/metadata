@@ -417,6 +417,13 @@ $ gh ssh-key add $HOME/.ssh/github.pub --title "${description}"
 
     Download desired font from [here](https://www.nerdfonts.com/font-downloads), then create `.fonts` directory under `/home/<username>` if it does not exist, and copy fonts to there, and run `fc-cache` from the terminal. [[ref](https://fedoramagazine.org/add-fonts-fedora/)]
 
+- More fonts
+
+  ```shell
+  sudo dnf install powerline-fonts fontawesome-fonts
+  sudo dnf install fira-code-fonts
+  ```
+
 - Gnome Screenshot: `sudo dnf install gnome-screenshot`.
 - [Screenshot Tool](https://extensions.gnome.org/extension/1112/screenshot-tool/) (gnome extensions based) [[source code](https://github.com/OttoAllmendinger/gnome-shell-screenshot/)]
     - Gnome extension
