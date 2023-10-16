@@ -456,6 +456,7 @@ $ gh ssh-key add $HOME/.ssh/github.pub --title "${description}"
   - Thunderbird Conversations (disabled).
 - Fractional scaling: `gsettings set org.gnome.desktop.interface text-scaling-factor 1.5`
 - Shortwave (Radio)
+- Resources. [repo](https://github.com/nokyan/resources)
 - Ensure all packages up-to-date: `sudo dnf upgrade --refresh`
 - Remove old packages: `sudo dnf autoremove`
 - `sudo dnf --refresh`
