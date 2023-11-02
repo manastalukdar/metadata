@@ -79,6 +79,13 @@ sudo snap refresh # to update all snap packages
     ```
 
 - [Strawberry music player](https://www.strawberrymusicplayer.org/#repositories): `sudo dnf install strawberry`
+- [Moosync](https://github.com/Moosync/Moosync)
+
+    ```
+    dnf copr enable ovenoboyo/Moosync
+    dnf install moosync
+    ```
+    
 - [pinta](https://www.pinta-project.com): Install snap using instruction above, then run `sudo snap install pinta`. To update, run: `sudo snap refresh pinta`.
 - [ffmpeg](https://ffmpeg.org/) [[ref](https://computingforgeeks.com/how-to-install-ffmpeg-on-fedora/)]
 
