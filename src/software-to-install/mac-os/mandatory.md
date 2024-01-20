@@ -8,6 +8,7 @@
   Reference: https://superuser.com/questions/174297/how-can-i-get-an-address-bar-in-finder
   ```
 
+- [Double Commander](https://doublecommander.com)
 - [Rectangle](https://github.com/rxhanson/Rectangle)
 - [Stay](https://cordlessdog.com/stay/)
 - [kap](https://getkap.co)

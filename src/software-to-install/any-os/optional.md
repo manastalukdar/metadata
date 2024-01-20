@@ -1,5 +1,6 @@
 # Optional
 
+- MarkText
 - Docker
   - Ubuntu
 

@@ -17,7 +17,7 @@
   "markdown.extension.toc.levels": "2..6",
   "markdown.extension.toc.githubCompatibility": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "editor.tabSize": 2,
   "powershell.codeFormatting.addWhitespaceAroundPipe": true,

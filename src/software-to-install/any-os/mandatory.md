@@ -130,7 +130,6 @@
     `-- windows-build-tools
     ```
 
-- MarkText
 - Sublime Text
   To open command prompt at file root: ctrl + alt + t
   MarkdownEditing Settings
@@ -226,6 +225,7 @@
 
 - FileZilla
 - Vivaldi Browser
+- Microsoft Edge Dev
 - Pandoc
 - Audacity
 - GitHub CLI
