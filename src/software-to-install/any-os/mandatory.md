@@ -215,13 +215,16 @@
 
 - pyenv
 
-  - [MacOS / Linux](https://github.com/pyenv/pyenv)
+  - [MacOS / Linux](https://github.com/pyenv/pyenv): `brew install pyenv`
 
   - [Windows](https://github.com/pyenv-win/pyenv-win/issues/153)
 
      ```plaintext
      After installing run `pyenv update` (https://github.com/pyenv-win/pyenv-win/issues/153)
      ```
+- virtualenv
+
+  - MacOS: `brew install pyenv-virtualenv`
 
 - FileZilla
 - Vivaldi Browser
