@@ -1,0 +1,32 @@
+# .zsh_plugins.txt
+
+# popular fish-like plugins
+zsh-users/zsh-autosuggestions
+zdharma-continuum/fast-syntax-highlighting kind:defer
+zsh-users/zsh-history-substring-search
+# zsh-users/zsh-syntax-highlighting
+
+# add even more completions
+zsh-users/zsh-completions
+
+# now, configure and run compinit to initialize completions
+belak/zsh-utils path:completion
+
+# frameworks like oh-my-zsh are supported
+ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/pip
+ohmyzsh/ohmyzsh path:plugins/command-not-found
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/iterm2
+ohmyzsh/ohmyzsh path:plugins/jsontools
+ohmyzsh/ohmyzsh path:plugins/macports
+ohmyzsh/ohmyzsh path:plugins/node
+ohmyzsh/ohmyzsh path:plugins/sublime
+ohmyzsh/ohmyzsh path:plugins/sudo
+ohmyzsh/ohmyzsh path:plugins/themes
+ohmyzsh/ohmyzsh path:plugins/vscode
+ohmyzsh/ohmyzsh path:plugins/web-search
+
+lukechilds/zsh-nvm
+
+ohmyzsh/ohmyzsh path:themes/robbyrussell.zsh-theme
