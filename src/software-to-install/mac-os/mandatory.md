@@ -40,3 +40,4 @@
 - JDK, java home, etc.:
   - <https://medium.com/notes-for-geeks/java-home-and-java-home-on-macos-f246cab643bd>
   - <https://mattshomepage.com/articles/2016/May/22/java_home_mac_os_x/>
+- [stats](https://github.com/exelban/stats)
