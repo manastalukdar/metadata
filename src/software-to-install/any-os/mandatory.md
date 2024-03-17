@@ -156,6 +156,7 @@
     ```
 
 - Postman
+- [Bruno](https://www.usebruno.com)
 - Latex (MikTex on Windows)
   - Ubuntu
 
