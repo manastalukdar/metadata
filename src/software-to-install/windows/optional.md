@@ -15,8 +15,7 @@
 - Recuva
 - Lockhunter
 - Wox
-- Greenshot
-- [Screen to Gif](https://www.screentogif.com/)
+- [ShareX](https://getsharex.com)
 - [Search and Replace](http://searchandreplace.com/)
 - yWriter6
 - [Flameshot](https://flameshot.org)

@@ -65,7 +65,8 @@
 - Google\Nik Collection
 - Speccy
 - ProcessHacker
-- [ShareX](https://getsharex.com)
+- [Screen to Gif](https://www.screentogif.com/)
+- [Greenshot](https://getgreenshot.org)
 - Winscp
 - CDisplayEx
 - f.lux

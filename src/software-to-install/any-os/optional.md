@@ -134,6 +134,8 @@
 - [Advanced REST client](https://github.com/advanced-rest-client/arc-electron)
 - [RedNotebook](https://rednotebook.sourceforge.io): desktop journal.
 - [glogg](https://glogg.bonnefon.org/index.html)
+- [yawcam](https://yawcam.com)
+- [ScreenRec](https://screenrec.com) 
 - [sift](https://github.com/svent/sift)
 - [Open Broadcaster Software](https://obsproject.com/)
   - [Dark screen on windows issue](https://obsproject.com/forum/threads/laptop-black-screen-when-capturing-read-here-first.5965/)
