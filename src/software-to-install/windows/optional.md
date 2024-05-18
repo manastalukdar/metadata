@@ -25,6 +25,7 @@
 - ImageGlass
 - Adobe Photoshop
 - Irfanview
+- <https://arc.net> - browser
 - WinCatalog
 - Nodepad3
 - ffmpeg
@@ -39,6 +40,7 @@
 - [Strawberry Perl](https://strawberryperl.com)
 - Brother printer driver (MFC-J835DW)
 - Autodesk Sketchbook
+- [Descript](https://www.descript.com)
 - [Windows Power Toys](https://github.com/microsoft/PowerToys/releases/)
 - Pocketcasts
 - [GrepWin](https://github.com/stefankueng/grepWin)
