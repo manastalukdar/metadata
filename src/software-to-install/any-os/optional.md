@@ -137,6 +137,7 @@
 - [yawcam](https://yawcam.com)
 - [ScreenRec](https://screenrec.com) 
 - [sift](https://github.com/svent/sift)
+- [RAWTherapee](https://rawtherapee.com)
 - [Open Broadcaster Software](https://obsproject.com/)
   - [Background Removal](https://occ-ai.github.io/obs-backgroundremoval/)
   - [Dark screen on windows issue](https://obsproject.com/forum/threads/laptop-black-screen-when-capturing-read-here-first.5965/)
