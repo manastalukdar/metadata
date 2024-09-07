@@ -135,7 +135,9 @@
 - [RedNotebook](https://rednotebook.sourceforge.io): desktop journal.
 - [glogg](https://glogg.bonnefon.org/index.html)
 - [yawcam](https://yawcam.com)
-- [ScreenRec](https://screenrec.com) 
+- [ScreenRec](https://screenrec.com)
+- [Lapce](https://lapce.dev) [source](https://github.com/lapce/lapce)
+- [Lite XL](https://lite-xl.com/en/) [source](https://github.com/lite-xl/lite-xl)
 - [sift](https://github.com/svent/sift)
 - [RAWTherapee](https://rawtherapee.com)
 - [Open Broadcaster Software](https://obsproject.com/)

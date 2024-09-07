@@ -22,6 +22,7 @@
 - Manuskript
 - Notepad++
     <http://setup-steps.blogspot.com/2013/05/notepad-nppexec-add-java-compiler.html>
+- [Notepad3](https://rizonesoft.com/downloads/notepad3/)
 - ImageGlass
 - Adobe Photoshop
 - Irfanview
