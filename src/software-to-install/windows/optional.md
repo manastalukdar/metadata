@@ -63,3 +63,4 @@
 - [HTTrack](http://www.httrack.com/page/2/en/index.html)
 - [simplewall](https://www.henrypp.org/product/simplewall)
 - ZoneAlarm Free Firewall
+- [Tinywall](https://tinywall.pados.hu) [source](https://github.com/pylorak/TinyWall)
