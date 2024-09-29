@@ -128,6 +128,7 @@
 - [Google Play Music Desktop Player](https://www.googleplaymusicdesktopplayer.com/)
 - [Brackets code editor](https://github.com/brackets-cont/brackets)
 - [Bleachbit](https://www.bleachbit.org)
+- [Czkawka](https://github.com/qarmin/czkawka) 
 - [kdnlive](https://kdenlive.org/en/)
 - [Insomnia](https://insomnia.rest/)
 - [Nightingle](https://nightingale.rest)
