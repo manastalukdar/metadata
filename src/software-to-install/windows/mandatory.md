@@ -63,7 +63,7 @@
 - [AIM player](https://www.aimp.ru/)
 - Google\Nik Collection
 - Speccy
-- ProcessHacker
+- [System Informer](https://systeminformer.sourceforge.io). [Source](https://github.com/winsiderss/systeminformer).
 - [Screen to Gif](https://www.screentogif.com/)
 - [Greenshot](https://getgreenshot.org)
 - Winscp
