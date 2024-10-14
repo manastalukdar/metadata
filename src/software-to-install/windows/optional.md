@@ -64,3 +64,6 @@
 - [simplewall](https://www.henrypp.org/product/simplewall)
 - ZoneAlarm Free Firewall
 - [Tinywall](https://tinywall.pados.hu) [source](https://github.com/pylorak/TinyWall)
+- [Cairo Desktop](https://cairodesktop.com). [Source](https://github.com/cairoshell/cairoshell).
+- [TablacusExplorer](https://tablacus.github.io/explorer_en.html). [Source](https://github.com/tablacus/TablacusExplorer).
+- [Sigma File Manager](https://sigma-file-manager.vercel.app). [Source](https://github.com/aleksey-hoffman/sigma-file-manager).
