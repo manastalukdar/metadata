@@ -216,3 +216,5 @@
     # Packages: https://copr.fedorainfracloud.org/coprs/sentry/lite/packages/
     sudo dnf copr enable sentry/lite && sudo dnf install lite-xl-nightly
     ```
+
+- [Spacedrive](https://www.spacedrive.com). [Source](https://github.com/spacedriveapp/spacedrive).
