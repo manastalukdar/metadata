@@ -184,6 +184,7 @@
 - DotNet Core
   - Linux->Fedora: `sudo dnf install dotnet-sdk-6.0`
 - Visual Studio Code editor
+- [Cursor code editor](https://www.cursor.com)
 - Powershell Core
 - [Oh My Posh](https://ohmyposh.dev/docs/installation)
   - <https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip>

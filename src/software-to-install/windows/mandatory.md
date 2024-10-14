@@ -85,3 +85,5 @@
 
 - [FxSound](https://www.fxsound.com)
 - [Simplewall](https://github.com/henrypp/simplewall)
+- [Explorer++](https://explorerplusplus.com). [Source code.](https://github.com/derceg/explorerplusplus)
+- [Clover](http://en.ejie.me)
