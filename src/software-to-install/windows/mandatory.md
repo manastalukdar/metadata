@@ -82,7 +82,7 @@
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   ```
 
-- [FxSound](https://www.fxsound.com)
+- [FxSound](https://www.fxsound.com). [Source](https://github.com/fxsound2/fxsound-app).
 - [Simplewall](https://github.com/henrypp/simplewall)
 - [Explorer++](https://explorerplusplus.com). [Source code.](https://github.com/derceg/explorerplusplus)
 - [Clover](http://en.ejie.me)
