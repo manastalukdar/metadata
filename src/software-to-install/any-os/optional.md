@@ -218,3 +218,8 @@
     ```
 
 - [Spacedrive](https://www.spacedrive.com). [Source](https://github.com/spacedriveapp/spacedrive).
+- <https://orbstack.dev/>
+- <https://www.cursor.com>
+- <https://windsurfai.org>
+- <https://www.trae.ai/>
+- <https://ollama.com>

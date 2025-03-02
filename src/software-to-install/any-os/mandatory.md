@@ -84,6 +84,7 @@
   - vaex (o)
   - ruff
   - black
+  - [aider](https://github.com/Aider-AI/aider)
 
 - nodejs
   - Ubuntu
@@ -127,6 +128,7 @@
     +-- typescript@latest
     +-- @types/node
     +-- less
+    +-- @anthropic-ai/claude-code [link](https://ai-claude.net/code/#system-requirements)
     `-- windows-build-tools
     ```
 
