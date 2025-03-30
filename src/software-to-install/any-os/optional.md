@@ -224,3 +224,4 @@
 - <https://www.trae.ai/>
 - <https://ollama.com>
 - [Zed Editor](https://zed.dev)
+- <https://lmstudio.ai>
