@@ -129,6 +129,7 @@
     +-- @types/node
     +-- less
     +-- @anthropic-ai/claude-code [link](https://ai-claude.net/code/#system-requirements)
+    +-- @google/gemini-cli [link](https://github.com/google-gemini/gemini-cli)
     `-- windows-build-tools
     ```
 
