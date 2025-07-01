@@ -68,3 +68,4 @@
 - [TablacusExplorer](https://tablacus.github.io/explorer_en.html). [Source](https://github.com/tablacus/TablacusExplorer).
 - [Sigma File Manager](https://sigma-file-manager.vercel.app). [Source](https://github.com/aleksey-hoffman/sigma-file-manager).
 - [Process Hacker](https://processhacker.sourceforge.io)
+- [x64dbg](https://x64dbg.com)
