@@ -226,3 +226,4 @@
 - [Zed Editor](https://zed.dev)
 - [Void Editor](https://voideditor.com/)
 - <https://lmstudio.ai>
+- <https://etcher.balena.io>
