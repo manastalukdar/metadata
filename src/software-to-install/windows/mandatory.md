@@ -70,6 +70,7 @@
 - Winscp
 - CDisplayEx
 - f.lux
+- Microsoft ToDo
 - RoslynPad
 - [Microsoft PowerToys](https://github.com/microsoft/PowerToys)
 - Windows Terminal

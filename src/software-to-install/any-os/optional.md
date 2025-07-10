@@ -209,6 +209,7 @@
 - [glances](https://github.com/nicolargo/glances)
 - [Zettlr](https://www.zettlr.com/)
 - Radiolise
+- [Darktable](https://www.darktable.org)
 - [lite-xl](https://github.com/lite-xl/lite-xl)
   - Linux->Fedora
 
