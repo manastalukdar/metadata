@@ -69,3 +69,6 @@
 - [Sigma File Manager](https://sigma-file-manager.vercel.app). [Source](https://github.com/aleksey-hoffman/sigma-file-manager).
 - [Process Hacker](https://processhacker.sourceforge.io)
 - [x64dbg](https://x64dbg.com)
+- [yori](https://github.com/malxau/yori)
+- EaseUS Data Recovery Wizard
+- Sabrent Acronis Clone Disk / Sabrent Acronis True Image

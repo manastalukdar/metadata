@@ -1,6 +1,6 @@
 # Mandatory
 
-- [Java SDK](https://adoptopenjdk.net/)
+- [Java SDK](https://adoptium.net)
   - Ubuntu
 
     ```plaintext
@@ -158,7 +158,6 @@
     sudo apt-get install sublime-merge
     ```
 
-- Postman
 - [Bruno](https://www.usebruno.com)
 - Latex (MikTex on Windows)
   - Ubuntu
@@ -227,6 +226,8 @@
      ```plaintext
      After installing run `pyenv update` (https://github.com/pyenv-win/pyenv-win/issues/153)
      ```
+
+
 - virtualenv
 
   - MacOS: `brew install pyenv-virtualenv`
@@ -248,6 +249,8 @@
 - [Virtual Volumes View](http://vvvapp.sourceforge.net/)
 - Opera Browser (for free VPN)
 - [Graphviz](https://graphviz.gitlab.io)
+- DaVinci Resolve
+- Slack
 - KeePass Password Safe
   - Ubuntu
 

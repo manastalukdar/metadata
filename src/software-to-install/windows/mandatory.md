@@ -11,7 +11,7 @@
 - ILSpy
 - SysinternalsSuite
 - GitExtensions
-- Windows Media Player classic
+- [Windows Media Player classic](https://github.com/clsid2/mpc-hc)
 - Adobe Lightroom
 - Putty
 - Lame For Audacity (bundled in Windows and Mac versions)
@@ -42,7 +42,6 @@
 - NitroPdf
 - DisplayFusion
 - Calibre
-- [yori](https://github.com/malxau/yori)
 - FreeCommander XE
 
     ```plaintext
@@ -69,7 +68,6 @@
 - Winscp
 - CDisplayEx
 - f.lux
-- DaVinci Resolve
 - RoslynPad
 - [Microsoft PowerToys](https://github.com/microsoft/PowerToys)
 - Windows Terminal
@@ -86,3 +84,4 @@
 - [Simplewall](https://github.com/henrypp/simplewall)
 - [Explorer++](https://explorerplusplus.com). [Source code.](https://github.com/derceg/explorerplusplus)
 - [Clover](http://en.ejie.me)
+- <https://github.com/marticliment/UnigetUI>
