@@ -208,6 +208,7 @@
 - [novelWriter](https://novelwriter.io). [source](https://github.com/vkbo/novelWriter)
 - [glances](https://github.com/nicolargo/glances)
 - [Zettlr](https://www.zettlr.com/)
+- Radiolise
 - [lite-xl](https://github.com/lite-xl/lite-xl)
   - Linux->Fedora
 

@@ -251,6 +251,9 @@
 - [Graphviz](https://graphviz.gitlab.io)
 - DaVinci Resolve
 - Slack
+- Notion
+- Pocketcasts
+- [Open Video Downloader (youtube-dl-gui)](https://github.com/jely2002/youtube-dl-gui)
 - KeePass Password Safe
   - Ubuntu
 

@@ -61,6 +61,8 @@
 - BurnAware Free
 - [AIM player](https://www.aimp.ru/)
 - Google\Nik Collection
+  - <https://archive.org/details/nikcollection-full-1.2.11>
+  - <https://www.techspot.com/downloads/6809-google-nik-collection.html>
 - Speccy
 - [System Informer](https://systeminformer.sourceforge.io). [Source](https://github.com/winsiderss/systeminformer).
 - [Screen to Gif](https://www.screentogif.com/)
@@ -71,6 +73,7 @@
 - RoslynPad
 - [Microsoft PowerToys](https://github.com/microsoft/PowerToys)
 - Windows Terminal
+- Microsoft Teams
 - Linux Subsystem for Windows
   - [How to Install zsh and Oh My Zsh in Windows 10](https://www.maketecheasier.com/install-zsh-and-oh-my-zsh-windows10/)
   - [How to change the dark blue in wsl to something brighter](https://superuser.com/a/1409856/783826)

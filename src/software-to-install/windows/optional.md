@@ -44,7 +44,6 @@
 - Autodesk Sketchbook
 - [Descript](https://www.descript.com)
 - [Windows Power Toys](https://github.com/microsoft/PowerToys/releases/)
-- Pocketcasts
 - [GrepWin](https://github.com/stefankueng/grepWin)
 - Discord
 - [Multi Commander](http://multicommander.com/)
@@ -71,4 +70,6 @@
 - [x64dbg](https://x64dbg.com)
 - [yori](https://github.com/malxau/yori)
 - EaseUS Data Recovery Wizard
+- Files
+- One Commander
 - Sabrent Acronis Clone Disk / Sabrent Acronis True Image
