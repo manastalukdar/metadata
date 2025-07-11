@@ -15,7 +15,7 @@
 - Recuva
 - Lockhunter
 - [Notepads](https://www.notepadsapp.com) [source](https://github.com/0x7c13/Notepads)
-- Wox
+- [Wox](http://www.wox.one). [Source](https://github.com/Wox-launcher/Wox)
 - [ShareX](https://getsharex.com)
 - [Search and Replace](http://searchandreplace.com/)
 - yWriter6
