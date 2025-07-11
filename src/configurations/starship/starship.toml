@@ -1,4 +1,7 @@
-# C:\Users\<username>\.config
+# C:\Users\<username>\.config\
 
-# Don't print a new line at the start of the prompt
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
 add_newline = true

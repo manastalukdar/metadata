@@ -187,12 +187,13 @@
   - Linux->Fedora: `sudo dnf install dotnet-sdk-6.0`
 - Visual Studio Code editor
 - [Cursor code editor](https://www.cursor.com)
+  - https://cursor.com/api/download?platform=win32-x64&releaseTrack=stable
 - Powershell Core
-- [Oh My Posh](https://ohmyposh.dev/docs/installation)
-  - <https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip>
+- [Oh My Posh](https://ohmyposh.dev/docs)
+  - <https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip>
 - [starship](https://github.com/starship/starship)
   - <https://starship.rs/guide/>
-  - <https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip>
+  - <https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip>
   - VSCode: `terminal.integrated.fontFamily`: `FiraCode NF`
 - [Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 - gradle
@@ -238,6 +239,7 @@
 - Pandoc
 - Audacity
 - GitHub CLI
+- [GitHub Desktop](https://github.com/apps/desktop)
 - Google Chrome
 - Libre Office
 - [Beekeeper Studio](https://github.com/beekeeper-studio/beekeeper-studio)

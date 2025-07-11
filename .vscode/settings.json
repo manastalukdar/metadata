@@ -24,5 +24,6 @@
   "files.watcherExclude": {
     "**/target": true
   },
-  "c3.rootPackage": ""
+  "c3.rootPackage": "",
+  "terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono'"
 }

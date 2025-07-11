@@ -17,6 +17,7 @@
 - Lame For Audacity (bundled in Windows and Mac versions)
 - Not Another Pdf Scanner 2
 - Paint.NET
+- Notepad++
 - [dnGrep](https://github.com/dnGrep/dnGrep)
 - Scrivener
 - [Popc*** T***](https://github.com/popcorn-official/popcorn-desktop)

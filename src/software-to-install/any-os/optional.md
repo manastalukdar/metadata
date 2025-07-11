@@ -33,6 +33,7 @@
 
     [Reference1](https://store.docker.com/editions/community/docker-ce-server-ubuntu?tab=description), [Reference2](https://askubuntu.com/questions/909691/how-to-install-docker-on-ubuntu-17-04)
 - yarn
+- <https://github.com/romkatv/powerlevel10k>
 - R
   - Ubuntu
 
