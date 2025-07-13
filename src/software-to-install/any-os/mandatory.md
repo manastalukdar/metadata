@@ -257,6 +257,8 @@
 - Pocketcasts
 - [Open Video Downloader (youtube-dl-gui)](https://github.com/jely2002/youtube-dl-gui)
 - KeePass Password Safe
+  - <https://keepassxc.org/> for Linux
+  - <https://macpassapp.org/> for macos
   - Ubuntu
 
     _*If you want an older version of KeePass 2.x*_

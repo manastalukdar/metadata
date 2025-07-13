@@ -1,5 +1,11 @@
 # Mandatory
 
+- Flatpak
+
+  ```plaintext
+  sudo apt install flatpak
+  ```
+
 - conky
 - [Peek](https://github.com/phw/peek)
 - redshift
