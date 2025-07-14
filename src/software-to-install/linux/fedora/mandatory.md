@@ -419,6 +419,7 @@ $ gh ssh-key add $HOME/.ssh/github.pub --title "${description}"
 
 - openssh-askpass: `sudo dnf install openssh-askpass`
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh/wiki): `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+- [antibody](https://github.com/mattmc3/antidote)
 - [antigen](https://github.com/zsh-users/antigen): `curl -L git.io/antigen > antigen.zsh`
 - [peek](https://github.com/phw/peek): `sudo dnf install peek`. This is a gif screen recorder.
 - [nvm](https://github.com/nvm-sh/nvm): `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash`
