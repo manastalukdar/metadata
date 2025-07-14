@@ -3,6 +3,7 @@
 - 7zip
 - [Stacer](https://github.com/oguzhaninan/Stacer)
 - GitKraken
+- [Albert](https://github.com/albertlauncher/albert)
 - Android Studio
   - Ubuntu
 

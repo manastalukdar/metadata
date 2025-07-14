@@ -1,6 +1,7 @@
 # Optional
 
 - MarkText
+- [Oh My Posh](https://ohmyposh.dev/docs)
 - Docker
   - Ubuntu
 

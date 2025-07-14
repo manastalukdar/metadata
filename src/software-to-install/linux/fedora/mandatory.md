@@ -172,8 +172,8 @@ OneDrive [ref](https://github.com/abraunegg/onedrive/blob/master/docs/USAGE.md#r
 
 ```shell
 onedrive --help
-onedrive --synchronize --verbose --dry-run
-onedrive --synchronize
+onedrive --sync --verbose --dry-run -confdir '/home/manas/.config/onedrive/accounts/manas0111@hotmail.com'
+onedrive --sync
 systemctl --user enable onedrive
 systemctl --user start onedrive
 systemctl status --user onedrive
@@ -190,8 +190,8 @@ wget https://raw.githubusercontent.com/abraunegg/onedrive/master/config -O ~/.co
 # set sync_dir in config file to ~/OneDrive-work
 onedrive --confdir="~/.config/onedrive-work"
 onedrive --confdir="~/.config/onedrive-work" --display-config
-onedrive --confdir="~/.config/onedrive-work" --synchronize --verbose --dry-run
-onedrive --confdir="~/.config/onedrive-work" --synchronize
+onedrive --confdir="~/.config/onedrive-work" --sync --verbose --dry-run
+onedrive --confdir="~/.config/onedrive-work" --sync
 sudo cp /usr/lib/systemd/user/onedrive.service /usr/lib/systemd/user/onedrive-work.service
 # Edit the new systemd file, updating the line beginning with ExecStart so that the confdir mirrors the one you used above:
 # ExecStart=/usr/local/bin/onedrive --monitor --confdir="/full/path/to/config/dir"
@@ -212,8 +212,8 @@ wget https://raw.githubusercontent.com/abraunegg/onedrive/master/config -O ~/.co
 # Update your 'onedrive' configuration file (~/.config/SharePoint_My_Library_Name/config) with the local folder where you will store your data: sync_dir = "~/SharePoint_My_Library_Name"
 # Update your 'onedrive' configuration file(~/.config/SharePoint_My_Library_Name/config) with the 'drive_id' value obtained in the steps above: drive_id = "insert the drive_id value from above here"
 onedrive --confdir="~/.config/SharePoint_My_Library_Name" --display-config
-onedrive --confdir="~/.config/SharePoint_My_Library_Name" --synchronize --verbose --dry-run
-onedrive --confdir="~/.config/SharePoint_My_Library_Name" --synchronize --verbose
+onedrive --confdir="~/.config/SharePoint_My_Library_Name" --sync --verbose --dry-run
+onedrive --confdir="~/.config/SharePoint_My_Library_Name" --sync --verbose
 sudo cp /usr/lib/systemd/user/onedrive.service /usr/lib/systemd/user/onedrive-SharePoint_My_Library_Name.service
 # Edit the new systemd file, updating the line beginning with ExecStart so that the confdir mirrors the one you used above:
 # ExecStart=/usr/local/bin/onedrive --monitor --confdir="/home/myusername/.config/SharePoint_My_Library_Name"

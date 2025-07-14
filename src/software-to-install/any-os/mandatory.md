@@ -1,12 +1,8 @@
 # Mandatory
 
 - [Java SDK](https://adoptium.net)
-  - Ubuntu
-
-    ```plaintext
-    sudo apt-get update
-    sudo apt-get install default-jdk
-    ```
+  - [Ubuntu](https://adoptium.net/installation/linux#_deb_installation_on_debian_or_ubuntu)
+    - `sdk install java 21.0.5-tem`: using SDKman
 
 - Git
   - Ubuntu
@@ -87,12 +83,24 @@
   - [aider](https://github.com/Aider-AI/aider)
 
 - nodejs
-  - Ubuntu
+  - [Ubuntu](https://nodejs.org/en/download/current)
 
     ```plaintext
-    curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-    sudo apt-get install -y nodejs
-    sudo apt-get install -y build-essential
+    # Download and install nvm:
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+    # in lieu of restarting the shell
+    \. "$HOME/.nvm/nvm.sh"
+
+    # Download and install Node.js:
+    nvm install 24
+
+    # Verify the Node.js version:
+    node -v # Should print "v24.4.0".
+    nvm current # Should print "v24.4.0".
+
+    # Verify npm version:
+    npm -v # Should print "11.4.2".
     ```
 
   - npm global packages (`npm list -g --depth 0`)
@@ -179,6 +187,8 @@
     sudo apt --fix-broken install
     ```
 
+    <https://code.launchpad.net/~sunderme/+archive/ubuntu/texstudio>
+
     dark mode:
 
     - <https://github.com/thatlittleboy/TeXstudio-Qt-Stylesheet>
@@ -189,7 +199,7 @@
 - [Cursor code editor](https://www.cursor.com)
   - https://cursor.com/api/download?platform=win32-x64&releaseTrack=stable
 - Powershell Core
-- [Oh My Posh](https://ohmyposh.dev/docs)
+- [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
   - <https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip>
 - [starship](https://github.com/starship/starship)
   - <https://starship.rs/guide/>
@@ -227,7 +237,6 @@
      ```plaintext
      After installing run `pyenv update` (https://github.com/pyenv-win/pyenv-win/issues/153)
      ```
-
 
 - virtualenv
 

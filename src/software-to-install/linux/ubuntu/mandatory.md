@@ -6,6 +6,13 @@
   sudo apt install flatpak
   ```
 
+- SDKman
+
+  ```plaintext
+  curl -s "https://get.sdkman.io" | bash
+  source ~/.sdkman/bin/sdkman-init.
+  ```
+
 - conky
 - [Peek](https://github.com/phw/peek)
 - redshift
