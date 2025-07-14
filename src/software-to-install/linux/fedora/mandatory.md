@@ -182,6 +182,19 @@ sudo systemctl restart SERVICE_NAME # to restart service
 systemctl --user restart onedrive # to restart onedrive service
 ```
 
+To remove [[ref](https://superuser.com/questions/513159/how-to-remove-systemd-services)]:
+
+```shell
+systemctl stop [servicename]
+systemctl disable [servicename]
+rm /etc/systemd/system/[servicename]
+rm /etc/systemd/system/[servicename] # and symlinks that might be related
+rm /usr/lib/systemd/system/[servicename] 
+rm /usr/lib/systemd/system/[servicename] # and symlinks that might be related
+systemctl daemon-reload
+systemctl reset-failed
+```
+
 Adding additional OneDrive accounts [ref](https://github.com/abraunegg/onedrive/blob/master/docs/advanced-usage.md#configuring-the-client-to-use-multiple-onedrive-accounts--configurations):
 
 ```shell
