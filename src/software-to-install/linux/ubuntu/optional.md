@@ -5,6 +5,7 @@
 - GitKraken
 - [Albert](https://github.com/albertlauncher/albert)
 - Android Studio
+- [Sayonara Player](https://sayonara-player.com)
   - Ubuntu
 
     ```plaintext
