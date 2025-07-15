@@ -229,6 +229,7 @@
 - <https://ollama.com>
 - [Zed Editor](https://zed.dev)
 - [Void Editor](https://voideditor.com/)
+- [Kiro Editor](https://kiro.dev)
 - <https://lmstudio.ai>
 - <https://etcher.balena.io>
 - Postman
