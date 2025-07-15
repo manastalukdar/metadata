@@ -228,6 +228,7 @@
   - Computer Modern: [here](https://www.fontsquirrel.com/fonts/computer-modern), [here](https://www.1001fonts.com/cmu-font.html)
   - Latin Modern Sans Serif: [here](https://www.fontsquirrel.com/fonts/Latin-Modern-Sans), [here](https://www.1001fonts.com/latin-modern-sans-font.html)
 
+- Pinta
 - pyenv
 
   - [MacOS / Linux](https://github.com/pyenv/pyenv): `brew install pyenv`
