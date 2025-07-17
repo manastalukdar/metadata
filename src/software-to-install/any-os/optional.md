@@ -233,3 +233,4 @@
 - <https://lmstudio.ai>
 - <https://etcher.balena.io>
 - Postman
+- <https://app.warp.dev>
