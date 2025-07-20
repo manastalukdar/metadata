@@ -6,7 +6,6 @@
 - Microsoft OneDrive
 - Visual Studio Community Edition
 - Android SDK
-- Android Studio
 - WinPython (includes Spyder)
 - ILSpy
 - SysinternalsSuite

@@ -234,3 +234,40 @@
 - <https://etcher.balena.io>
 - Postman
 - <https://app.warp.dev>
+- Android Studio
+  - Ubuntu
+    - <https://dev.to/janetmutua/installing-android-studio-on-ubuntu-2204-complete-guide-1kh8>
+    - <https://developer.android.com/studio/run/emulator-acceleration?utm_source=android-studio#vm-linux>
+
+    ```shell
+    tar -zxvf android-studio-2022.1.1.21-linux.tar.gz
+    sudo mv android-studio /opt/
+    sudo ln -sf /opt/android-studio/bin/studio.sh /bin/android-studio
+    sudo nano /usr/share/applications/android-studio.desktop
+    ```
+
+    Snippet to add:
+
+    ```plaintext
+    [Desktop Entry]
+    Version=1.0
+    Type=Application
+    Name=Android Studio
+    Comment=Android Studio
+    Exec=bash -i "/opt/android-studio/bin/studio.sh" %f
+    Icon=/opt/android-studio/bin/studio.png
+    Categories=Development;IDE;
+    Terminal=false
+    StartupNotify=true
+    StartupWMClass=jetbrains-android-studio
+    Name[en_GB]=android-studio.desktop
+    ```
+
+    Uninstalling:
+
+    ```shell
+    sudo rm /usr/share/applications/android-studio.desktop
+    sudo rm -r /usr/bin/android-studio
+    sudo rm -rf /opt/android-studio
+    rm -rf ~/android-studio-2022.1.1.21-linux.tar.gz
+    ```

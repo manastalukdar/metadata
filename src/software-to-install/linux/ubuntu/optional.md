@@ -4,7 +4,6 @@
 - [Stacer](https://github.com/oguzhaninan/Stacer)
 - GitKraken
 - [Albert](https://github.com/albertlauncher/albert)
-- Android Studio
 - [Sayonara Player](https://sayonara-player.com)
   - Ubuntu
 
