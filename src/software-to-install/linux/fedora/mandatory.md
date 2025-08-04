@@ -182,6 +182,24 @@ sudo systemctl restart SERVICE_NAME # to restart service
 systemctl --user restart onedrive # to restart onedrive service
 ```
 
+`/usr/lib/systemd/user/onedrive`:
+
+```plaintext
+[Unit]
+Description=OneDrive Free Client
+Documentation=https://github.com/abraunegg/onedrive
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/home/linuxbrew/.linuxbrew/bin/onedrive --monitor --confdir="/home/manas/.config/onedrive/accounts/manas0111@hotmail.com"
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
+```
+
 To remove [[ref](https://superuser.com/questions/513159/how-to-remove-systemd-services)]:
 
 ```shell
