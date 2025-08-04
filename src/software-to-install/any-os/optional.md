@@ -234,6 +234,7 @@
 - <https://etcher.balena.io>
 - Postman
 - <https://app.warp.dev>
+- <https://github.com/fastfetch-cli/fastfetch>
 - Android Studio
   - Ubuntu
     - <https://dev.to/janetmutua/installing-android-studio-on-ubuntu-2204-complete-guide-1kh8>
