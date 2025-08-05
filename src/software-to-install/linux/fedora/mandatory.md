@@ -176,6 +176,7 @@ onedrive --sync --verbose --dry-run -confdir '/home/manas/.config/onedrive/accou
 onedrive --sync
 systemctl --user enable onedrive
 systemctl --user start onedrive
+systemctl --user stop onedrive
 systemctl status --user onedrive
 journalctl --user-unit onedrive -f
 sudo systemctl restart SERVICE_NAME # to restart service
