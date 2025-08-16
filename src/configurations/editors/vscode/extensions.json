@@ -1,0 +1,61 @@
+{
+  "recommendations": [
+    // Language Support
+    "ms-python.python",
+    "ms-python.black-formatter",
+    "charliermarsh.ruff",
+    "ms-vscode.vscode-typescript-next",
+    "golang.go",
+    "rust-lang.rust-analyzer",
+    "redhat.java",
+    "ms-dotnettools.csharp",
+    
+    // Formatting & Linting
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.makefile-tools",
+    
+    // Git & Version Control
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+    "github.copilot",
+    "github.copilot-chat",
+    
+    // Productivity
+    "ms-vscode.vscode-json",
+    "redhat.vscode-yaml",
+    "ms-vscode.hexeditor",
+    "streetsidesoftware.code-spell-checker",
+    
+    // Themes & Icons
+    "zhuangtongfa.material-theme",
+    "pkief.material-icon-theme",
+    "github.github-vscode-theme",
+    
+    // Remote Development
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode-remote.remote-wsl",
+    
+    // Docker & Containers
+    "ms-azuretools.vscode-docker",
+    
+    // Markdown
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "bierner.markdown-mermaid",
+    
+    // Data & Databases
+    "ms-ossdata.vscode-postgresql",
+    "ms-mssql.mssql",
+    
+    // Utilities
+    "ms-vscode.live-server",
+    "humao.rest-client",
+    "ms-vscode.notepadplusplus-keybindings",
+    
+    // AI & Code Assistance
+    "anthropic.claude-dev",
+    "continue.continue"
+  ]
+}

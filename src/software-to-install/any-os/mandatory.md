@@ -3,6 +3,8 @@
 - [Java SDK](https://adoptium.net)
   - [Ubuntu](https://adoptium.net/installation/linux#_deb_installation_on_debian_or_ubuntu)
     - `sdk install java 21.0.5-tem`: using SDKman
+    - Alternative: `sudo apt install openjdk-21-jdk`
+    - Verify: `java --version && javac --version`
 
 - Git
   - Ubuntu
@@ -42,12 +44,14 @@
   - Ubuntu
 
     ```plaintext
-    sudo apt-get python3.6
+    sudo apt-get install python3 python3-pip python3-venv
 
-    // This does not seem to work
-    python -m pip install --upgrade pip
-    // So we use this
-    sudo apt-install python-pip
+    # Upgrade pip
+    python3 -m pip install --upgrade pip --user
+    
+    # Create virtual environment (recommended)
+    python3 -m venv ~/.venv/default
+    source ~/.venv/default/bin/activate
 
     pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
     // Consider adding this at the end of your ~/.bashrc file
@@ -89,18 +93,20 @@
     # Download and install nvm:
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
-    # in lieu of restarting the shell
-    \. "$HOME/.nvm/nvm.sh"
+    # Reload shell or source nvm
+    source ~/.bashrc
+    # Or: \. "$HOME/.nvm/nvm.sh"
 
-    # Download and install Node.js:
-    nvm install 24
+    # Download and install Node.js LTS:
+    nvm install --lts
+    nvm use --lts
+    nvm alias default node
 
-    # Verify the Node.js version:
-    node -v # Should print "v24.4.0".
-    nvm current # Should print "v24.4.0".
-
-    # Verify npm version:
-    npm -v # Should print "11.4.2".
+    # Verify installation:
+    node --version && npm --version
+    
+    # Enable corepack for yarn/pnpm
+    corepack enable
     ```
 
   - npm global packages (`npm list -g --depth 0`)
@@ -136,8 +142,8 @@
     +-- typescript@latest
     +-- @types/node
     +-- less
-    +-- @anthropic-ai/claude-code [link](https://ai-claude.net/code/#system-requirements)
-    +-- @google/gemini-cli [link](https://github.com/google-gemini/gemini-cli)
+    +-- @anthropic-ai/claude-code
+    +-- @google/gemini-cli
     `-- windows-build-tools
     ```
 

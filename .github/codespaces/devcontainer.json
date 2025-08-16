@@ -1,0 +1,53 @@
+{
+  "name": "GitHub Codespaces - Metadata Repository",
+  "image": "mcr.microsoft.com/devcontainers/universal:2-ubuntu",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    },
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21"
+    },
+    "ghcr.io/devcontainers/features/go:1": {},
+    "ghcr.io/devcontainers/features/rust:1": {},
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "ms-python.black-formatter",
+        "ms-vscode.vscode-typescript-next",
+        "esbenp.prettier-vscode",
+        "github.vscode-pull-request-github",
+        "eamodio.gitlens",
+        "ms-vscode.makefile-tools"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "editor.formatOnSave": true,
+        "files.autoSave": "afterDelay"
+      }
+    },
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "docs/INDEX.md"
+      ]
+    }
+  },
+
+  "forwardPorts": [3000, 8000, 8080],
+  
+  "postCreateCommand": "bash scripts/setup-devcontainer.sh && echo 'Welcome to the Metadata Repository! 🚀'",
+
+  "remoteUser": "codespace"
+}

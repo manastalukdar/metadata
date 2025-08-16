@@ -8,18 +8,22 @@
 
 - SDKman
 
-  ```plaintext
+  ```bash
   curl -s "https://get.sdkman.io" | bash
-  source ~/.sdkman/bin/sdkman-init.
+  source ~/.sdkman/bin/sdkman-init.sh
+  # Verify installation
+  sdk version
   ```
 
 - conky
 - [Peek](https://github.com/phw/peek)
 - redshift
 
-    ```plaintext
-    sudo apt install redshift
-    sudo apt install redshift-gtk
+    ```bash
+    sudo apt update
+    sudo apt install redshift redshift-gtk
+    # Configure location for automatic adjustment
+    echo '[redshift]\ntemp-day=6500\ntemp-night=4500\nlocation-provider=manual\n[manual]\nlat=40.7\nlon=-74.0' > ~/.config/redshift.conf
     ```
 
 - Meld

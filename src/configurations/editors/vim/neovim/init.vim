@@ -33,8 +33,14 @@ set nu
 
 set clipboard=unnamed
 
-let g:python3_host_prog='H:/Programs/Python36_64/python.exe'
-let g:python_host_prog='H:/Programs/Python36_64/python.exe'
+" Set Python paths - update these based on your system
+if has('win32')
+  let g:python3_host_prog = expand('$USERPROFILE/AppData/Local/Programs/Python/Python311/python.exe')
+  let g:python_host_prog = expand('$USERPROFILE/AppData/Local/Programs/Python/Python311/python.exe')
+elseif has('unix')
+  let g:python3_host_prog = '/usr/bin/python3'
+  let g:python_host_prog = '/usr/bin/python3'
+endif
 
 "------------------------------------------
 " Add or remove your plugins here:
