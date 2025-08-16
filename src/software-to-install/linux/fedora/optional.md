@@ -39,6 +39,7 @@
 - <https://github.com/swaywm/sway>: `sudo dnf install sway`
   - [[ref](https://computingforgeeks.com/setup-sway-tiling-window-manager-on-fedora-with-waybar/)] [[ref](https://thomas-leister.de/sway-window-manager/)] [[ref](https://www.techjunkie.com/tiling-window-managers/)] [[ref](https://www.greghilston.com/post/tiling-window-managers/)] [[ref](https://www.reddit.com/r/swaywm/comments/sphp7b/a_quick_look_to_sway_wm_with_nvidias_drivers/)]
 - <https://github.com/Alexays/Waybar>
+- <https://github.com/elkowar/eww>
 - <https://sr.ht/~emersion/grim/>
 - <https://github.com/natpen/awesome-wayland>
 - [qtile](http://www.qtile.org/). [Source](https://github.com/qtile/qtile).
