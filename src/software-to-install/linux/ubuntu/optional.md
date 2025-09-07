@@ -5,6 +5,8 @@
 - GitKraken
 - [Albert](https://github.com/albertlauncher/albert)
 - [Sayonara Player](https://sayonara-player.com)
+- [Cutter Reverse Engineering platform](https://cutter.re)
+- [Cuda Text test editor](https://cudatext.github.io)
   - Ubuntu
 
     ```plaintext
