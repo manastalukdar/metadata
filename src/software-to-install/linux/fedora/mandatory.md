@@ -165,6 +165,7 @@ Microsoft does not have an official Linux client for OneDrive. There is a pretty
 - Install [OneDrive](https://github.com/abraunegg/onedrive): `sudo dnf install onedrive` [[ref](https://www.linuxuprising.com/2020/02/how-to-keep-onedrive-in-sync-with.html)]
   - [GUI for configuration management](https://github.com/bpozdena/OneDriveGUI)
   - [OneDrive Client for Linux System Tray Icon](https://github.com/DanielBorgesOliveira/onedrive_tray)
+- Alternatively onedrive may be install using linuxbrew: `brew install onedrive-cli`
 
 Note that OneDrive latest has not been updated in the dnf pkg repo. The one version older still works. If you want the latest and greatest, you can always build from source. The GUI for config management and tray icon add-ons do not work with the older version.
 
@@ -172,7 +173,7 @@ OneDrive [ref](https://github.com/abraunegg/onedrive/blob/master/docs/USAGE.md#r
 
 ```shell
 onedrive --help
-onedrive --sync --verbose --dry-run -confdir '/home/manas/.config/onedrive/accounts/manas0111@hotmail.com'
+onedrive --sync --verbose --dry-run -confdir '/home/manas/.config/onedrive/accounts/<email>'
 onedrive --sync
 systemctl --user enable onedrive
 systemctl --user start onedrive
