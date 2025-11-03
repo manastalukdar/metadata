@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/manastalukdar/.oh-my-zsh"
 
+source $ZSH/oh-my-zsh.sh
+
 export PATH="$PATH:$HOME/bin"
 
 export PATH="$PATH:$HOME/manastalukdar/.dotnet/tools"
