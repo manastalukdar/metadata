@@ -184,7 +184,7 @@ sudo systemctl restart SERVICE_NAME # to restart service
 systemctl --user restart onedrive # to restart onedrive service
 ```
 
-`/usr/lib/systemd/user/onedrive`:
+`/usr/lib/systemd/user/onedrive.service`:
 
 ```plaintext
 [Unit]
