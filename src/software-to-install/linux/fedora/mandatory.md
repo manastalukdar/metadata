@@ -194,7 +194,7 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-ExecStart=/home/linuxbrew/.linuxbrew/bin/onedrive --monitor --confdir="/home/manas/.config/onedrive/accounts/manas0111@hotmail.com"
+ExecStart=/home/linuxbrew/.linuxbrew/bin/onedrive --monitor --confdir="/home/manas/.config/onedrive/accounts/<email>"
 Restart=on-failure
 RestartSec=3
 
