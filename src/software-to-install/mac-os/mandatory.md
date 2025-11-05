@@ -17,7 +17,7 @@
 - [Antidote](https://github.com/mattmc3/antidote)
 - [AppCleaner](http://freemacsoft.net/appcleaner/)
 - Pine media player
-- [Lightshot](https://app.prntscr.com/en/index.html)
+- [Shottr](https://shottr.cc/)
 - [nvm](https://github.com/nvm-sh/nvm)
   
   ```shell
