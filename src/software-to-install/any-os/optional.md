@@ -235,6 +235,7 @@
 - Postman
 - <https://app.warp.dev>
 - <https://github.com/fastfetch-cli/fastfetch>
+- [Readest](https://readest.com) ebook reader. [Code](https://github.com/readest/readest/).
 - Android Studio
   - Ubuntu
     - <https://dev.to/janetmutua/installing-android-studio-on-ubuntu-2204-complete-guide-1kh8>
