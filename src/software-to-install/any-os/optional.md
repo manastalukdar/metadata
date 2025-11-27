@@ -236,6 +236,8 @@
 - <https://app.warp.dev>
 - <https://github.com/fastfetch-cli/fastfetch>
 - [Readest](https://readest.com) ebook reader. [Code](https://github.com/readest/readest/).
+- [CudaText](https://cudatext.github.io/index.html)
+- [Google AntiGravity](https://antigravity.google/download/linux)
 - Android Studio
   - Ubuntu
     - <https://dev.to/janetmutua/installing-android-studio-on-ubuntu-2204-complete-guide-1kh8>
