@@ -239,6 +239,8 @@
 - [CudaText](https://cudatext.github.io/index.html)
 - [Google AntiGravity](https://antigravity.google/download/linux)
 - [Nix](https://nixos.org/learn/)
+- [Portmaster](https://safing.io)
+- [Upscayl](https://upscayl.org)
 - Android Studio
   - Ubuntu
     - <https://dev.to/janetmutua/installing-android-studio-on-ubuntu-2204-complete-guide-1kh8>
