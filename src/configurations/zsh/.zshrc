@@ -78,14 +78,6 @@ eval "$(pyenv virtualenv-init -)"
 
 # direnv
 eval "$(direnv hook zsh)"
-
-INTELLIGENCE=~/data/labelbox-dev/intelligence/
-
-function ipm2() {
-  cwd=$(pwd)
-  cd $INTELLIGENCE
-  npx pm2 "$@"
-  cd $cwd
 }
 
 export YVM_DIR=/opt/homebrew/opt/yvm
