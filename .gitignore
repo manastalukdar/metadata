@@ -62,3 +62,6 @@ typings/
 
 # scala
 .metals
+
+# mac
+.DS_STORE
