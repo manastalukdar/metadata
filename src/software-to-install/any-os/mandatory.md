@@ -271,6 +271,11 @@
 - Slack
 - Notion
 - Pocketcasts
+- Claude Code
+- OpenCode
+- [Claudish](https://claudish.com)
+- [OpenClaw](https://openclaw.ai)
+  - [Code](https://github.com/openclaw/openclaw)
 - [Open Video Downloader (youtube-dl-gui)](https://github.com/jely2002/youtube-dl-gui)
 - KeePass Password Safe
   - <https://keepassxc.org/> for Linux
