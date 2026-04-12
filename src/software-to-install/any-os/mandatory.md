@@ -277,6 +277,13 @@
 - [OpenClaw](https://openclaw.ai)
   - [Code](https://github.com/openclaw/openclaw)
 - [Open Video Downloader (youtube-dl-gui)](https://github.com/jely2002/youtube-dl-gui)
+- [Beads](https://gastownhall.github.io/beads/)
+  - [Code](https://github.com/gastownhall/beads)
+- [Ghostty](https://ghostty.org)
+  - [Code](https://github.com/ghostty-org/ghostty)
+- [Claude Mem](https://claude-mem.ai)
+  - [Code](https://github.com/thedotmack/claude-mem)
+- [Ruflo - Multi-agent AI orchestration for Claude Code](https://github.com/ruvnet/ruflo)
 - KeePass Password Safe
   - <https://keepassxc.org/> for Linux
   - <https://macpassapp.org/> for macos
