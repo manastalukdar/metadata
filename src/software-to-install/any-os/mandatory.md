@@ -144,7 +144,14 @@
     +-- less
     +-- @anthropic-ai/claude-code
     +-- @google/gemini-cli
-    `-- windows-build-tools
+    +-- windows-build-tools
+    +-- @fission-ai/openspec@1.3.1
+    +-- @google/gemini-cli@0.40.1
+    +-- @mariozechner/pi-coding-agent@0.72.0
+    +-- @mermaid-js/mermaid-cli@11.14.0
+    +-- claudish@7.0.3
+    +-- corepack@0.34.7
+
     ```
 
 - Sublime Text
@@ -283,6 +290,7 @@
   - [Code](https://github.com/ghostty-org/ghostty)
 - [Claude Mem](https://claude-mem.ai)
   - [Code](https://github.com/thedotmack/claude-mem)
+- [PI coding agent](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent)
 - [Ruflo - Multi-agent AI orchestration for Claude Code](https://github.com/ruvnet/ruflo)
 - KeePass Password Safe
   - <https://keepassxc.org/> for Linux
