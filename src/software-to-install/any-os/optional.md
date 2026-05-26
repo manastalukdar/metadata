@@ -234,6 +234,9 @@
 - <https://etcher.balena.io>
 - Postman
 - <https://app.warp.dev>
+- [Terax terminal](https://terax.app) - [code](https://github.com/crynta/terax-ai)
+- Alacrity terminal
+- Google Antigravity
 - <https://github.com/fastfetch-cli/fastfetch>
 - [Readest](https://readest.com) ebook reader. [Code](https://github.com/readest/readest/).
 - [CudaText](https://cudatext.github.io/index.html)

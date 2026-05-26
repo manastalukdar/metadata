@@ -283,6 +283,7 @@
 - [Claudish](https://claudish.com)
 - [OpenClaw](https://openclaw.ai)
   - [Code](https://github.com/openclaw/openclaw)
+- [Understand Anything](https://github.com/Lum1104/Understand-Anything) - [website](https://understand-anything.com)
 - [Open Video Downloader (youtube-dl-gui)](https://github.com/jely2002/youtube-dl-gui)
 - [Beads](https://gastownhall.github.io/beads/)
   - [Code](https://github.com/gastownhall/beads)
