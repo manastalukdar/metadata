@@ -244,6 +244,9 @@
 - [Nix](https://nixos.org/learn/)
 - [Portmaster](https://safing.io)
 - [Upscayl](https://upscayl.org)
+- [Herdr](https://herdr.dev) [code](https://github.com/ogulcancelik/herdr)
+- [oh-my-pi](https://omp.sh) [code](https://github.com/can1357/oh-my-pi)
+- [Flue Framework](https://flueframework.com) [code](https://github.com/withastro/flue)
 - Android Studio
   - Ubuntu
     - <https://dev.to/janetmutua/installing-android-studio-on-ubuntu-2204-complete-guide-1kh8>
