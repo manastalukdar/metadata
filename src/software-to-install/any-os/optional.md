@@ -247,6 +247,7 @@
 - [Herdr](https://herdr.dev) [code](https://github.com/ogulcancelik/herdr)
 - [oh-my-pi](https://omp.sh) [code](https://github.com/can1357/oh-my-pi)
 - [Flue Framework](https://flueframework.com) [code](https://github.com/withastro/flue)
+- [Omni Agent](https://omnigent.ai) [code](https://github.com/omnigent-ai/omnigent)
 - Android Studio
   - Ubuntu
     - <https://dev.to/janetmutua/installing-android-studio-on-ubuntu-2204-complete-guide-1kh8>
