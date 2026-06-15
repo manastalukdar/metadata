@@ -1,4 +1,4 @@
-# Configuration
+# Ubuntu — Post-install Configuration
 
 ## Enabling right mouse click option for a Synaptics mousepad
 
@@ -63,7 +63,7 @@ If you want to uninstall the GetDeb repository run this command: `sudo apt-get r
 
 ## Make battery last longer
 
-TLP is Linux management power application, this application controls CPU temperature and this contributes to better control of battery life in long run. 
+TLP is Linux management power application, this application controls CPU temperature and this contributes to better control of battery life in long run.
 
 For installation and launching run: `sudo apt install tlp tlp-rdw && sudo tlp start`
 

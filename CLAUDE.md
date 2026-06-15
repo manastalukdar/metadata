@@ -26,10 +26,11 @@ This is a **development environment metadata repository** containing:
 - `windows-terminal/` - Windows Terminal JSON configuration
 
 ### `/src/software-to-install/` - Installation Guides
-- `any-os/` - Cross-platform tools (Java, Python, Node.js, etc.)
-- `linux/` - Linux distributions (Ubuntu, Fedora)
-- `mac-os/` - macOS-specific software
-- `windows/` - Windows-specific software
+- `common/` - Cross-platform tools organized by function (languages, editors, AI tools, CLI utilities, dev tools, media, etc.)
+- `linux/` - Linux distributions (`common.md`, plus `ubuntu/` and `fedora/`, each with `packages.md` + `post-install.md`; Fedora also has `nvidia.md` and `onedrive.md`)
+- `macos/` - macOS-specific software (`packages.md` + `post-install.md`)
+- `windows/` - Windows-specific software (`packages.md` + `post-install.md`)
+- See `src/software-to-install/README.md` for the routing rule (where a tool goes) and the Mandatory/Optional section conventions.
 
 ### `/docs/` - Documentation
 - `INDEX.md` - Complete navigation guide

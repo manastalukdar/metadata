@@ -61,9 +61,9 @@ metadata/
     │   ├── powershell/        # PowerShell profile
     │   └── windows-terminal/  # Windows Terminal
     ├── software-to-install/   # Installation guides
-    │   ├── any-os/           # Cross-platform tools
+    │   ├── common/           # Cross-platform tools, by category
     │   ├── linux/            # Linux-specific (Ubuntu, Fedora)
-    │   ├── mac-os/           # macOS-specific
+    │   ├── macos/            # macOS-specific
     │   └── windows/          # Windows-specific
     ├── development/          # Development notes
     └── tech-interview-prep/  # Interview materials

@@ -6,7 +6,7 @@ A comprehensive development environment setup and configuration repository.
 
 ### 🚀 Quick Start
 - [Setup Scripts](../scripts/) - Automated installation scripts
-- [Essential Software](../src/software-to-install/any-os/mandatory.md) - Must-have tools
+- [Essential Software](../src/software-to-install/common/) - Cross-platform tools by category
 - [Platform Guides](#platform-specific-guides)
 
 ### 📁 Directory Structure
@@ -27,6 +27,11 @@ metadata/
 
 ## Platform-Specific Guides
 
+See [software-to-install/README.md](../src/software-to-install/README.md) for the full structure and routing rules.
+
+### 🌐 Cross-Platform
+- [Common Tools](../src/software-to-install/common/) - Organized by function (languages, editors, AI tools, CLI utilities, etc.)
+
 ### 🐧 Linux
 - [Ubuntu Setup](../scripts/setup-ubuntu.sh) (Automated)
 - [Ubuntu Manual](../src/software-to-install/linux/ubuntu/)
@@ -34,7 +39,7 @@ metadata/
 
 ### 🍎 macOS
 - [macOS Setup](../scripts/setup-macos.sh) (Automated)
-- [macOS Manual](../src/software-to-install/mac-os/)
+- [macOS Manual](../src/software-to-install/macos/)
 
 ### 🪟 Windows
 - [Windows Manual](../src/software-to-install/windows/)
