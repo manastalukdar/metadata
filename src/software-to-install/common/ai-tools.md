@@ -33,5 +33,6 @@ AI coding agents, assistants, AI-first editors, and local model runners.
 - [oh-my-pi](https://omp.sh) [code](https://github.com/can1357/oh-my-pi)
 - [Flue Framework](https://flueframework.com) [code](https://github.com/withastro/flue)
 - [Omni Agent](https://omnigent.ai) [code](https://github.com/omnigent-ai/omnigent)
+- [Hermes Agent](https://hermes-agent.nousresearch.com) [code](https://github.com/NousResearch/hermes-agent)
 - [Beads](https://gastownhall.github.io/beads/)
   - [Code](https://github.com/gastownhall/beads)
