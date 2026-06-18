@@ -16,3 +16,8 @@ macOS-specific applications. Cross-platform tools live under [../common/](../com
 - [Shottr](https://shottr.cc/)
 - [stats](https://github.com/exelban/stats)
 - [MacUpdater](https://www.corecode.io/macupdater/)
+
+## Optional
+
+- [Supacode](https://supacode.sh/) [code](https://github.com/supabitapp/supacode)
+- [cmux](https://cmux.com) [code](https://github.com/manaflow-ai/cmux)

@@ -26,9 +26,7 @@ AI coding agents, assistants, AI-first editors, and local model runners.
 - <https://lmstudio.ai>
 - [Void Editor](https://voideditor.com/)
 - [Kiro Editor](https://kiro.dev)
-- Google Antigravity
 - [Google AntiGravity](https://antigravity.google/download/linux)
-- [cmux](https://cmux.com) [code](https://github.com/manaflow-ai/cmux)
 - [Herdr](https://herdr.dev) [code](https://github.com/ogulcancelik/herdr)
 - [oh-my-pi](https://omp.sh) [code](https://github.com/can1357/oh-my-pi)
 - [Flue Framework](https://flueframework.com) [code](https://github.com/withastro/flue)
@@ -36,3 +34,5 @@ AI coding agents, assistants, AI-first editors, and local model runners.
 - [Hermes Agent](https://hermes-agent.nousresearch.com) [code](https://github.com/NousResearch/hermes-agent)
 - [Beads](https://gastownhall.github.io/beads/)
   - [Code](https://github.com/gastownhall/beads)
+- [Ponytail](https://github.com/DietrichGebert/ponytail)
+- [Caveman](getcaveman.dev/) [code](https://github.com/JuliusBrussee/caveman)
