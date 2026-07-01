@@ -37,3 +37,5 @@ AI coding agents, assistants, AI-first editors, and local model runners.
   - [Code](https://github.com/gastownhall/beads)
 - [Ponytail](https://github.com/DietrichGebert/ponytail)
 - [Caveman](getcaveman.dev/) [code](https://github.com/JuliusBrussee/caveman)
+- [rtk](https://www.rtk-ai.app)
+  - [code](https://github.com/rtk-ai/rtk)
