@@ -16,6 +16,7 @@ AI coding agents, assistants, AI-first editors, and local model runners.
   - [Code](https://github.com/thedotmack/claude-mem)
 - [PI coding agent](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent)
 - [Ruflo - Multi-agent AI orchestration for Claude Code](https://github.com/ruvnet/ruflo)
+- [Claude Swap](https://github.com/realiti4/claude-swap)
 
 ## Optional
 
