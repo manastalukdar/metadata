@@ -40,3 +40,4 @@ Markdown editors, LaTeX/typesetting, long-form authoring, and desktop publishing
 - [skribisto](https://github.com/jacquetc/skribisto). Software for writers. Continuation of plume-creator.
 - [novelWriter](https://novelwriter.io). [source](https://github.com/vkbo/novelWriter)
 - [Stirling pdf](https://stirling.com/download) [code](https://github.com/Stirling-Tools/Stirling-PDF)
+- [NotepadNext](https://github.com/dail8859/NotepadNext)
