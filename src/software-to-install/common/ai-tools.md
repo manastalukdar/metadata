@@ -39,3 +39,5 @@ AI coding agents, assistants, AI-first editors, and local model runners.
 - [Caveman](getcaveman.dev/) [code](https://github.com/JuliusBrussee/caveman)
 - [rtk](https://www.rtk-ai.app)
   - [code](https://github.com/rtk-ai/rtk)
+- [ZCode](https://zcode.z.ai/en)
+- [Kilo code cli](https://kilo.ai/cli)
