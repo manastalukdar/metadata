@@ -40,4 +40,4 @@ AI coding agents, assistants, AI-first editors, and local model runners.
 - [rtk](https://www.rtk-ai.app)
   - [code](https://github.com/rtk-ai/rtk)
 - [ZCode](https://zcode.z.ai/en)
-- [Kilo code cli](https://kilo.ai/cli)
+- [Kilo code cli](https://kilo.ai/cli) [code](https://github.com/Kilo-Org/kilocode/)
