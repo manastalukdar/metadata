@@ -163,6 +163,11 @@ Programming languages, SDKs, and version/environment managers.
 - virtualenv
   - MacOS: `brew install pyenv-virtualenv`
 
+- [uv](https://github.com/astral-sh/uv) — fast Python package & project manager
+  - macOS / Linux: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+  - macOS (Homebrew): `brew install uv`
+  - Windows: `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`
+
 - [nvm](https://github.com/nvm-sh/nvm)
   - macOS
 
