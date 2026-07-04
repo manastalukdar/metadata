@@ -12,8 +12,6 @@ Terminal emulators, shells, shell frameworks, and prompts.
   - <https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip>
   - VSCode: `terminal.integrated.fontFamily`: `FiraCode NF`
 - [nushell](https://github.com/nushell/nushell)
-- [Ghostty](https://ghostty.org)
-  - [Code](https://github.com/ghostty-org/ghostty)
 
 ## Optional
 
@@ -24,3 +22,7 @@ Terminal emulators, shells, shell frameworks, and prompts.
 - <https://app.warp.dev>
 - [Terax terminal](https://terax.app) - [code](https://github.com/crynta/terax-ai)
 - <https://github.com/fastfetch-cli/fastfetch>
+- [Tabby](https://tabby.sh/) [code](https://github.com/eugeny/tabby)
+- [Waveterm](https://www.waveterm.dev/) [code](https://github.com/wavetermdev/waveterm)
+- [Ghostty](https://ghostty.org)
+  - [Code](https://github.com/ghostty-org/ghostty)
