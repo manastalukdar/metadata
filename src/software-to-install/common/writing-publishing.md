@@ -29,6 +29,8 @@ Markdown editors, LaTeX/typesetting, long-form authoring, and desktop publishing
     dark mode:
 
     - <https://github.com/thatlittleboy/TeXstudio-Qt-Stylesheet>
+- [Typst](https://github.com/typst/typst)
+  - [Typst](https://typst.app) official website
 
 ## Optional
 
