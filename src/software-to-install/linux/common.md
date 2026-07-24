@@ -4,5 +4,6 @@ Notes and tools shared across Linux distributions. Distribution-specific package
 
 - [Ubuntu](ubuntu/) — [packages](ubuntu/packages.md), [post-install](ubuntu/post-install.md)
 - [Fedora](fedora/) — [packages](fedora/packages.md), [post-install](fedora/post-install.md), [NVIDIA](fedora/nvidia.md), [OneDrive](fedora/onedrive.md)
+- [Nautilus My Computer](https://github.com/yannmasoch/nautilus-my-computer)
 
 Cross-platform tools (languages, editors, CLI utilities, etc.) live under [../common/](../common/). This section is only for Linux-specific install recipes and configuration.

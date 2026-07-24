@@ -41,3 +41,4 @@ AI coding agents, assistants, AI-first editors, and local model runners.
   - [code](https://github.com/rtk-ai/rtk)
 - [ZCode](https://zcode.z.ai/en)
 - [Kilo code cli](https://kilo.ai/cli) [code](https://github.com/Kilo-Org/kilocode/)
+- [jcode harness](https://jcode.sh) [code](https://github.com/1jehuang/jcode)
