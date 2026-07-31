@@ -42,3 +42,6 @@ AI coding agents, assistants, AI-first editors, and local model runners.
 - [ZCode](https://zcode.z.ai/en)
 - [Kilo code cli](https://kilo.ai/cli) [code](https://github.com/Kilo-Org/kilocode/)
 - [jcode harness](https://jcode.sh) [code](https://github.com/1jehuang/jcode)
+- [Agent Reach](https://github.com/Panniantong/Agent-Reach)
+- [OmniRoute](https://omniroute.online) [code](https://github.com/diegosouzapw/OmniRoute)
+
