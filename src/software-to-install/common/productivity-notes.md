@@ -30,3 +30,4 @@ Note-taking, personal knowledge management, reference managers, mind mapping, re
 ### Productivity
 
 - Pomodoro based productivity app - [Pomotroid](https://github.com/Splode/pomotroid)
+- [Kaneo](https://kaneo.app/): self-hosted project management platform (Docker). [Code](https://github.com/usekaneo/kaneo).

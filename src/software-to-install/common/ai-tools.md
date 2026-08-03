@@ -44,4 +44,4 @@ AI coding agents, assistants, AI-first editors, and local model runners.
 - [jcode harness](https://jcode.sh) [code](https://github.com/1jehuang/jcode)
 - [Agent Reach](https://github.com/Panniantong/Agent-Reach)
 - [OmniRoute](https://omniroute.online) [code](https://github.com/diegosouzapw/OmniRoute)
-
+- [QM](https://qm.ycombinator.com) [code](https://github.com/yc-software/qm): multiplayer agent harness (self-hosted on Fly/AWS, Slack + web).
