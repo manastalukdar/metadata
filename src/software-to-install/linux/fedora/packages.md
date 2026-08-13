@@ -252,6 +252,7 @@ Fedora-specific software and native `dnf`/`copr`/`snap` install recipes. Cross-p
   - Markdown Here Revival.
   - Own for Exchange.
   - Thunderbird Conversations (disabled).
+- Evolution email client
 - Shortwave (Radio)
 - Resources. [repo](https://github.com/nokyan/resources)
 
