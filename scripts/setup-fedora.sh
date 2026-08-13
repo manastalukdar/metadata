@@ -176,8 +176,6 @@ Next steps (not scripted — they need your credentials or a reboot):
   - Battery (TLP conflicts with power-profiles-daemon, so it is opt-in):
       sudo dnf install tlp tlp-rdw && sudo dnf remove power-profiles-daemon
       sudo systemctl enable tlp
-
-Not available from any package manager — install by hand:
-  DaVinci Resolve, Cursor, Notion (use the PWA), Outlook (use the PWA),
-  MuCommander, Azure Storage Explorer (snap, handled above).
 NOTES
+
+manual_notes

@@ -2,172 +2,79 @@
 
 Programming languages, SDKs, and version/environment managers.
 
+[mise](https://mise.jdx.dev) manages all of these on every platform, replacing nvm, pyenv, SDKman and jenv. Versions are pinned by the `mise:` tags below, which generate [`scripts/pkgs/mise.txt`](../../../scripts/pkgs/mise.txt) — change a version there and re-run the setup script to switch.
+
 ## Mandatory
 
-- [Java SDK](https://adoptium.net)
+- [Java SDK](https://adoptium.net) `mise:java@temurin-21`
   - [Ubuntu](https://adoptium.net/installation/linux#_deb_installation_on_debian_or_ubuntu)
-    - `sdk install java 21.0.5-tem`: using SDKman
-    - Alternative: `sudo apt install openjdk-21-jdk`
+    - Alternative without mise: `sudo apt install openjdk-21-jdk`
     - Verify: `java --version && javac --version`
 
-- Python
-  - Ubuntu
+- Python `mise:python@3.13`
+  - The system `python3` is still installed (some distro packages need it), but project work uses the mise-managed interpreter.
+  - Libraries — NumPy, pandas, SciPy, scikit-learn, TensorFlow, Keras, jupyter, opencv-python, Cython, statsmodels, plotly, seaborn, dask — belong to a *project's* virtual environment, created per repo with `uv venv` / `uv sync`. They are deliberately not installed globally.
 
-    ```plaintext
-    sudo apt-get install python3 python3-pip python3-venv
+- nodejs `mise:node@lts`
+  - `corepack enable` is run by the setup scripts, which provides yarn and pnpm.
 
-    # Upgrade pip
-    python3 -m pip install --upgrade pip --user
+- DotNet Core `dnf:dotnet-sdk-9.0` `apt:dotnet-sdk-9.0`
+  - From the Microsoft prod repo on both distros.
 
-    # Create virtual environment (recommended)
-    python3 -m venv ~/.venv/default
-    source ~/.venv/default/bin/activate
+- gradle `mise:gradle@latest`
+- [uv](https://github.com/astral-sh/uv) `mise:uv@latest` — fast Python package & project manager
+  - Standalone installers, if you want it before mise: `curl -LsSf https://astral.sh/uv/install.sh | sh`, or `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"` on Windows.
+- Go lang `mise:go@latest`
+  - Set `GOPATH` for personal projects; add `$GOPATH/bin` to `PATH`.
+- Rust `mise:rust@latest`
 
-    pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
-    // Consider adding this at the end of your ~/.bashrc file
-    export PATH="$PATH:/home/your_user/.local/bin"
-    ```
+### Python CLI tools
 
-    [Reference](https://scipy.org/install.html)
+Installed with `uv tool install`, each into its own isolated environment — never into a project venv or the system Python.
 
-  - pip packages to install: (`pip list`)
-    - Cython
-    - [Rummage](https://github.com/facelessuser/Rummage/)
-    - [git-filter-repo](https://github.com/newren/git-filter-repo)
-    - pandas
-    - NumPy
-    - Scikit-learn (o)
-    - Gradio (o)
-    - TensorFlow
-      - Keras
-    - SciPy
-    - scikit-image
-    - jupyterlab
-    - cv2
-    - opencv-python
-    - opencv-contrib-python
-    - Statsmodels (o)
-    - Plotly (o)
-    - Seaborn (o)
-    - Dask (o)
-    - vaex (o)
-    - ruff
-    - black
-    - [aider](https://github.com/Aider-AI/aider)
+- [ruff](https://github.com/astral-sh/ruff) `uv:ruff`
+- [black](https://github.com/psf/black) `uv:black`
+- [aider](https://github.com/Aider-AI/aider) `uv:aider-chat`
+- [JupyterLab](https://jupyter.org) `uv:jupyterlab`
+- [git-filter-repo](https://github.com/newren/git-filter-repo) `uv:git-filter-repo`
 
-- nodejs
-  - [Ubuntu](https://nodejs.org/en/download/current)
+### Node global CLIs
 
-    ```plaintext
-    # Download and install nvm:
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+AI coding agents live in [ai-tools.md](ai-tools.md); these are the rest.
 
-    # Reload shell or source nvm
-    source ~/.bashrc
-    # Or: \. "$HOME/.nvm/nvm.sh"
+- TypeScript `npm:typescript` `npm:ts-node`
+- [Vue CLI](https://cli.vuejs.org) `npm:@vue/cli`
+- [serve](https://github.com/vercel/serve) `npm:serve`
+- [http-server](https://github.com/http-party/http-server) `npm:http-server`
+- [rimraf](https://github.com/isaacs/rimraf) `npm:rimraf`
+- [node-gyp](https://github.com/nodejs/node-gyp) `npm:node-gyp`
+- [less](https://lesscss.org) `npm:less`
+- [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli) `npm:markdownlint-cli`
+- [mermaid-cli](https://github.com/mermaid-js/mermaid-cli) `npm:@mermaid-js/mermaid-cli`
+- [Marp CLI](https://github.com/marp-team/marp-cli) `npm:@marp-team/marp-cli`
+- [gh-pages](https://github.com/tschaub/gh-pages) `npm:gh-pages`
+- [npm-check-updates](https://github.com/raineorshine/npm-check-updates) `npm:npm-check-updates`
+- [vsce](https://github.com/microsoft/vscode-vsce) `npm:vsce`
 
-    # Download and install Node.js LTS:
-    nvm install --lts
-    nvm use --lts
-    nvm alias default node
+## Optional
 
-    # Verify installation:
-    node --version && npm --version
+### Superseded version managers
 
-    # Enable corepack for yarn/pnpm
-    corepack enable
-    ```
+Kept for reference; mise covers all four, and the setup scripts no longer install them.
 
-  - npm global packages (`npm list -g --depth 0`)
+- SDKman — <http://sdkman.io/install.html>
 
-    ```plaintext
-    +-- @angular/cli
-    +-- @vue/cli
-    +-- david
-    +-- npm-check-updates
-    +-- standard
-    +-- gh-pages
-    +-- http-server
-    +-- @gridsome/cli
-    +-- compressjs
-    +-- create-react-app
-    +-- electron-packager
-    +-- markdown
-    +-- node-gyp
-    +-- npm
-    +-- rxjs-tslint
-    +-- webpack
-    +-- webpack-cli
-    +-- webpack-dev-server
-    +-- rimraf
-    +-- serve
-    +-- @marp-team/marp-cli
-    +-- markdownlint-cli
-    +-- npm-check-updates
-    +-- vsce
-    +-- yo
-    +-- generator-code
-    +-- ts-node@latest
-    +-- typescript@latest
-    +-- @types/node
-    +-- less
-    +-- @anthropic-ai/claude-code
-    +-- @google/gemini-cli
-    +-- windows-build-tools
-    +-- @fission-ai/openspec@1.3.1
-    +-- @google/gemini-cli@0.40.1
-    +-- @mariozechner/pi-coding-agent@0.72.0
-    +-- @mermaid-js/mermaid-cli@11.14.0
-    +-- claudish@7.0.3
-    +-- corepack@0.34.7
-    ```
-
-- DotNet Core
-  - Linux->Fedora: `sudo dnf install dotnet-sdk-6.0`
-
-- gradle
-  - Ubuntu
-
-    ```plaintext
-    sdk install gradle 4.2.1
-    ```
-
-  - Windows
-
-    ```plaintext
-    gradle.org/install/
-    ```
-
-### Version & environment managers
-
-- SDKman
-  - Ubuntu
-
-    ```bash
-    curl -s "https://get.sdkman.io" | bash
-    source ~/.sdkman/bin/sdkman-init.sh
-    # Verify installation
-    sdk version
-    ```
-
-  - <http://sdkman.io/install.html>
+  ```bash
+  curl -s "https://get.sdkman.io" | bash
+  source ~/.sdkman/bin/sdkman-init.sh
+  sdk version
+  ```
 
 - pyenv
   - [MacOS / Linux](https://github.com/pyenv/pyenv): `brew install pyenv`
-  - [Windows](https://github.com/pyenv-win/pyenv-win/issues/153)
-
-    ```plaintext
-    After installing run `pyenv update` (https://github.com/pyenv-win/pyenv-win/issues/153)
-    ```
-
+  - [Windows](https://github.com/pyenv-win/pyenv-win/issues/153): after installing run `pyenv update`
 - virtualenv
   - MacOS: `brew install pyenv-virtualenv`
-
-- [uv](https://github.com/astral-sh/uv) — fast Python package & project manager
-  - macOS / Linux: `curl -LsSf https://astral.sh/uv/install.sh | sh`
-  - macOS (Homebrew): `brew install uv`
-  - Windows: `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`
-
 - [nvm](https://github.com/nvm-sh/nvm)
   - macOS
 
@@ -200,7 +107,7 @@ Programming languages, SDKs, and version/environment managers.
   - <https://medium.com/notes-for-geeks/java-home-and-java-home-on-macos-f246cab643bd>
   - <https://mattshomepage.com/articles/2016/May/22/java_home_mac_os_x/>
 
-## Optional
+### Other languages
 
 - yarn
 - R
@@ -216,11 +123,6 @@ Programming languages, SDKs, and version/environment managers.
 
 - Scala
 - Ruby
-- Go lang
-  - Set GOROOT to where Go was installed (`C:\Go` on windows)
-  - Be sure to set GOPATH env (user) variable (`G:\dev\go` as an example on Windows; default: `%USERPROFILE%\go`)
-  - GO projects will need to be under `G:\dev\go`, using the above example. Possibly under a folder call \_my-projects. Alternately, a different folder can also be used for personal Go projects.
-  - Add `G:\dev\go\bin` (using above example) to PATH.
 - Dart lang
 - [Lua](http://www.lua.org)
   - Windows: [Installing Lua on a Windows system](http://www.thijsschreijer.nl/blog/?p=863)

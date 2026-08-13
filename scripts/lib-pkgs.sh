@@ -51,6 +51,15 @@ instone() {
     xargs -r -n1 "$@" <<<"$pkgs" || warn "$name: some entries failed (see above)"
 }
 
+# Print the tools that no package manager on this platform can install. The list
+# is generated from `manual` tags in the docs by scripts/gen-pkgs.sh.
+manual_notes() {
+    local list="$PKGS/manual.txt"
+    [[ -f "$list" ]] || return 0
+    say "Not installable by any package manager — install these by hand"
+    awk '{sub(/#.*/, "")} NF { print "  - " $0 }' "$list"
+}
+
 report() {
     if ((${#FAILED[@]})); then
         echo -e "\n\033[1;33m${#FAILED[@]} step(s) needed attention:\033[0m"

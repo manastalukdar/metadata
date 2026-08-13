@@ -4,7 +4,7 @@ Traditional code editors and IDEs. AI-first editors and coding agents live in [a
 
 ## Mandatory
 
-- Sublime Text
+- Sublime Text `dnf:sublime-text` `apt:sublime-text` `cask:sublime-text`
 
   To open command prompt at file root: ctrl + alt + t
   MarkdownEditing Settings
@@ -19,19 +19,15 @@ Traditional code editors and IDEs. AI-first editors and coding agents live in [a
     sudo apt-get install sublime-text
     ```
 
-- Visual Studio Code editor
+- Sublime Merge `dnf:sublime-merge` `apt:sublime-merge` `cask:sublime-merge`
+- Visual Studio Code editor `dnf:code-insiders` `apt:code-insiders` `cask:visual-studio-code@insiders`
+  - The Insiders channel is the one actually used; stable is `code` / `visual-studio-code`.
+- [Neovim](https://github.com/neovim/neovim) `dnf:neovim` `dnf:python3-neovim` `dnf:neovim-qt` `apt:neovim` `apt:python3-neovim` `apt:neovim-qt` `brew-macos:neovim`
+  - [neovim-qt](https://github.com/equalsraf/neovim-qt) is the GUI front end.
 
 ## Optional
 
 - [Onivim2](https://github.com/onivim/oni2)
-- [Neovim](https://github.com/neovim/neovim)
-  - Linux-Fedora
-
-    ```shell
-    sudo dnf install -y neovim python3-neovim
-    sudo dnf install neovim-qt # [neovim-qt](https://github.com/equalsraf/neovim-qt)
-    ```
-
 - [SciTE](https://www.scintilla.org/SciTEDownload.html)
 - [geany](https://www.geany.org/)
   - [geany plugins](https://plugins.geany.org/downloads.html)

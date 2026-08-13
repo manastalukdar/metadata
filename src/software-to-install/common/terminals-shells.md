@@ -4,14 +4,16 @@ Terminal emulators, shells, shell frameworks, and prompts.
 
 ## Mandatory
 
-- Powershell Core
-- [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
+- Powershell Core `dnf:powershell` `apt:powershell` `brew-macos:powershell`
+- [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) `manual`
+  - Installed by the `setup-*.sh` scripts via the upstream installer; not packaged.
   - <https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip>
-- [starship](https://github.com/starship/starship)
+- [starship](https://github.com/starship/starship) `mise:starship@latest`
   - <https://starship.rs/guide/>
   - <https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip>
   - VSCode: `terminal.integrated.fontFamily`: `FiraCode NF`
-- [nushell](https://github.com/nushell/nushell)
+- [nushell](https://github.com/nushell/nushell) `brew:nushell`
+  - Homebrew on every platform: Fedora packages it but apt does not, so one source keeps it consistent.
 
 ## Optional
 

@@ -4,7 +4,7 @@ Password managers, antivirus, firewalls, and privacy tools.
 
 ## Mandatory
 
-- KeePass Password Safe
+- KeePass Password Safe `dnf:keepassxc` `apt:keepassxc` `cask:keepassxc`
   - <https://keepassxc.org/> for Linux
   - <https://macpassapp.org/> for macos
   - Ubuntu

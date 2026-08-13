@@ -4,18 +4,19 @@ macOS-specific applications. Cross-platform tools live under [../common/](../com
 
 ## Mandatory
 
-- [Double Commander](https://doublecommander.com)
-- [Rectangle](https://github.com/rxhanson/Rectangle)
-- [Stay](https://cordlessdog.com/stay/)
-- [kap](https://getkap.co)
-- [iterm2](https://iterm2.com/)
-- [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
-- [Antidote](https://github.com/mattmc3/antidote)
-- [AppCleaner](http://freemacsoft.net/appcleaner/)
-- Pine media player
-- [Shottr](https://shottr.cc/)
-- [stats](https://github.com/exelban/stats)
-- [MacUpdater](https://www.corecode.io/macupdater/)
+- [Rectangle](https://github.com/rxhanson/Rectangle) `cask:rectangle` — window management
+- [iterm2](https://iterm2.com/) `cask:iterm2`
+- [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) `manual`
+  - Installed by `setup-macos.sh` via the upstream installer; see [terminals-shells.md](../common/terminals-shells.md).
+- [Double Commander](https://doublecommander.com) `manual`
+- [Stay](https://cordlessdog.com/stay/) `manual`
+- [kap](https://getkap.co) `manual`
+- [Antidote](https://github.com/mattmc3/antidote) `manual`
+- [AppCleaner](http://freemacsoft.net/appcleaner/) `manual`
+- Pine media player `manual`
+- [Shottr](https://shottr.cc/) `manual`
+- [stats](https://github.com/exelban/stats) `manual`
+- [MacUpdater](https://www.corecode.io/macupdater/) `manual`
 
 ## Optional
 

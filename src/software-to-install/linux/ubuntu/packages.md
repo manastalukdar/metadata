@@ -4,32 +4,14 @@ Ubuntu-specific software and native install recipes. Cross-platform tools live u
 
 ## Mandatory
 
-- Flatpak
+Tools shared with Fedora — conky, redshift, Meld, Peek, the GNOME pieces and the font packages — are tagged once in [../common.md](../common.md). Flatpak and snapd are installed as plumbing by `setup-ubuntu.sh`.
 
-  ```plaintext
-  sudo apt install flatpak
-  ```
-
-- conky
-- [Peek](https://github.com/phw/peek)
-- redshift
-
-    ```bash
-    sudo apt update
-    sudo apt install redshift redshift-gtk
-    # Configure location for automatic adjustment
-    echo '[redshift]\ntemp-day=6500\ntemp-night=4500\nlocation-provider=manual\n[manual]\nlat=40.7\nlon=-74.0' > ~/.config/redshift.conf
-    ```
-
-- Meld
+- gdebi `apt:gdebi`
+  - `sudo apt install gdebi`
 - [Spyder](https://www.spyder-ide.org)
   - <https://github.com/spyder-ide/spyder-notebook>
   - <https://github.com/spyder-ide/spyder-terminal>
   - <https://github.com/spyder-ide/spyder-unittest>
-- gdebi
-  - `sudo apt install gdebi`
-- snapd
-  - `sudo apt install snapd` or `sudo snap install`
 - rclone (for Microsoft OneDrive)
   - *Fetch and unpack*
 

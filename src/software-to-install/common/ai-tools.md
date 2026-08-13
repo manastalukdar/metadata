@@ -4,19 +4,21 @@ AI coding agents, assistants, AI-first editors, and local model runners.
 
 ## Mandatory
 
-- Claude Code
-- OpenCode
-- [Cursor code editor](https://www.cursor.com)
-  - <https://cursor.com/api/download?platform=win32-x64&releaseTrack=stable>
-- [Claudish](https://claudish.com)
-- [OpenClaw](https://openclaw.ai)
+- Claude Code `npm:@anthropic-ai/claude-code`
+- [Gemini CLI](https://github.com/google-gemini/gemini-cli) `npm:@google/gemini-cli`
+- OpenCode `npm:opencode-ai`
+- [Cursor code editor](https://www.cursor.com) `cask:cursor` `manual`
+  - Linux is a tarball/AppImage download: <https://cursor.com/api/download?platform=win32-x64&releaseTrack=stable>
+- [Claudish](https://claudish.com) `npm:claudish`
+- [OpenClaw](https://openclaw.ai) `manual`
   - [Code](https://github.com/openclaw/openclaw)
-- [Understand Anything](https://github.com/Lum1104/Understand-Anything) - [website](https://understand-anything.com)
-- [Claude Mem](https://claude-mem.ai)
+- [Understand Anything](https://github.com/Lum1104/Understand-Anything) `manual` - [website](https://understand-anything.com)
+- [Claude Mem](https://claude-mem.ai) `npm:claude-mem`
   - [Code](https://github.com/thedotmack/claude-mem)
-- [PI coding agent](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent)
-- [Ruflo - Multi-agent AI orchestration for Claude Code](https://github.com/ruvnet/ruflo)
-- [Claude Swap](https://github.com/realiti4/claude-swap)
+- [PI coding agent](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent) `npm:@mariozechner/pi-coding-agent`
+- [Ruflo - Multi-agent AI orchestration for Claude Code](https://github.com/ruvnet/ruflo) `npm:ruflo`
+- [OpenSpec](https://github.com/Fission-AI/OpenSpec) `npm:@fission-ai/openspec`
+- [Claude Swap](https://github.com/realiti4/claude-swap) `manual`
 
 ## Optional
 

@@ -4,7 +4,8 @@ Markdown editors, LaTeX/typesetting, long-form authoring, and desktop publishing
 
 ## Mandatory
 
-- Latex (MikTex on Windows)
+- Latex (MikTex on Windows) `dnf:texlive-scheme-medium` `apt:texlive-latex-extra` `apt:texlive-fonts-recommended` `cask:mactex`
+  - Swap in `texlive-scheme-full` / `texlive-full` if you hit missing packages.
   - Ubuntu
 
     ```plaintext
@@ -14,7 +15,7 @@ Markdown editors, LaTeX/typesetting, long-form authoring, and desktop publishing
     *After you installed texlive-full you can list all the installed language packs with dpkg -l texlive-lang-\*. Then you can remove the unneeded ones with sudo apt-get purge -y texlive-lang-... (where ... is the language).
     [Reference](https://tex.stackexchange.com/questions/372130/how-to-install-a-more-minimal-but-complete-texlive-on-ubuntu#comment919440_372130)*
 
-- TexStudio
+- TexStudio `dnf:texstudio` `apt:texstudio` `cask:texstudio`
   - Ubuntu
 
     *May have to install libqt5scripts*
@@ -29,7 +30,7 @@ Markdown editors, LaTeX/typesetting, long-form authoring, and desktop publishing
     dark mode:
 
     - <https://github.com/thatlittleboy/TeXstudio-Qt-Stylesheet>
-- [Typst](https://github.com/typst/typst)
+- [Typst](https://github.com/typst/typst) `mise:typst@latest`
   - [Typst](https://typst.app) official website
 
 ## Optional

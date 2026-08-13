@@ -174,7 +174,8 @@ Next steps (not scripted — they need your credentials or a reboot):
   - GitHub SSH key + auth: see src/software-to-install/linux/fedora/packages.md
   - Restore dotfiles/configs:  bash scripts/restore-configs.sh
 
-Not available from any Ubuntu package manager — install by hand:
-  DaVinci Resolve, Cursor, Moosync (.deb from releases), Lite XL,
-  Notion (use the PWA), Outlook (use the PWA), MuCommander.
+Fedora-only packages (Moosync, Lite XL) have no Ubuntu equivalent — build from
+source or fetch a .deb from upstream releases if you want them.
 NOTES
+
+manual_notes

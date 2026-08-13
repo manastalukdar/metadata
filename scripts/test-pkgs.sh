@@ -1,18 +1,26 @@
 #!/usr/bin/env bash
-# Self-check for the pkgs/*.txt lists and the parsing setup-fedora.sh does on
+# Self-check for the pkgs/*.txt lists and the parsing the setup scripts do on
 # them. Run with: bash scripts/test-pkgs.sh
 set -uo pipefail
 
-PKGS="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/pkgs"
+SCRIPTS="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PKGS="$SCRIPTS/pkgs"
 STRIP='{sub(/#.*/, "")} NF'
 fails=0
 fail() { echo "FAIL: $*" >&2; ((fails++)); }
+
+# manual.txt holds human-readable tool names, not installable package ids, so it
+# is exempt from the per-entry checks below.
+INSTALL_LISTS=()
+for f in "$PKGS"/*.txt; do
+    [[ "$(basename "$f")" == "manual.txt" ]] || INSTALL_LISTS+=("$f")
+done
 
 # The stripping expression: drops comments (whole-line and trailing) and blanks.
 got="$(printf '# comment\n\n  \nfoo\nbar   # trailing\n' | awk "$STRIP" | xargs)"
 [[ "$got" == "foo bar" ]] || fail "comment/blank stripping: got '$got', want 'foo bar'"
 
-for f in "$PKGS"/*.txt; do
+for f in "${INSTALL_LISTS[@]}"; do
     name="$(basename "$f")"
     pkgs="$(awk "$STRIP" "$f")"
 
@@ -47,13 +55,20 @@ check_overlap fedora dnf snap flatpak mise brew-common
 check_overlap ubuntu apt snap flatpak mise brew-common
 check_overlap macos  brew-macos brew-cask mise brew-common
 
-# Every list must be reachable from at least one setup script, or it is dead
-# weight that quietly stops being maintained.
-for f in "$PKGS"/*.txt; do
+# Every generated list must be reachable from a setup script, or it is dead
+# weight that quietly stops being maintained. .extra.txt files are consumed
+# generically by gen-pkgs.sh, so they are exempt.
+for f in "${INSTALL_LISTS[@]}"; do
     name="$(basename "$f" .txt)"
-    grep -qr -- "$name" "$PKGS/../"*.sh \
+    [[ "$name" == *.extra ]] && continue
+    grep -qr -- "$name" "$SCRIPTS"/*.sh \
         || fail "$name.txt is not referenced by any script"
 done
 
+# The lists are generated: if they do not match the docs, someone hand-edited a
+# generated file or forgot to re-run the generator.
+bash "$SCRIPTS/gen-pkgs.sh" --check >/dev/null 2>&1 \
+    || fail "pkgs/ is out of sync with src/software-to-install/ — run: bash scripts/gen-pkgs.sh"
+
 if ((fails)); then echo "$fails check(s) failed"; exit 1; fi
-echo "OK: all package lists parse cleanly"
+echo "OK: all package lists parse cleanly and match the docs"

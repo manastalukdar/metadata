@@ -16,7 +16,8 @@ Fedora-specific software and native `dnf`/`copr`/`snap` install recipes. Cross-p
     ```
 
 - [Strawberry music player](https://www.strawberrymusicplayer.org/#repositories): `sudo dnf install strawberry`
-- [Moosync](https://github.com/Moosync/Moosync)
+  - Installed as a flatpak by the setup script so one entry covers every distro; see [media-creative.md](../../common/media-creative.md).
+- [Moosync](https://github.com/Moosync/Moosync) `dnf:moosync`
 
     ```
     dnf copr enable ovenoboyo/Moosync
@@ -47,7 +48,13 @@ Fedora-specific software and native `dnf`/`copr`/`snap` install recipes. Cross-p
 
 ### Editors
 
-- Visual Studio Code Insiders: Install snap using instruction in [post-install.md](post-install.md), then run `sudo snap install --classic code-insiders`. To update, run: `sudo snap refresh code-insiders`.
+- Visual Studio Code Insiders: the setup script uses the Microsoft dnf repo (`code-insiders`) rather than snap. Snap alternative: `sudo snap install --classic code-insiders`, updated with `sudo snap refresh code-insiders`.
+- [Lite XL](https://lite-xl.com/en/) `dnf:lite-xl-nightly`
+
+    ```shell
+    sudo dnf copr enable sentry/lite && sudo dnf install lite-xl-nightly
+    ```
+
 - [SublimeText](https://www.sublimetext.com/docs/linux_repositories.html#dnf)
 
     Strongly recommend going with the stable channel (unless you have a license).

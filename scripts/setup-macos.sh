@@ -87,6 +87,7 @@ Next steps (not scripted — they need your credentials or a restart):
   - GitHub SSH key + auth: see src/software-to-install/linux/fedora/packages.md
   - Restore dotfiles/configs:  bash scripts/restore-configs.sh
 
-No longer available as Homebrew casks — install by hand:
-  FileZilla, DaVinci Resolve. Also: Outlook (use the PWA), MuCommander.
+FileZilla was removed from Homebrew; download it from filezilla-project.org.
 NOTES
+
+manual_notes

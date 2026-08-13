@@ -4,13 +4,17 @@ Audio, video, image, and graphics applications, plus media players.
 
 ## Mandatory
 
-- Pinta
-- Audacity
-- GIMP
-- Inkscape
-- VLC Media player
-- DaVinci Resolve
-- Pocketcasts
+- Pinta `flatpak:com.github.PintaProject.Pinta` `cask:pinta`
+- Audacity `flatpak:org.audacityteam.Audacity` `cask:audacity`
+- GIMP `flatpak:org.gimp.GIMP` `cask:gimp`
+- Inkscape `flatpak:org.inkscape.Inkscape` `cask:inkscape`
+- VLC Media player `dnf:vlc` `apt:vlc` `cask:vlc`
+  - On Fedora this needs RPM Fusion; see [linux/fedora/post-install.md](../linux/fedora/post-install.md).
+- [ffmpeg](https://ffmpeg.org/) `dnf:ffmpeg` `apt:ffmpeg` `brew-macos:ffmpeg`
+- Strawberry music player `flatpak:org.strawberrymusicplayer.strawberry` `cask:strawberry`
+- DaVinci Resolve `manual`
+- Pocketcasts `manual`
+  - Web app; install as a PWA from the browser.
 
 ## Optional
 

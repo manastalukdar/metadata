@@ -6,8 +6,9 @@ Compilers and build tools, version-control clients and diff/merge tools, databas
 
 ### Compilers & build
 
-- [clang](https://clang.llvm.org/)
-- gcc
+- [clang](https://clang.llvm.org/) `dnf:clang` `apt:clang` `brew-macos:llvm`
+- gcc `dnf:gcc` `dnf:gcc-c++`
+  - Ubuntu gets gcc and g++ from `build-essential`; macOS from the Xcode Command Line Tools.
   - [Windows](https://www.msys2.org/wiki/MSYS2-installation/)
 
     [Useful Link](https://www.devdungeon.com/content/how-setup-gcc-msys2-eclipse-windows-c-development)
@@ -26,29 +27,33 @@ Compilers and build tools, version-control clients and diff/merge tools, databas
     optional: pacman -S --disable-download-timeout --needed mingw-w64-x86_64-qt6
     ```
 
+- [CMake](https://cmake.org/) `native:cmake`
+- make `native:make`
+
 ### Version control & diff
 
-- kdiff3
+- kdiff3 `dnf:kdiff3` `apt:kdiff3` `cask:kdiff3`
   - macos
 
     `git config --global mergetool.kdiff3.path /Applications/kdiff3.app/Contents/MacOS/kdiff3`
 
-- GitHub CLI
-- [GitHub Desktop](https://github.com/apps/desktop)
+- meld `dnf:meld` `apt:meld` `cask:meld`
+- GitHub CLI `native:gh`
+- [GitHub Desktop](https://github.com/apps/desktop) `flatpak:io.github.shiftey.Desktop` `cask:github`
+  - The flatpak is the community Linux build.
 
 ### Database clients
 
-- [Beekeeper Studio](https://github.com/beekeeper-studio/beekeeper-studio)
+- [Beekeeper Studio](https://github.com/beekeeper-studio/beekeeper-studio) `flatpak:io.beekeeperstudio.Studio` `cask:beekeeper-studio`
 
 ### API clients
 
-- [Bruno](https://www.usebruno.com)
+- [Bruno](https://www.usebruno.com) `flatpak:com.usebruno.Bruno` `cask:bruno`
 
 ## Optional
 
 ### Compilers & build
 
-- [CMake](https://cmake.org/)
 - Qt SDK
 
 ### Version control & diff

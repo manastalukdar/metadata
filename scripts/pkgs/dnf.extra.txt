@@ -1,0 +1,8 @@
+# Machine-only plumbing for Fedora: bootstrap and build dependencies that have
+# no place in the user-facing docs. Appended to the generated dnf.txt.
+flatpak
+snapd
+python3
+python3-pip
+python3-devel
+python3-virtualenv
