@@ -1,0 +1,5 @@
+# snap — only for apps that exist nowhere else. Everything that has a flathub or
+# dnf equivalent belongs in flatpak.txt / dnf.txt instead. If this file ever
+# empties out, drop snapd from dnf.txt and delete the snap step in the script.
+
+storage-explorer      # Azure Storage Explorer — snap-only on Linux

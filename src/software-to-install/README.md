@@ -41,6 +41,14 @@ software-to-install/
     └── post-install.md
 ```
 
+## Relationship to `scripts/pkgs/`
+
+These markdown files are the reference: what a tool is, why it is here, and how to install it by hand on each OS.
+
+[`scripts/pkgs/`](../../scripts/pkgs/) is the executable subset — one plain text file per package manager (`dnf`, `flatpak`, `mise`, `npm`, `uv`, `brew`, `snap`), consumed by [`scripts/setup-fedora.sh`](../../scripts/setup-fedora.sh) to rebuild a machine unattended. It carries only the Mandatory entries that a package manager can actually install; anything needing a manual download stays documented here and is listed at the end of the script's output.
+
+When you add a Mandatory tool here, add it to the matching `scripts/pkgs/*.txt` too, and run `bash scripts/test-pkgs.sh`.
+
 ## Where does a tool go? (routing rule)
 
 - **`common/` is a tool's home.** If a tool runs on more than one OS, it belongs in the matching `common/` category, with its canonical cross-platform install method (Homebrew, SDKman, npm, etc.). Short per-OS install snippets may be nested as sub-bullets under the tool.

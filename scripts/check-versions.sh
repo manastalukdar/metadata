@@ -35,17 +35,30 @@ check_version "make" "make --version"
 check_version "cmake" "cmake --version"
 check_version "gradle" "gradle --version"
 
-# Version managers
+# Version managers. mise supersedes nvm / sdkman / pyenv / jenv — those were
+# shell functions rather than binaries, so they never showed up here anyway.
 echo ""
 echo "📦 Version Managers:"
-check_version "nvm" "nvm --version"
-check_version "sdk" "sdk version"
-check_version "pyenv" "pyenv --version"
+check_version "mise" "mise --version"
+check_version "uv" "uv --version"
+if command -v mise &> /dev/null; then
+    echo "   pinned by mise:"
+    mise ls --current --no-header 2>/dev/null | awk '{printf "     %s %s\n", $1, $2}'
+fi
+
+# Package managers (the tiers in scripts/pkgs/)
+echo ""
+echo "🗃️ Package Managers:"
+check_version "flatpak" "flatpak --version"
+check_version "brew" "brew --version"
+check_version "snap" "snap --version"
 
 # Editors
 echo ""
 echo "✏️ Editors:"
 check_version "code" "code --version"
+check_version "code-insiders" "code-insiders --version"
+check_version "subl" "subl --version"
 check_version "vim" "vim --version"
 check_version "nvim" "nvim --version"
 check_version "emacs" "emacs --version"

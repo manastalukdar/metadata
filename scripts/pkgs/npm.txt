@@ -1,0 +1,30 @@
+# npm global packages. Installed against the mise-managed node, so this needs no
+# sudo and is wiped/recreated with the node install.
+
+# --- AI coding agents ---
+@anthropic-ai/claude-code
+@google/gemini-cli
+opencode-ai
+claudish
+@mariozechner/pi-coding-agent
+@fission-ai/openspec
+
+# --- web / build ---
+typescript
+ts-node
+@vue/cli
+serve
+http-server
+rimraf
+node-gyp
+less
+
+# --- docs / markdown ---
+markdownlint-cli
+@mermaid-js/mermaid-cli
+@marp-team/marp-cli
+gh-pages
+
+# --- maintenance ---
+npm-check-updates
+vsce

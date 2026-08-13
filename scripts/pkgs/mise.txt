@@ -1,0 +1,14 @@
+# mise — language runtimes and version-pinned dev CLIs, installed per-user.
+# Replaces nvm + pyenv + sdkman + jenv + gradle-by-hand with one tool.
+# Format: <tool>@<version>, as accepted by `mise use -g`.
+# Change a version here and re-run the script to switch.
+
+node@lts
+python@3.13
+java@temurin-21
+go@latest
+rust@latest
+uv@latest
+gradle@latest
+typst@latest
+starship@latest

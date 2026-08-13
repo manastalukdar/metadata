@@ -1,0 +1,27 @@
+# flatpak (flathub) — GUI desktop apps. Every ID below was verified against
+# flathub. One ID per line; '#' starts a comment.
+
+# --- communication ---
+com.slack.Slack
+org.telegram.desktop
+
+# --- creative ---
+org.gimp.GIMP
+org.inkscape.Inkscape
+org.audacityteam.Audacity
+com.github.PintaProject.Pinta
+
+# --- dev ---
+com.usebruno.Bruno
+io.beekeeperstudio.Studio
+io.github.shiftey.Desktop        # GitHub Desktop (community build)
+
+# --- browsers ---
+org.torproject.torbrowser-launcher
+com.opera.Opera                  # kept for the bundled VPN
+
+# --- system / utilities ---
+net.nokyan.Resources
+com.github.liferooter.textpieces
+de.haeckerfelix.Shortwave
+io.github.seadve.Kooha           # screen recorder (Wayland-native)

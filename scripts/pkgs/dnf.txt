@@ -1,0 +1,106 @@
+# dnf — OS, system integration, and anything needing root/systemd.
+# One package per line. '#' starts a comment. Names that don't resolve on your
+# Fedora release are skipped and reported (--skip-unavailable), so it is safe to
+# leave entries here that come and go between releases.
+# Repos (RPM Fusion, Microsoft, Sublime, Vivaldi, Chrome, coprs) are enabled by
+# setup-fedora.sh before this list is installed.
+
+# --- core ---
+git
+git-lfs
+curl
+wget
+zsh
+util-linux-user       # provides chsh
+openssh-askpass
+p7zip
+p7zip-plugins
+unzip                 # needed by the Nerd Fonts step
+jq
+pandoc
+graphviz
+protobuf-compiler
+ripgrep
+fd-find
+fzf
+bat
+htop
+
+# --- build toolchain ---
+clang
+gcc
+gcc-c++
+cmake
+make
+python3
+python3-pip
+python3-devel
+python3-virtualenv
+
+# --- .NET (mise covers node/java/python/go; .NET is cleanest from dnf) ---
+dotnet-sdk-9.0
+
+# --- editors ---
+neovim
+python3-neovim
+neovim-qt
+sublime-text          # repo: sublimehq
+sublime-merge         # repo: sublimehq
+code-insiders         # repo: packages.microsoft.com/yumrepos/vscode
+
+# --- git / diff ---
+gh
+meld
+kdiff3
+
+# --- browsers ---
+microsoft-edge-dev    # repo: packages.microsoft.com/yumrepos/edge
+vivaldi-snapshot      # repo: repo.vivaldi.com
+google-chrome-stable  # repo: fedora-workstation-repositories
+
+# --- shells & terminals ---
+powershell            # repo: packages.microsoft.com
+nushell
+terminator
+
+# --- media (needs RPM Fusion) ---
+vlc
+ffmpeg
+strawberry
+moosync               # copr: ovenoboyo/Moosync
+
+# --- writing / LaTeX ---
+texstudio
+texlive-scheme-medium # swap for texlive-scheme-full if you hit missing packages
+
+# --- desktop / GNOME ---
+gnome-tweaks
+gnome-extensions-app
+gnome-shell-extension-dash-to-dock
+gnome-font-viewer
+gnome-screenshot
+blueman
+ulauncher
+polybar
+conky
+redshift
+redshift-gtk
+
+# --- fonts ---
+powerline-fonts
+fira-code-fonts
+google-noto-emoji-color-fonts
+# Nerd Fonts are not packaged; setup-fedora.sh fetches Meslo + FiraCode.
+
+# --- mail ---
+thunderbird
+evolution
+
+# --- misc ---
+keepassxc
+filezilla
+doublecmd-gtk         # repo: opensuse home:Alexx2000
+lite-xl-nightly       # copr: sentry/lite
+yt-dlp
+lnav
+pass

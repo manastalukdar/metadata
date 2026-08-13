@@ -1,0 +1,9 @@
+# Python CLI tools, each installed by `uv tool install` into its own isolated
+# venv. Do NOT put libraries here (numpy, pandas, ...) — those belong to a
+# project's own venv, created with `uv venv` / `uv sync` per repo.
+
+ruff
+black
+aider-chat
+jupyterlab
+git-filter-repo

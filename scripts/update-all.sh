@@ -1,23 +1,33 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Universal Update Script
-# Updates all development tools and configurations
+# Updates all development tools and configurations.
+#
+# Mirrors the tiers in scripts/pkgs/: system packages, flatpak, snap, mise,
+# npm, uv, brew. Adding a tool to a pkgs list needs no change here.
 
-set -e
+set -uo pipefail   # not -e: a single updater that is absent or unhappy must not
+                   # abort the rest of the run
+
+FAILED=()
+say()  { echo -e "\n\033[1;34m==>\033[0m $*"; }
+warn() { echo -e "\033[1;33m[warn]\033[0m $*" >&2; FAILED+=("$*"); }
+have() { command -v "$1" >/dev/null 2>&1; }
+try()  { "$@" || warn "failed: $*"; }
 
 echo "🔄 Starting comprehensive system update..."
 
 # Detect platform
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    if command -v apt &> /dev/null; then
+if [[ "${OSTYPE:-}" == "linux-gnu"* ]]; then
+    if have apt; then
         PLATFORM="ubuntu"
-    elif command -v dnf &> /dev/null; then
+    elif have dnf; then
         PLATFORM="fedora"
     else
         PLATFORM="linux"
     fi
-elif [[ "$OSTYPE" == "darwin"* ]]; then
+elif [[ "${OSTYPE:-}" == "darwin"* ]]; then
     PLATFORM="macos"
-elif [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "cygwin" ]]; then
+elif [[ "${OSTYPE:-}" == "msys" ]] || [[ "${OSTYPE:-}" == "cygwin" ]]; then
     PLATFORM="windows"
 else
     PLATFORM="unknown"
@@ -25,104 +35,88 @@ fi
 
 echo "🖥️ Detected platform: $PLATFORM"
 
-# Update system packages
-echo "📦 Updating system packages..."
+say "📦 System packages"
 case $PLATFORM in
     "ubuntu")
-        sudo apt update && sudo apt upgrade -y
-        sudo apt autoremove -y
+        try sudo apt update
+        try sudo apt upgrade -y
+        try sudo apt autoremove -y
         ;;
     "fedora")
-        sudo dnf update -y
-        sudo dnf autoremove -y
+        try sudo dnf upgrade --refresh -y
+        try sudo dnf autoremove -y
         ;;
     "macos")
-        if command -v brew &> /dev/null; then
-            brew update && brew upgrade
-            brew cleanup
-        fi
-        ;;
+        ;;   # handled by the Homebrew step below
     "windows")
         echo "⚠️ Windows updates require manual intervention"
         echo "Run: winget upgrade --all"
         ;;
 esac
 
-# Update Node.js packages
-if command -v npm &> /dev/null; then
-    echo "🟢 Updating Node.js global packages..."
-    npm update -g
-    npm audit fix
+if have flatpak; then
+    say "📦 Flatpak apps"
+    try flatpak update -y
+    try flatpak uninstall --unused -y
 fi
 
-# Update Python packages
-if command -v pip3 &> /dev/null; then
-    echo "🐍 Updating Python packages..."
-    pip3 install --upgrade pip --user
-    
-    # Update packages in default virtual environment if it exists
-    if [ -d "$HOME/.venv/default" ]; then
-        source "$HOME/.venv/default/bin/activate"
-        pip install --upgrade pip
-        pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U
-        deactivate
+if have snap; then
+    say "📦 Snap apps"
+    try sudo snap refresh
+fi
+
+# mise owns node, python, java, go, rust, gradle and friends — it replaces the
+# nvm / sdkman / pyenv / jenv updates this script used to do one by one.
+if have mise; then
+    say "🔧 Runtimes and dev CLIs (mise)"
+    try mise self-update -y
+    try mise upgrade -y
+    try mise prune -y
+fi
+
+if have npm; then
+    say "🟢 Node global packages"
+    try npm update -g
+fi
+
+if have uv; then
+    say "🐍 Python CLI tools"
+    try uv tool upgrade --all
+    try uv self update
+fi
+
+if have brew; then
+    say "🍺 Homebrew"
+    try brew update
+    try brew upgrade
+    try brew cleanup
+fi
+
+# vim-plug only; other plugin managers self-update on next launch.
+if have nvim && [[ -f "$HOME/.local/share/nvim/site/autoload/plug.vim" ]]; then
+    say "📝 Neovim plugins"
+    try nvim +PlugUpdate +qall
+fi
+
+for editor in code code-insiders; do
+    if have "$editor"; then
+        say "🔧 $editor extensions"
+        try "$editor" --update-extensions
     fi
-fi
+done
 
-# Update Rust
-if command -v rustup &> /dev/null; then
-    echo "🦀 Updating Rust..."
-    rustup update
-fi
-
-# Update Go
-if command -v go &> /dev/null; then
-    echo "🐹 Updating Go tools..."
-    go install -a std
-fi
-
-# Update SDKman packages
-if [ -d "$HOME/.sdkman" ]; then
-    echo "☕ Updating SDKman and Java..."
-    source ~/.sdkman/bin/sdkman-init.sh
-    sdk selfupdate
-    sdk update
-fi
-
-# Update vim/neovim plugins
-if command -v nvim &> /dev/null; then
-    echo "📝 Updating Neovim plugins..."
-    nvim +PlugUpdate +qall
-fi
-
-# Update VS Code extensions
-if command -v code &> /dev/null; then
-    echo "🔧 Updating VS Code extensions..."
-    code --update-extensions
-fi
-
-# Clean up
-echo "🧹 Cleaning up..."
-case $PLATFORM in
-    "ubuntu"|"fedora")
-        # Clear package cache
-        sudo apt autoremove -y &> /dev/null || true
-        sudo dnf autoremove -y &> /dev/null || true
-        ;;
-    "macos")
-        if command -v brew &> /dev/null; then
-            brew cleanup
-        fi
-        ;;
-esac
-
-# Run health check
-echo "🏥 Running health check..."
-if [ -f "scripts/check-versions.sh" ]; then
-    bash scripts/check-versions.sh
+say "🏥 Health check"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [[ -f "$SCRIPT_DIR/check-versions.sh" ]]; then
+    bash "$SCRIPT_DIR/check-versions.sh"
 else
-    echo "⚠️ Health check script not found"
+    warn "check-versions.sh not found"
 fi
 
-echo "✅ System update completed successfully!"
+if ((${#FAILED[@]})); then
+    echo -e "\n\033[1;33m${#FAILED[@]} step(s) needed attention:\033[0m"
+    printf '  - %s\n' "${FAILED[@]}"
+else
+    echo -e "\n✅ System update completed successfully!"
+fi
 echo "💡 Consider backing up your configurations: scripts/backup-configs.sh"
