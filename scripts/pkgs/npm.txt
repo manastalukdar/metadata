@@ -5,12 +5,8 @@
 
 # from common/ai-tools.md
 @anthropic-ai/claude-code
-@google/gemini-cli
 opencode-ai
-claudish
-claude-mem
 @mariozechner/pi-coding-agent
-ruflo
 @fission-ai/openspec
 
 # from common/languages-runtimes.md

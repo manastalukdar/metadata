@@ -72,6 +72,11 @@ aptrepo vivaldi https://repo.vivaldi.com/archive/linux_signing_key.pub \
     "deb [arch=$ARCH signed-by=KEY] https://repo.vivaldi.com/archive/deb/ stable main"
 aptrepo google-chrome https://dl.google.com/linux/linux_signing_key.pub \
     "deb [arch=$ARCH signed-by=KEY] https://dl.google.com/linux/chrome/deb/ stable main"
+# Rancher Desktop, from the openSUSE Build Service. The trailing "./" is the
+# flat-repository form OBS publishes; it is not a typo.
+aptrepo isv-rancher-stable \
+    https://download.opensuse.org/repositories/isv:/Rancher:/stable/deb/Release.key \
+    "deb [signed-by=KEY] https://download.opensuse.org/repositories/isv:/Rancher:/stable/deb/ ./"
 
 # Ulauncher is only published as a PPA.
 if ! grep -rq ulauncher /etc/apt/sources.list.d/ 2>/dev/null; then

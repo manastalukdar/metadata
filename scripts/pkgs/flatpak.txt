@@ -5,7 +5,6 @@
 
 # from common/browsers.md
 org.torproject.torbrowser-launcher
-com.opera.Opera
 
 # from common/communication.md
 com.slack.Slack

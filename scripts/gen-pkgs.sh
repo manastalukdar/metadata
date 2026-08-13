@@ -72,7 +72,9 @@ awk -v mgrs="$(printf '%s ' "${!TARGETS[@]}")" '
             val = substr(tag, colon + 1)
             if (mgr in known) print mgr "\t" val "\t" src
         }
-        if ($0 ~ /`manual`/ && $0 ~ /^[[:space:]]*[-*][[:space:]]/) {
+        # Top-level bullets only. Sub-bullets are per-OS prose for their parent,
+        # and prose that merely mentions `manual` must not become an entry.
+        if ($0 ~ /`manual`/ && $0 ~ /^[-*][[:space:]]/) {
             name = $0
             sub(/^[[:space:]]*[-*][[:space:]]*/, "", name)
             gsub(/`[^`]*`/, "", name)               # drop all tags

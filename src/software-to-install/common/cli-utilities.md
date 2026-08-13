@@ -16,7 +16,6 @@ Command-line tools and document/data processing utilities.
 - [fzf](https://github.com/junegunn/fzf) `native:fzf`
 - [bat](https://github.com/sharkdp/bat) `native:bat`
   - The binary is `batcat` on Debian/Ubuntu.
-- [yt-dlp](https://github.com/yt-dlp/yt-dlp) `native:yt-dlp`
 - [lnav](https://lnav.org/) `native:lnav`
 - [pass](https://www.passwordstore.org) `native:pass`
 
@@ -25,3 +24,4 @@ Command-line tools and document/data processing utilities.
 - [sift](https://github.com/svent/sift)
 - [glances](https://github.com/nicolargo/glances)
 - [glogg](https://glogg.bonnefon.org/index.html)
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp) `native:yt-dlp`

@@ -17,13 +17,15 @@ ripgrep
 fd-find
 fzf
 bat
-yt-dlp
 lnav
 pass
 
 # from common/communication.md
-thunderbird
 evolution
+
+# from common/containers-virtualization.md
+podman
+rancher-desktop
 
 # from common/core.md
 git

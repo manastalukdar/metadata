@@ -80,6 +80,9 @@ addrepo https://repo.vivaldi.com/archive/vivaldi-fedora.repo
 # Google Chrome ships in Fedora's own third-party repo definitions.
 sudo dnf -y install fedora-workstation-repositories && enablerepo google-chrome
 
+# Rancher Desktop, from the openSUSE Build Service.
+addrepo "https://download.opensuse.org/repositories/isv:/Rancher:/stable/fedora/isv:Rancher:stable.repo"
+
 sudo dnf -y copr enable ovenoboyo/Moosync
 sudo dnf -y copr enable sentry/lite            # lite-xl
 

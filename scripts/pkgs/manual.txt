@@ -5,12 +5,8 @@
 
 # from common/ai-tools.md
 Cursor code editor
-OpenClaw
 Understand Anything - website
 Claude Swap
-
-# from common/communication.md
-Outlook
 
 # from common/core.md
 Fonts

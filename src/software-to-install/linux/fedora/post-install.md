@@ -109,6 +109,20 @@ sudo systemctl enable tlp
 sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 ```
 
+## Rancher Desktop: privileged ports for Traefik
+
+Rancher Desktop's Traefik ingress wants to bind ports 80 and 443. Allowing that lowers the privileged-port floor for *every* process on the machine, so decide deliberately rather than scripting it:
+
+```shell
+# try it for this boot only
+sudo sysctl -w net.ipv4.ip_unprivileged_port_start=80
+
+# make it persist
+echo 'net.ipv4.ip_unprivileged_port_start=80' | sudo tee /etc/sysctl.d/99-rancher-desktop.conf
+```
+
+Skip it if you do not need ingress on the standard ports — Rancher Desktop works fine otherwise, and you can map to high ports instead. Also confirm `/dev/kvm` is readable and writable by your user.
+
 ## Fractional scaling
 
 `gsettings set org.gnome.desktop.interface text-scaling-factor 1.5`

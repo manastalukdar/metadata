@@ -2,6 +2,21 @@
 
 Container runtimes, virtual machines, and reproducible-environment tools.
 
+## Mandatory
+
+- [Podman](https://podman.io) `native:podman`
+- [Rancher Desktop](https://rancherdesktop.io) `dnf:rancher-desktop` `apt:rancher-desktop` `cask:rancher`
+  - [Install docs](https://docs.rancherdesktop.io/getting-started/installation/). Ships its own `docker`/`nerdctl` CLI plus a local Kubernetes cluster, so it stands in for Docker Desktop — do not run both.
+  - Linux packages come from the openSUSE Build Service `isv:Rancher:stable` repo, which the setup scripts add:
+    - Fedora: `sudo dnf config-manager addrepo --from-repofile=https://download.opensuse.org/repositories/isv:/Rancher:/stable/fedora/isv:Rancher:stable.repo`
+    - Ubuntu: key `https://download.opensuse.org/repositories/isv:/Rancher:/stable/deb/Release.key`, repo `deb [signed-by=...] https://download.opensuse.org/repositories/isv:/Rancher:/stable/deb/ ./`
+    - AppImage alternative: <https://download.opensuse.org/repositories/isv:/Rancher:/stable/AppImage/rancher-desktop-latest-x86_64.AppImage>
+  - macOS: upstream recommends the DMG from [GitHub releases](https://github.com/rancher-sandbox/rancher-desktop/releases) and notes the Homebrew cask is *not* maintained by the Rancher Desktop team. The `rancher` cask is tagged anyway so a rebuild stays unattended — change it to `manual` if that caveat outweighs the automation.
+  - Requirements
+    - Linux: x86_64 with AMD-V/VT-x and read-write `/dev/kvm`. macOS 13+. Windows 11 with WSL.
+    - `pass` and `gpg` for credential storage — `pass` is in [cli-utilities.md](cli-utilities.md), and both distros ship GnuPG.
+    - Traefik binding ports 80/443 needs `net.ipv4.ip_unprivileged_port_start=80`. That lowers privileged-port protection machine-wide, so it is documented rather than scripted: see [fedora/post-install.md](../linux/fedora/post-install.md).
+
 ## Optional
 
 - Docker
@@ -39,3 +54,4 @@ Container runtimes, virtual machines, and reproducible-environment tools.
 - <https://orbstack.dev/>
 - [VirtualBox](https://www.virtualbox.org)
 - [Nix](https://nixos.org/learn/)
+- [Podman Desktop](https://podman-desktop.io)

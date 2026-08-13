@@ -3,6 +3,9 @@
 # Add or remove tools in src/software-to-install/ (the source of truth),
 # then run: bash scripts/gen-pkgs.sh
 
+# from common/ai-tools.md
+herdr
+
 # from common/cli-utilities.md
 q
 yq

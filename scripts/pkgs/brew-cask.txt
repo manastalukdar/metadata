@@ -11,12 +11,13 @@ vivaldi
 microsoft-edge@dev
 google-chrome
 tor-browser
-opera
 
 # from common/communication.md
 slack
 telegram-desktop
-thunderbird
+
+# from common/containers-virtualization.md
+rancher
 
 # from common/core.md
 font-meslo-lg-nerd-font

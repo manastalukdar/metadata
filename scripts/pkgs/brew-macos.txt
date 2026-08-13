@@ -11,9 +11,11 @@ ripgrep
 fd
 fzf
 bat
-yt-dlp
 lnav
 pass
+
+# from common/containers-virtualization.md
+podman
 
 # from common/core.md
 git
