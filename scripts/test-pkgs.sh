@@ -9,11 +9,14 @@ STRIP='{sub(/#.*/, "")} NF'
 fails=0
 fail() { echo "FAIL: $*" >&2; ((fails++)); }
 
-# manual.txt holds human-readable tool names, not installable package ids, so it
-# is exempt from the per-entry checks below.
+# manual.txt and untagged.txt hold human-readable tool names and doc references,
+# not installable package ids, so they are exempt from the per-entry checks.
 INSTALL_LISTS=()
 for f in "$PKGS"/*.txt; do
-    [[ "$(basename "$f")" == "manual.txt" ]] || INSTALL_LISTS+=("$f")
+    case "$(basename "$f")" in
+        manual.txt|untagged.txt) ;;
+        *) INSTALL_LISTS+=("$f") ;;
+    esac
 done
 
 # The stripping expression: drops comments (whole-line and trailing) and blanks.
@@ -67,8 +70,17 @@ done
 
 # The lists are generated: if they do not match the docs, someone hand-edited a
 # generated file or forgot to re-run the generator.
-bash "$SCRIPTS/gen-pkgs.sh" --check >/dev/null 2>&1 \
-    || fail "pkgs/ is out of sync with src/software-to-install/ — run: bash scripts/gen-pkgs.sh"
+if ! check_out="$(bash "$SCRIPTS/gen-pkgs.sh" --check 2>&1)"; then
+    echo "$check_out" >&2
+    fail "pkgs/ is out of sync with src/software-to-install/ — run: bash scripts/gen-pkgs.sh"
+fi
 
 if ((fails)); then echo "$fails check(s) failed"; exit 1; fi
 echo "OK: all package lists parse cleanly and match the docs"
+
+# Not a failure — the standing to-do list of Mandatory entries nothing installs.
+if [[ -s "$PKGS/untagged.txt" ]] && awk '{sub(/#.*/, "")} NF' "$PKGS/untagged.txt" | grep -q .; then
+    echo ""
+    echo "Untagged Mandatory entries (see pkgs/untagged.txt):"
+    awk '{sub(/#.*/, "")} NF { print "  " $0 }' "$PKGS/untagged.txt"
+fi

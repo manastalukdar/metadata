@@ -80,6 +80,8 @@ bash scripts/test-pkgs.sh    # verifies the lists parse and match these docs
 
 `gen-pkgs.sh --check` fails if the committed lists are stale, which is how drift gets caught rather than discovered on a fresh machine. `test-pkgs.sh` runs it for you.
 
+Mandatory entries with no tag at all are collected into [`pkgs/untagged.txt`](../../scripts/pkgs/untagged.txt) and printed by both scripts. It is committed, so `git diff` shows when a new Mandatory bullet arrives without a tag. An empty list is the goal; it does not fail the build, because "not tagged yet" is a to-do, not a broken state.
+
 The OS `packages.md` files are *recipe documentation* — they describe repo setup and per-distro install commands for tools owned by `common/`, and deliberately carry no tags for those, so a package name is never written in two places. They tag only OS-exclusive software (e.g. Fedora's `moosync`).
 
 Plumbing with no place in user-facing docs (`ca-certificates`, `build-essential`, …) lives in hand-written `pkgs/<list>.extra.txt` files that the generator appends.
@@ -101,6 +103,7 @@ Most lists are cross-platform, so a tool usually only needs adding in one place:
 | `uv.txt` — python CLI tools | ✅ | ✅ | ✅ |
 | `brew-common.txt` — CLI tools no other tier carries | ✅ | ✅ | ✅ |
 | `manual.txt` — printed, not installed | ✅ | ✅ | ✅ |
+| `untagged.txt` — to-do list, installs nothing | — | — | — |
 
 ## Where does a tool go? (routing rule)
 
