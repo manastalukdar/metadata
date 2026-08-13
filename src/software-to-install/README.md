@@ -68,7 +68,10 @@ Tools are annotated with inline install tags naming the package manager and the 
 
 Repeat a tag to install several packages for one tool (`` `dnf:p7zip` `dnf:p7zip-plugins` ``).
 
-Only `## Mandatory` sections are read — tagging an Optional entry documents the id but installs nothing.
+Two rules on where a tag counts:
+
+- Only `## Mandatory` sections are read — tagging an Optional entry documents the id but installs nothing.
+- Only **top-level** bullets are read. Sub-bullets are per-OS prose for their parent, so you can safely mention a tag there when documenting an Optional tool or quoting an example without the setup scripts installing it.
 
 ### Workflow
 

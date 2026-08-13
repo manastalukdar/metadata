@@ -5,6 +5,14 @@ Container runtimes, virtual machines, and reproducible-environment tools.
 ## Mandatory
 
 - [Podman](https://podman.io) `native:podman`
+  - Same package name from dnf, apt and brew, hence the single `native:` tag.
+  - Rootless containers work out of the box on Fedora and Ubuntu. On macOS the formula installs only the client, so it needs a Linux VM first — not scripted, since it downloads an image and picks a resource budget:
+
+    ```shell
+    podman machine init && podman machine start
+    ```
+
+  - [Podman Desktop](https://podman-desktop.io) is the GUI (`cask:podman-desktop` on macOS, flatpak on Linux) and is listed under Optional below.
 - [Rancher Desktop](https://rancherdesktop.io) `dnf:rancher-desktop` `apt:rancher-desktop` `cask:rancher`
   - [Install docs](https://docs.rancherdesktop.io/getting-started/installation/). Ships its own `docker`/`nerdctl` CLI plus a local Kubernetes cluster, so it stands in for Docker Desktop — do not run both.
   - Linux packages come from the openSUSE Build Service `isv:Rancher:stable` repo, which the setup scripts add:

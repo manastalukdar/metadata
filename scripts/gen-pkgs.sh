@@ -62,7 +62,10 @@ awk -v mgrs="$(printf '%s ' "${!TARGETS[@]}")" '
     /^##[[:space:]]+Mandatory/  { mandatory = 1; next }
     /^##[[:space:]]/ && !/^###/ { mandatory = 0 }
     !mandatory { next }
-    {
+    # Top-level bullets only. Sub-bullets are per-OS prose for their parent, and
+    # prose that merely names a tag (documenting an Optional tool, quoting an
+    # example) must never become something the setup scripts install.
+    /^[-*][[:space:]]/ {
         line = $0
         while (match(line, /`[a-z][a-z0-9-]*:[^`[:space:]]+`/)) {
             tag = substr(line, RSTART + 1, RLENGTH - 2)
