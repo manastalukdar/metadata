@@ -30,12 +30,30 @@ for f in "$PKGS"/*.txt; do
     [[ -z "$dupes" ]] || fail "$name: duplicate entries: $(xargs <<<"$dupes")"
 done
 
-# A tool listed in two tiers gets installed twice, from two sources, and the
-# one that wins depends on PATH order. Catch it here instead of at 3am.
-overlap="$(for f in "$PKGS"/{dnf,brew,mise,snap}.txt; do
-    awk "$STRIP" "$f" | sed 's/@.*//' | sort -u
-done | sort | uniq -d)"
-[[ -z "$overlap" ]] || fail "same tool in multiple tiers: $(xargs <<<"$overlap")"
+# A tool listed in two tiers of the SAME platform gets installed twice, from two
+# sources, and which one wins depends on PATH order. Catch it here, not at 3am.
+# Checked per platform, because dnf.txt and apt.txt are alternatives that are
+# supposed to name the same tools.
+check_overlap() {
+    local platform="$1"; shift
+    local overlap
+    overlap="$(for list in "$@"; do
+        awk "$STRIP" "$PKGS/$list.txt" | sed 's/@.*//' | sort -u
+    done | sort | uniq -d)"
+    [[ -z "$overlap" ]] \
+        || fail "$platform: same tool in multiple tiers: $(xargs <<<"$overlap")"
+}
+check_overlap fedora dnf snap flatpak mise brew-common
+check_overlap ubuntu apt snap flatpak mise brew-common
+check_overlap macos  brew-macos brew-cask mise brew-common
+
+# Every list must be reachable from at least one setup script, or it is dead
+# weight that quietly stops being maintained.
+for f in "$PKGS"/*.txt; do
+    name="$(basename "$f" .txt)"
+    grep -qr -- "$name" "$PKGS/../"*.sh \
+        || fail "$name.txt is not referenced by any script"
+done
 
 if ((fails)); then echo "$fails check(s) failed"; exit 1; fi
 echo "OK: all package lists parse cleanly"

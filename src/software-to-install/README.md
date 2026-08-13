@@ -45,9 +45,24 @@ software-to-install/
 
 These markdown files are the reference: what a tool is, why it is here, and how to install it by hand on each OS.
 
-[`scripts/pkgs/`](../../scripts/pkgs/) is the executable subset — one plain text file per package manager (`dnf`, `flatpak`, `mise`, `npm`, `uv`, `brew`, `snap`), consumed by [`scripts/setup-fedora.sh`](../../scripts/setup-fedora.sh) to rebuild a machine unattended. It carries only the Mandatory entries that a package manager can actually install; anything needing a manual download stays documented here and is listed at the end of the script's output.
+[`scripts/pkgs/`](../../scripts/pkgs/) is the executable subset — one plain text file per package manager, consumed by the `scripts/setup-*.sh` scripts to rebuild a machine unattended. It carries only the Mandatory entries that a package manager can actually install; anything needing a manual download stays documented here and is listed at the end of each script's output.
 
-When you add a Mandatory tool here, add it to the matching `scripts/pkgs/*.txt` too, and run `bash scripts/test-pkgs.sh`.
+Most lists are cross-platform, so a tool usually only needs adding in one place:
+
+| List | Fedora | Ubuntu | macOS |
+| --- | :-: | :-: | :-: |
+| `dnf.txt` — OS/system packages | ✅ | | |
+| `apt.txt` — OS/system packages | | ✅ | |
+| `flatpak.txt` — GUI apps | ✅ | ✅ | |
+| `brew-cask.txt` — GUI apps | | | ✅ |
+| `brew-macos.txt` — CLI tools Linux gets from dnf/apt | | | ✅ |
+| `snap.txt` — only what exists nowhere else | ✅ | ✅ | |
+| `mise.txt` — runtimes and version-pinned dev CLIs | ✅ | ✅ | ✅ |
+| `npm.txt` — node global CLIs | ✅ | ✅ | ✅ |
+| `uv.txt` — python CLI tools | ✅ | ✅ | ✅ |
+| `brew-common.txt` — CLI tools no other tier carries | ✅ | ✅ | ✅ |
+
+When you add a Mandatory tool here, add it to the matching list too, then run `bash scripts/test-pkgs.sh` — it checks the entries are installable-safe, unique, and not duplicated across two tiers of the same platform.
 
 ## Where does a tool go? (routing rule)
 

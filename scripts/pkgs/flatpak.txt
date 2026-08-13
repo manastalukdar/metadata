@@ -10,6 +10,7 @@ org.gimp.GIMP
 org.inkscape.Inkscape
 org.audacityteam.Audacity
 com.github.PintaProject.Pinta
+org.strawberrymusicplayer.strawberry   # one source for both Fedora and Ubuntu
 
 # --- dev ---
 com.usebruno.Bruno

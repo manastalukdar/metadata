@@ -6,42 +6,20 @@
 # The package lists live in scripts/pkgs/*.txt — one package per line, '#' for
 # comments. To add a tool, add a line to the right list; do not edit this script.
 #
-#   dnf.txt      OS, drivers, system integration, anything needing root/systemd
-#   flatpak.txt  GUI desktop apps (flathub)
-#   mise.txt     language runtimes and version-pinned dev CLIs (per-user)
-#   npm.txt      node global CLIs (installed against the mise-managed node)
-#   uv.txt       python CLI tools (each in its own isolated venv)
-#   brew.txt     escape hatch for CLI tools none of the above carry
-#   snap.txt     last resort, for apps that exist nowhere else
+#   dnf.txt          OS, drivers, system integration, anything needing root
+#   flatpak.txt      GUI desktop apps (flathub) — shared with Ubuntu
+#   mise.txt         language runtimes and dev CLIs (per-user) — shared
+#   npm.txt          node global CLIs — shared
+#   uv.txt           python CLI tools — shared
+#   brew-common.txt  CLI tools dnf and mise do not carry — shared
+#   snap.txt         last resort, for apps that exist nowhere else — shared
 #
 # Idempotent: safe to re-run. Every step is a no-op when already satisfied.
 
 set -uo pipefail   # deliberately NOT -e: one unavailable package must not abort
                    # a 300-package install. Failures are collected and reported.
 
-PKGS="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/pkgs"
-FAILED=()
-
-say()  { echo -e "\n\033[1;34m==>\033[0m $*"; }
-warn() { echo -e "\033[1;33m[warn]\033[0m $*" >&2; FAILED+=("$*"); }
-have() { command -v "$1" >/dev/null 2>&1; }
-
-# inst <list-name> <install-command...>
-# Reads pkgs/<list-name>.txt, strips comments and blanks, installs in one batch.
-# If the batch fails, retries one package at a time so a single bad or
-# release-renamed package name cannot take the rest of the list down with it.
-inst() {
-    local name="$1"; shift
-    local file="$PKGS/$name.txt" pkgs
-    [[ -f "$file" ]] || { warn "missing list: $file"; return 0; }
-    pkgs="$(awk '{sub(/#.*/, "")} NF' "$file")"
-    [[ -n "$pkgs" ]] || return 0
-    say "$name: installing $(wc -l <<<"$pkgs") entries"
-    if ! xargs -r "$@" <<<"$pkgs"; then
-        warn "$name: batch failed, retrying individually"
-        xargs -r -n1 "$@" <<<"$pkgs" || warn "$name: some entries failed (see above)"
-    fi
-}
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib-pkgs.sh"
 
 # ---------------------------------------------------------------------------
 # dnf4 / dnf5 compatibility. Fedora 41+ ships dnf5, which renamed both the
@@ -137,27 +115,8 @@ sudo ln -sf /var/lib/snapd/snap /snap
 sudo snap wait system seed.loaded && inst snap sudo snap install --classic
 
 # ---------------------------------------------------------------------------
-say "Runtimes and dev CLIs (mise)"
+setup_mise_tiers
 # ---------------------------------------------------------------------------
-# mise replaces nvm + pyenv + sdkman + jenv: one tool, versions pinned in
-# pkgs/mise.txt, no shell-init soup.
-have mise || curl -fsSL https://mise.run | sh
-export PATH="$HOME/.local/bin:$HOME/.local/share/mise/shims:$PATH"
-have mise || { warn "mise install failed — skipping mise/npm/uv tiers"; MISE_DEAD=1; }
-
-if [[ -z "${MISE_DEAD:-}" ]]; then
-    inst mise mise use --global --yes
-    mise install --yes
-
-    say "Node global CLIs (npm)"
-    corepack enable 2>/dev/null
-    inst npm npm install -g
-
-    say "Python CLI tools (uv)"
-    # uv tool install takes one package at a time, each in its own venv.
-    xargs -r -n1 uv tool install < <(awk '{sub(/#.*/, "")} NF' "$PKGS/uv.txt") \
-        || warn "some uv tools failed"
-fi
 
 # ---------------------------------------------------------------------------
 say "Homebrew (escape hatch)"
@@ -169,7 +128,7 @@ fi
 BREW=/home/linuxbrew/.linuxbrew/bin/brew
 if [[ -x "$BREW" ]]; then
     eval "$("$BREW" shellenv)"
-    inst brew brew install
+    inst brew-common brew install
 else
     warn "brew not found — skipping brew tier"
 fi
@@ -181,7 +140,7 @@ say "Nerd Fonts"
 FONTDIR="$HOME/.local/share/fonts"
 mkdir -p "$FONTDIR"
 for font in Meslo FiraCode; do
-    if compgen -G "$FONTDIR/$font*" >/dev/null; then continue; fi
+    compgen -G "$FONTDIR/$font*" >/dev/null && continue
     tmp="$(mktemp -d)"
     if curl -fsSL -o "$tmp/$font.zip" \
         "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font.zip"; then
@@ -199,15 +158,12 @@ say "Shell"
 [[ -d "$HOME/.oh-my-zsh" ]] || \
     RUNZSH=no CHSH=no sh -c \
     "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-[[ "$SHELL" == *zsh ]] || chsh -s "$(command -v zsh)"
+[[ "${SHELL:-}" == *zsh ]] || try chsh -s "$(command -v zsh)"
 
 # ---------------------------------------------------------------------------
 say "Done"
 # ---------------------------------------------------------------------------
-if ((${#FAILED[@]})); then
-    echo -e "\n\033[1;33m${#FAILED[@]} step(s) needed attention:\033[0m"
-    printf '  - %s\n' "${FAILED[@]}"
-fi
+report
 
 cat <<'NOTES'
 

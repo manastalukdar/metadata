@@ -1,7 +1,0 @@
-# Homebrew on Linux — the escape hatch for CLI tools that are not in dnf, mise,
-# or flathub. Keep this list short; prefer dnf or mise when either has the tool.
-
-q
-yq
-sift
-glances

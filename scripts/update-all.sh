@@ -8,11 +8,8 @@
 set -uo pipefail   # not -e: a single updater that is absent or unhappy must not
                    # abort the rest of the run
 
-FAILED=()
-say()  { echo -e "\n\033[1;34m==>\033[0m $*"; }
-warn() { echo -e "\033[1;33m[warn]\033[0m $*" >&2; FAILED+=("$*"); }
-have() { command -v "$1" >/dev/null 2>&1; }
-try()  { "$@" || warn "failed: $*"; }
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+source "$SCRIPT_DIR/lib-pkgs.sh"
 
 echo "🔄 Starting comprehensive system update..."
 
@@ -106,17 +103,11 @@ for editor in code code-insiders; do
 done
 
 say "🏥 Health check"
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 if [[ -f "$SCRIPT_DIR/check-versions.sh" ]]; then
     bash "$SCRIPT_DIR/check-versions.sh"
 else
     warn "check-versions.sh not found"
 fi
 
-if ((${#FAILED[@]})); then
-    echo -e "\n\033[1;33m${#FAILED[@]} step(s) needed attention:\033[0m"
-    printf '  - %s\n' "${FAILED[@]}"
-else
-    echo -e "\n✅ System update completed successfully!"
-fi
+report && echo -e "\n✅ System update completed successfully!"
 echo "💡 Consider backing up your configurations: scripts/backup-configs.sh"

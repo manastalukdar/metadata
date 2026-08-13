@@ -1,69 +1,92 @@
-#!/bin/bash
-# macOS Development Environment Setup Script
+#!/usr/bin/env bash
+# macOS Development Environment Setup
+#
 # Run with: bash scripts/setup-macos.sh
+#
+# The package lists live in scripts/pkgs/*.txt — one package per line, '#' for
+# comments. To add a tool, add a line to the right list; do not edit this script.
+#
+#   brew-cask.txt    GUI apps (the macOS equivalent of flatpak.txt)
+#   brew-macos.txt   CLI formulae that Linux gets from dnf/apt
+#   brew-common.txt  CLI tools shared with Linux
+#   mise.txt         language runtimes and dev CLIs (per-user) — shared
+#   npm.txt          node global CLIs — shared
+#   uv.txt           python CLI tools — shared
+#
+# Idempotent: safe to re-run. Every step is a no-op when already satisfied.
 
-set -e  # Exit on any error
+set -uo pipefail   # deliberately NOT -e: one unavailable cask must not abort a
+                   # 100-package install. Failures are collected and reported.
+
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib-pkgs.sh"
 
 echo "🚀 Starting macOS development environment setup..."
 
-# Check if Homebrew is installed
-if ! command -v brew &> /dev/null; then
-    echo "🍺 Installing Homebrew..."
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+# ---------------------------------------------------------------------------
+say "Xcode Command Line Tools"
+# ---------------------------------------------------------------------------
+# Homebrew needs these, and the install is a GUI prompt on a fresh machine.
+xcode-select -p >/dev/null 2>&1 || {
+    xcode-select --install
+    echo "Finish the Xcode Command Line Tools install, then re-run this script."
+    exit 1
+}
+
+# ---------------------------------------------------------------------------
+say "Homebrew"
+# ---------------------------------------------------------------------------
+if ! have brew; then
+    NONINTERACTIVE=1 /bin/bash -c \
+        "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+# Apple silicon installs to /opt/homebrew, Intel to /usr/local.
+for candidate in /opt/homebrew/bin/brew /usr/local/bin/brew; do
+    [[ -x "$candidate" ]] && { eval "$("$candidate" shellenv)"; break; }
+done
+have brew || { warn "brew not found — cannot continue"; report; exit 1; }
+try brew update
+
+# ---------------------------------------------------------------------------
+say "CLI tools (brew)"
+# ---------------------------------------------------------------------------
+inst brew-macos  brew install
+inst brew-common brew install
+
+# ---------------------------------------------------------------------------
+say "Applications (brew --cask)"
+# ---------------------------------------------------------------------------
+inst brew-cask brew install --cask
+
+# ---------------------------------------------------------------------------
+setup_mise_tiers
+# ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+say "Shell"
+# ---------------------------------------------------------------------------
+# macOS already defaults to zsh; only oh-my-zsh is missing.
+[[ -d "$HOME/.oh-my-zsh" ]] || \
+    RUNZSH=no CHSH=no sh -c \
+    "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# git needs an absolute path to the kdiff3 bundled inside the .app.
+if [[ -x /Applications/kdiff3.app/Contents/MacOS/kdiff3 ]]; then
+    git config --global mergetool.kdiff3.path \
+        /Applications/kdiff3.app/Contents/MacOS/kdiff3
 fi
 
-# Update Homebrew
-echo "📦 Updating Homebrew..."
-brew update
+# ---------------------------------------------------------------------------
+say "Done"
+# ---------------------------------------------------------------------------
+report
 
-# Install essential tools
-echo "🔧 Installing essential development tools..."
-brew install git python3 node wget curl
+cat <<'NOTES'
 
-# Install development tools
-echo "🛠️ Installing development tools..."
-brew install --cask visual-studio-code
-brew install --cask cursor
-brew install --cask iterm2
-brew install --cask sublime-text
-brew install --cask sublime-merge
+Next steps (not scripted — they need your credentials or a restart):
+  - Restart your shell, then run: bash scripts/check-versions.sh
+  - GitHub SSH key + auth: see src/software-to-install/linux/fedora/packages.md
+  - Restore dotfiles/configs:  bash scripts/restore-configs.sh
 
-# Install SDKman
-echo "☕ Installing SDKman..."
-if [ ! -d "$HOME/.sdkman" ]; then
-    curl -s "https://get.sdkman.io" | bash
-    source ~/.sdkman/bin/sdkman-init.sh
-    sdk install java 21.0.5-tem
-fi
-
-# Install Node.js via nvm
-echo "🟢 Installing Node.js via nvm..."
-if [ ! -d "$HOME/.nvm" ]; then
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-    source ~/.bash_profile || source ~/.zshrc
-    nvm install --lts
-    nvm use --lts
-    nvm alias default node
-    corepack enable
-fi
-
-# Install Python environment
-echo "🐍 Setting up Python environment..."
-python3 -m pip install --upgrade pip --user
-python3 -m venv ~/.venv/default
-source ~/.venv/default/bin/activate
-pip install ruff black aider
-
-# Install additional utilities
-echo "🎯 Installing additional utilities..."
-brew install pyenv pyenv-virtualenv
-brew install --cask bruno
-brew install --cask keepassxc
-brew install --cask vlc
-brew install --cask telegram-desktop
-brew install pandoc
-brew install gh
-
-echo "✅ macOS setup completed successfully!"
-echo "⚠️  Please restart your terminal or run 'source ~/.zshrc' (or ~/.bash_profile) to reload environment variables"
+No longer available as Homebrew casks — install by hand:
+  FileZilla, DaVinci Resolve. Also: Outlook (use the PWA), MuCommander.
+NOTES

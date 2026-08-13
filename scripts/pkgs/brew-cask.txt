@@ -1,0 +1,62 @@
+# macOS GUI apps, installed with `brew install --cask`. This is the macOS
+# equivalent of flatpak.txt. Every token below was verified against the
+# Homebrew API.
+
+# --- editors & IDEs ---
+visual-studio-code@insiders
+cursor
+sublime-text
+sublime-merge
+texstudio
+
+# --- terminal ---
+iterm2
+
+# --- dev ---
+bruno
+beekeeper-studio
+github                          # GitHub Desktop
+kdiff3
+meld
+
+# --- fonts (packaged on macOS, unlike on Linux) ---
+font-meslo-lg-nerd-font
+font-fira-code-nerd-font
+
+# --- browsers ---
+microsoft-edge@dev
+vivaldi
+google-chrome
+tor-browser
+opera                           # kept for the bundled VPN
+
+# --- communication ---
+slack
+telegram-desktop
+
+# --- creative ---
+gimp
+inkscape
+audacity
+pinta
+vlc
+strawberry
+
+# --- productivity ---
+notion
+obsidian
+libreoffice
+thunderbird
+microsoft-azure-storage-explorer  # on Linux this one is snap-only
+
+# --- security ---
+keepassxc
+
+# --- latex ---
+mactex
+
+# --- window management (macOS has no equivalent of the GNOME extensions) ---
+rectangle
+
+# Not available as casks (removed from Homebrew): FileZilla, DaVinci Resolve.
+# Install those by hand — see the note printed at the end of setup-macos.sh.

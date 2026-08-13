@@ -1,0 +1,38 @@
+# macOS-only Homebrew formulae: the CLI tools that Fedora and Ubuntu get from
+# dnf.txt / apt.txt. Cross-platform formulae belong in brew-common.txt instead,
+# and GUI apps in brew-cask.txt.
+#
+# All names verified against the Homebrew API.
+
+# --- core ---
+git
+git-lfs
+curl
+wget
+zsh
+p7zip
+unzip
+jq
+pandoc
+graphviz
+protobuf
+ripgrep
+fd
+fzf
+bat
+htop
+
+# --- build ---
+llvm            # clang; Xcode CLT provides the system one
+cmake
+make
+
+# --- editors / git ---
+neovim
+gh
+
+# --- misc ---
+yt-dlp
+lnav
+pass
+powershell

@@ -60,13 +60,11 @@ google-chrome-stable  # repo: fedora-workstation-repositories
 
 # --- shells & terminals ---
 powershell            # repo: packages.microsoft.com
-nushell
 terminator
 
 # --- media (needs RPM Fusion) ---
 vlc
 ffmpeg
-strawberry
 moosync               # copr: ovenoboyo/Moosync
 
 # --- writing / LaTeX ---

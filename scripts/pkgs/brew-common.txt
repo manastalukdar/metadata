@@ -1,0 +1,13 @@
+# Homebrew formulae installed on EVERY platform — CLI tools that neither
+# dnf/apt nor mise carry. Keep this list short: prefer the native package
+# manager or mise when either has the tool.
+#
+# macOS additionally installs brew-macos.txt (the CLI tools Linux gets from
+# dnf/apt) and brew-cask.txt (GUI apps).
+
+q
+yq
+sift
+glances
+nushell        # not packaged by apt
+rclone
