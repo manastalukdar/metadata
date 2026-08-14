@@ -65,3 +65,7 @@ typings/
 
 # mac
 .DS_STORE
+
+# Claude Code local tooling state. Only the cache is ignored, so that shared
+# config such as .claude/settings.json or skills can still be committed.
+.claude/cache/
