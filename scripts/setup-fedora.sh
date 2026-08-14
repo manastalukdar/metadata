@@ -12,7 +12,7 @@
 #   npm.txt          node global CLIs — shared
 #   uv.txt           python CLI tools — shared
 #   brew-common.txt  CLI tools dnf and mise do not carry — shared
-#   snap.txt         last resort, for apps that exist nowhere else — shared
+#   snap.txt         currently empty; snapd is not installed (see the note below)
 #
 # Idempotent: safe to re-run. Every step is a no-op when already satisfied.
 
@@ -109,13 +109,13 @@ say "Desktop apps (flatpak)"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 inst flatpak flatpak install -y --noninteractive flathub
 
-# ---------------------------------------------------------------------------
-say "Snap (only for apps available nowhere else)"
-# ---------------------------------------------------------------------------
-sudo systemctl enable --now snapd.socket
-sudo ln -sf /var/lib/snapd/snap /snap
-# snapd needs a moment before its seeding completes and installs will work.
-sudo snap wait system seed.loaded && inst snap sudo snap install --classic
+# Nothing is tagged `snap:` any more, so snapd is not installed and no daemon or
+# /snap symlink is set up. To bring the tier back: add a `snap:` tag in the docs,
+# put snapd back in pkgs/dnf.extra.txt, and restore the bootstrap:
+#
+#   sudo systemctl enable --now snapd.socket
+#   sudo ln -sf /var/lib/snapd/snap /snap
+#   sudo snap wait system seed.loaded && inst snap sudo snap install --classic
 
 # ---------------------------------------------------------------------------
 setup_mise_tiers

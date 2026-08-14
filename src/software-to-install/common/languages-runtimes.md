@@ -2,7 +2,9 @@
 
 Programming languages, SDKs, and version/environment managers.
 
-[mise](https://mise.jdx.dev) manages all of these on every platform, replacing nvm, pyenv, SDKman and jenv. Versions are pinned by the `mise:` tags below, which generate [`scripts/pkgs/mise.txt`](../../../scripts/pkgs/mise.txt) — change a version there and re-run the setup script to switch.
+[mise](https://mise.jdx.dev) manages the runtimes on every platform. Versions are pinned by the `mise:` tags below, which generate [`scripts/pkgs/mise.txt`](../../../scripts/pkgs/mise.txt) — change a version there and re-run the setup script to switch.
+
+pyenv and nvm are installed alongside it; see [Version managers](#version-managers) for how they interact, since all three want to own `python` and `node` on `PATH`.
 
 ## Mandatory
 
@@ -27,6 +29,44 @@ Programming languages, SDKs, and version/environment managers.
 - Go lang `mise:go@latest`
   - Set `GOPATH` for personal projects; add `$GOPATH/bin` to `PATH`.
 - Rust `mise:rust@latest`
+
+### Version managers
+
+Installed from Homebrew on all three platforms: apt has no `nvm` package, and Homebrew keeps one source rather than a different recipe per distro (the same reason nushell uses it).
+
+- [pyenv](https://github.com/pyenv/pyenv) `brew:pyenv`
+  - Shell init, needed before `pyenv` works — add to `~/.zshrc`:
+
+    ```shell
+    export PYENV_ROOT="$HOME/.pyenv"
+    command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+    ```
+
+  - Building a Python needs the usual headers and libs (`zlib`, `bzip2`, `readline`, `sqlite`, `openssl`, `libffi` dev packages). See [pyenv's wiki](https://github.com/pyenv/pyenv/wiki#suggested-build-environment).
+  - Windows: [pyenv-win](https://github.com/pyenv-win/pyenv-win); run `pyenv update` after installing.
+- [nvm](https://github.com/nvm-sh/nvm) `brew:nvm`
+  - Shell init — Homebrew does not wire this up, so add to `~/.zshrc`:
+
+    ```shell
+    export NVM_DIR="$HOME/.nvm"
+    source "$(brew --prefix nvm)/nvm.sh"
+    ```
+
+  - Upstream prefers its own installer over Homebrew: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash`. Either way the shell lines above are required, since nvm is a shell function rather than a binary — which is also why it never shows up in `check-versions.sh`.
+  - Useful: `nvm install node --reinstall-packages-from=node`, `echo "node" > .nvmrc`, `nvm use node`, `nvm ls`.
+
+#### Precedence with mise
+
+All three put a `python`/`node` shim on `PATH`, so **whichever initializes last wins**. That is a genuine footgun: `mise use -g node@lts` and `nvm use 20` can disagree, and `which node` then depends on `~/.zshrc` ordering rather than on intent.
+
+Pick one owner per language and be deliberate about it.
+
+*Simplest:* let mise own the defaults. Put the mise activation **last** in `~/.zshrc`, and treat pyenv and nvm as on-demand tools for the occasional project needing a version or build flag mise cannot express.
+
+*Otherwise:* drop `python`/`node` from `mise.txt` by removing those two `mise:` tags, and let pyenv and nvm own them outright — leaving mise for java, go, rust and gradle.
+
+mise already reads `.nvmrc` and `.python-version`, so per-project pinning works without nvm or pyenv being involved at all.
 
 ### Python CLI tools
 
@@ -60,7 +100,7 @@ AI coding agents live in [ai-tools.md](ai-tools.md); these are the rest.
 
 ### Superseded version managers
 
-Kept for reference; mise covers all four, and the setup scripts no longer install them.
+Kept for reference; mise covers these, and the setup scripts do not install them. pyenv and nvm are Mandatory — see [Version managers](#version-managers) above.
 
 - SDKman — <http://sdkman.io/install.html>
 
@@ -70,26 +110,9 @@ Kept for reference; mise covers all four, and the setup scripts no longer instal
   sdk version
   ```
 
-- pyenv
-  - [MacOS / Linux](https://github.com/pyenv/pyenv): `brew install pyenv`
-  - [Windows](https://github.com/pyenv-win/pyenv-win/issues/153): after installing run `pyenv update`
 - virtualenv
-  - MacOS: `brew install pyenv-virtualenv`
-- [nvm](https://github.com/nvm-sh/nvm)
-  - macOS
-
-    ```shell
-    nvm install node --reinstall-packages-from=node
-    echo "node" > .nvmrc
-    nvm use node
-    nvm ls
-    nvm versions
-    ```
-
-    [Installing Multiple Versions of Node.js Using nvm](https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/)
-
-  - Linux-Fedora: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash`
-
+  - macOS: `brew install pyenv-virtualenv`
+  - Prefer `uv venv` for new work; pyenv-virtualenv only matters if you are already managing interpreters with pyenv.
 - [jenv](https://github.com/jenv/jenv)
   - macOS
     - <https://github.com/AdoptOpenJDK/homebrew-openjdk>

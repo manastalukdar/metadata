@@ -8,6 +8,7 @@ Audio, video, image, and graphics applications, plus media players.
 - Audacity `flatpak:org.audacityteam.Audacity` `cask:audacity`
 - GIMP `flatpak:org.gimp.GIMP` `cask:gimp`
 - Inkscape `flatpak:org.inkscape.Inkscape` `cask:inkscape`
+- [Krita](https://krita.org/en/) `flatpak:org.kde.krita` `cask:krita`
 - VLC Media player `dnf:vlc` `apt:vlc` `cask:vlc`
   - On Fedora this needs RPM Fusion; see [linux/fedora/post-install.md](../linux/fedora/post-install.md).
 - [ffmpeg](https://ffmpeg.org/) `dnf:ffmpeg` `apt:ffmpeg` `brew-macos:ffmpeg`
@@ -22,7 +23,6 @@ Audio, video, image, and graphics applications, plus media players.
 - [Blender](https://www.blender.org)
 - [Pencil animation](https://www.pencil2d.org), [code](https://github.com/pencil2d/pencil).
 - [Synfig Studio](https://www.synfig.org)
-- [Krita](https://krita.org/en/)
 - [HandBrake](https://handbrake.fr): video transcoder. [code](https://github.com/HandBrake/HandBrake).
 - [Ren'Py](https://www.renpy.org)
 - [Google Play Music Desktop Player](https://www.googleplaymusicdesktopplayer.com/)

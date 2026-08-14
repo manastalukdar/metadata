@@ -66,7 +66,6 @@ check_version "emacs" "emacs --version"
 # Shell tools
 echo ""
 echo "🐚 Shell Tools:"
-check_version "starship" "starship --version"
 check_version "zsh" "zsh --version"
 check_version "bash" "bash --version"
 

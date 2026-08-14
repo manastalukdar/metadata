@@ -20,6 +20,7 @@ com.github.PintaProject.Pinta
 org.audacityteam.Audacity
 org.gimp.GIMP
 org.inkscape.Inkscape
+org.kde.krita
 org.strawberrymusicplayer.strawberry
 
 # from common/productivity-notes.md

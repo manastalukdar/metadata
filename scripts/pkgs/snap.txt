@@ -2,6 +2,3 @@
 #
 # Add or remove tools in src/software-to-install/ (the source of truth),
 # then run: bash scripts/gen-pkgs.sh
-
-# from common/system-utilities.md
-storage-explorer

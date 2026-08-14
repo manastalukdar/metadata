@@ -10,6 +10,10 @@ herdr
 q
 yq
 
+# from common/languages-runtimes.md
+pyenv
+nvm
+
 # from common/system-utilities.md
 rclone
 

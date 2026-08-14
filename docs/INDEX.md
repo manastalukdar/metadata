@@ -52,7 +52,8 @@ See [software-to-install/README.md](../src/software-to-install/README.md) for th
 - [VSCode](../src/configurations/editors/vscode/) - Visual Studio Code settings
 
 ### 🖥️ Terminal & Shell
-- [Starship](../src/configurations/starship/) - Cross-platform prompt
+- [Starship](../src/configurations/starship/) - Cross-platform prompt (config only; install starship yourself)
+- [Oh My Posh](../src/configurations/oh-my-posh/) - Cross-platform prompt (config only)
 - [PowerShell](../src/configurations/powershell/) - Modern PowerShell profile
 - [Windows Terminal](../src/configurations/windows-terminal/) - Windows Terminal configuration
 

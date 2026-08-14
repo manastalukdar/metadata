@@ -12,8 +12,5 @@ uv@latest
 go@latest
 rust@latest
 
-# from common/terminals-shells.md
-starship@latest
-
 # from common/writing-publishing.md
 typst@latest

@@ -12,7 +12,7 @@
 #   npm.txt          node global CLIs — shared
 #   uv.txt           python CLI tools — shared
 #   brew-common.txt  CLI tools apt and mise do not carry — shared
-#   snap.txt         last resort, for apps that exist nowhere else — shared
+#   snap.txt         currently empty; snapd is not installed (see the note below)
 #
 # Idempotent: safe to re-run. Every step is a no-op when already satisfied.
 
@@ -98,11 +98,11 @@ sudo apt-get install -y flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 inst flatpak flatpak install -y --noninteractive flathub
 
-# ---------------------------------------------------------------------------
-say "Snap (only for apps available nowhere else)"
-# ---------------------------------------------------------------------------
-sudo apt-get install -y snapd
-sudo snap wait system seed.loaded && inst snap sudo snap install --classic
+# Nothing is tagged `snap:` any more, so snapd is not installed. To bring the
+# tier back: add a `snap:` tag in the docs, put snapd back in
+# pkgs/apt.extra.txt, and restore the bootstrap:
+#
+#   sudo snap wait system seed.loaded && inst snap sudo snap install --classic
 
 # ---------------------------------------------------------------------------
 setup_mise_tiers

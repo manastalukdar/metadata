@@ -41,6 +41,8 @@ Compilers and build tools, version-control clients and diff/merge tools, databas
 - GitHub CLI `native:gh`
 - [GitHub Desktop](https://github.com/apps/desktop) `flatpak:io.github.shiftey.Desktop` `cask:github`
   - The flatpak is the community Linux build.
+- [BitComet](https://www.bitcomet.com/en) `manual`
+  - Vendor downloads only — no Homebrew cask, no Flathub app, and not in the Fedora or Ubuntu repos. Get it from [the downloads page](https://www.bitcomet.com/en/downloads).
 
 ### Database clients
 
@@ -64,7 +66,7 @@ Compilers and build tools, version-control clients and diff/merge tools, databas
 ### Database clients
 
 - [DB Browser for SQLite](https://github.com/sqlitebrowser/sqlitebrowser)
-- [beekeeper studio](https://github.com/beekeeper-studio/beekeeper-studio/)
+- [DBeaver Community](https://dbeaver.io)
 - MySQL Workbench
 
 ### API clients

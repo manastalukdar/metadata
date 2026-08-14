@@ -35,7 +35,6 @@ Markdown editors, LaTeX/typesetting, long-form authoring, and desktop publishing
 
 ## Optional
 
-- MarkText
 - [MarkText](https://github.com/marktext/marktext)
 - [Typora](https://typora.io)
 - [TexMaker](https://www.xm1math.net/texmaker/)

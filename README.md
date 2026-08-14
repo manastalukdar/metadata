@@ -57,7 +57,8 @@ metadata/
 └── 📂 src/
     ├── configurations/        # Application configurations
     │   ├── editors/           # Vim, Emacs, VSCode
-    │   ├── starship/          # Shell prompt
+    │   ├── starship/          # Shell prompt (not installed by default)
+    │   ├── oh-my-posh/        # Shell prompt (not installed by default)
     │   ├── powershell/        # PowerShell profile
     │   └── windows-terminal/  # Windows Terminal
     ├── software-to-install/   # Installation guides
@@ -79,7 +80,7 @@ metadata/
 - **Containers**: Docker, Podman
 
 ### Shell & Terminal
-- **Prompts**: Starship (cross-platform)
+- **Prompts**: Starship and Oh My Posh configs are kept here; neither is installed by the setup scripts
 - **Shells**: Bash, Zsh, PowerShell
 - **Terminals**: Windows Terminal, iTerm2, Alacritty
 - **Multiplexers**: tmux, screen

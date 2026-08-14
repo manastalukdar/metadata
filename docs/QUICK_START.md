@@ -49,7 +49,6 @@ git --version       # Git
 
 # Optional but recommended
 code --version      # VS Code
-starship --version  # Starship prompt
 gh --version        # GitHub CLI
 ```
 
@@ -71,16 +70,19 @@ gh --version        # GitHub CLI
    - Copy configurations from `src/configurations/editors/`
    - Customize based on your preferences
 
-4. **Set up shell prompt**:
+4. **Set up shell prompt** (optional — no prompt is installed by default, but both configs are kept in this repo):
    ```bash
-   # Copy starship config
+   # Starship — install it first, e.g. `mise use -g starship@latest`
    mkdir -p ~/.config
    cp src/configurations/starship/starship.toml ~/.config/
-   
-   # Add to shell profile
-   echo 'eval "$(starship init bash)"' >> ~/.bashrc  # For bash
-   echo 'eval "$(starship init zsh)"' >> ~/.zshrc    # For zsh
+   echo 'eval "$(starship init zsh)"' >> ~/.zshrc
+
+   # ...or Oh My Posh
+   cp src/configurations/oh-my-posh/.mytheme.omp.json ~/
+   echo 'eval "$(oh-my-posh init zsh --config ~/.mytheme.omp.json)"' >> ~/.zshrc
    ```
+
+   See [terminals-shells.md](../src/software-to-install/common/terminals-shells.md) for the prompt options.
 
 ## 🐳 Development Containers
 

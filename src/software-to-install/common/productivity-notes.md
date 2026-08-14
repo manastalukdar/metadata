@@ -4,8 +4,8 @@ Note-taking, personal knowledge management, reference managers, mind mapping, re
 
 ## Mandatory
 
-- Notion `cask:notion`
-  - No official Linux app; install the web app as a PWA from the browser.
+- Notion `cask:notion` `manual`
+  - No official Linux app; open Notion in the browser and install it as a PWA. The `manual` tag is there so Linux rebuilds get that reminder in the closing notes.
 - Libre Office `flatpak:org.libreoffice.LibreOffice` `cask:libreoffice`
   - Fedora ships LibreOffice preinstalled.
 

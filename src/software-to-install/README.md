@@ -100,7 +100,7 @@ Most lists are cross-platform, so a tool usually only needs adding in one place:
 | `flatpak.txt` — GUI apps | ✅ | ✅ | |
 | `brew-cask.txt` — GUI apps | | | ✅ |
 | `brew-macos.txt` — CLI tools Linux gets from dnf/apt | | | ✅ |
-| `snap.txt` — only what exists nowhere else | ✅ | ✅ | |
+| `snap.txt` — last resort, currently empty | ✅ | ✅ | |
 | `mise.txt` — runtimes and version-pinned dev CLIs | ✅ | ✅ | ✅ |
 | `npm.txt` — node global CLIs | ✅ | ✅ | ✅ |
 | `uv.txt` — python CLI tools | ✅ | ✅ | ✅ |

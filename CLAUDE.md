@@ -21,7 +21,7 @@ This is a **development environment metadata repository** containing:
 
 ### `/src/configurations/` - Application Configs
 - `editors/` - Vim, Emacs, VSCode configurations
-- `starship/` - Cross-platform shell prompt configuration  
+- `starship/`, `oh-my-posh/` - Cross-platform shell prompt configurations (kept ready; neither prompt is installed by the setup scripts)  
 - `powershell/` - PowerShell profile with modern features
 - `windows-terminal/` - Windows Terminal JSON configuration
 

@@ -23,11 +23,18 @@ done
 got="$(printf '# comment\n\n  \nfoo\nbar   # trailing\n' | awk "$STRIP" | xargs)"
 [[ "$got" == "foo bar" ]] || fail "comment/blank stripping: got '$got', want 'foo bar'"
 
+EMPTY_LISTS=()
 for f in "${INSTALL_LISTS[@]}"; do
     name="$(basename "$f")"
     pkgs="$(awk "$STRIP" "$f")"
 
-    [[ -n "$pkgs" ]] || fail "$name parses to nothing"
+    # An empty list is legitimate, not a failure: every tool that used a tier can
+    # move to a better one, and inst() no-ops on an empty list. It is reported at
+    # the end, because an empty tier usually means its plumbing is now dead too.
+    if [[ -z "$pkgs" ]]; then
+        EMPTY_LISTS+=("$name")
+        continue
+    fi
 
     # xargs applies its own quote and backslash parsing, so a package name
     # containing shell-ish characters would either error or silently mangle.
@@ -77,6 +84,12 @@ fi
 
 if ((fails)); then echo "$fails check(s) failed"; exit 1; fi
 echo "OK: all package lists parse cleanly and match the docs"
+
+if ((${#EMPTY_LISTS[@]})); then
+    echo ""
+    echo "Empty tiers (nothing is tagged for them): ${EMPTY_LISTS[*]}"
+    echo "Their bootstrap should stay out of the setup scripts until something needs them."
+fi
 
 # Not a failure — the standing to-do list of Mandatory entries nothing installs.
 if [[ -s "$PKGS/untagged.txt" ]] && awk '{sub(/#.*/, "")} NF' "$PKGS/untagged.txt" | grep -q .; then

@@ -6,17 +6,6 @@ set -e
 
 echo "🚀 Setting up development environment in container..."
 
-# Install starship prompt
-echo "⭐ Installing starship prompt..."
-curl -sS https://starship.rs/install.sh | sh -s -- -y
-echo 'eval "$(starship init bash)"' >> ~/.bashrc
-
-# Copy starship configuration
-if [ -f "/workspaces/metadata/src/configurations/starship/starship.toml" ]; then
-    mkdir -p ~/.config
-    cp /workspaces/metadata/src/configurations/starship/starship.toml ~/.config/
-fi
-
 # Install Python packages
 echo "🐍 Installing Python development packages..."
 pip install --user ruff black aider jupyter pandas numpy matplotlib seaborn

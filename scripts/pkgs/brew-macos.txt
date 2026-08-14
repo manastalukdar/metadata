@@ -40,5 +40,8 @@ neovim
 # from common/media-creative.md
 ffmpeg
 
+# from common/system-utilities.md
+rsync
+
 # from common/terminals-shells.md
 powershell

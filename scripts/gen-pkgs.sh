@@ -88,6 +88,11 @@ awk -v mgrs="$(printf '%s ' "${!TARGETS[@]}")" '
             gsub(/<[^>]*>/, "", name)               # bare autolinks
             gsub(/[[:space:]]+/, " ", name)
             sub(/^[[:space:]]+/, "", name)
+            # Bullets often trail a second link or a description after a dash
+            # ("Terax terminal - code", "Understand Anything - website"). From the
+            # first " - " on it is commentary rather than the name.
+            # No apostrophes in this comment: the awk program is single-quoted.
+            sub(/ - .*$/, "", name)
             sub(/[[:space:]]*[-:.,]+[[:space:]]*$/, "", name)
             sub(/[[:space:]]+$/, "", name)
             if (name != "") print "manual\t" name "\t" src

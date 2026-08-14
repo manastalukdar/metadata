@@ -70,6 +70,7 @@ keepassxc
 
 # from common/system-utilities.md
 filezilla
+rsync
 
 # from common/terminals-shells.md
 powershell
@@ -103,7 +104,6 @@ lite-xl-nightly
 
 # --- from pkgs/dnf.extra.txt ---
 flatpak
-snapd
 python3
 python3-pip
 python3-devel

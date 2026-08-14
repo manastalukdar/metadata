@@ -40,6 +40,7 @@ pinta
 audacity
 gimp
 inkscape
+krita
 vlc
 strawberry
 
@@ -50,8 +51,8 @@ libreoffice
 # from common/security-privacy.md
 keepassxc
 
-# from common/system-utilities.md
-microsoft-azure-storage-explorer
+# from common/terminals-shells.md
+terax
 
 # from common/writing-publishing.md
 mactex
