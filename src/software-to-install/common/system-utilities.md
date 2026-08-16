@@ -12,14 +12,13 @@ File managers and transfer, system monitors and cleaners, disk imaging, screen/w
     sudo dnf install doublecmd-gtk
     ```
 
-  - macOS: download the DMG from upstream; no Homebrew cask.
 - FileZilla `dnf:filezilla` `apt:filezilla`
   - No longer available as a Homebrew cask; download from [filezilla-project.org](https://filezilla-project.org) on macOS.
 - Microsoft OneDrive `dnf:onedrive` `apt:onedrive` `cask:onedrive`
   - Preinstalled on Windows; see [windows/packages.md](../windows/packages.md).
   - Microsoft ships no official Linux client; `dnf`/`apt` install [abraunegg/onedrive](https://github.com/abraunegg/onedrive), a CLI sync daemon. Setup, multi-account and SharePoint config: [linux/fedora/onedrive.md](../linux/fedora/onedrive.md).
 - [rclone](https://rclone.org) `brew:rclone`
-  - Used for Microsoft OneDrive; see [linux/fedora/onedrive.md](../linux/fedora/onedrive.md).
+  - Used for Microsoft OneDrive: [rclone OneDrive setup](https://rclone.org/onedrive/), and [linux/fedora/onedrive.md](../linux/fedora/onedrive.md).
 - [rsync](https://rsync.samba.org) `native:rsync`
   - Preinstalled on all three platforms, but tagged anyway: macOS ships Apple's fork rather than upstream rsync, and installing the formula puts a current 3.x on `PATH` ahead of it.
   - Complements rclone rather than replacing it — rsync for local and SSH copies, rclone for cloud remotes.

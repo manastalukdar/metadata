@@ -4,7 +4,6 @@ Windows-specific applications and utilities. Cross-platform tools live under [..
 
 ## Mandatory
 
-- 7zip
 - [Windows PowerToys](https://github.com/microsoft/PowerToys)
 - [Rufus](https://rufus.ie/)
 - Microsoft OneDrive — preinstalled; see [common/system-utilities.md](../common/system-utilities.md)
@@ -68,7 +67,7 @@ Windows-specific applications and utilities. Cross-platform tools live under [..
   - <https://archive.org/details/nikcollection-full-1.2.11>
   - <https://www.techspot.com/downloads/6809-google-nik-collection.html>
 - Speccy
-- [System Informer](https://systeminformer.sourceforge.io). [Source](https://github.com/winsiderss/systeminformer).
+- [System Informer](https://systeminformer.sourceforge.io), formerly Process Hacker. [Source](https://github.com/winsiderss/systeminformer).
 - [Screen to Gif](https://www.screentogif.com/)
 - [Greenshot](https://getgreenshot.org)
 - Winscp
@@ -76,7 +75,6 @@ Windows-specific applications and utilities. Cross-platform tools live under [..
 - f.lux
 - Microsoft ToDo
 - RoslynPad
-- [Microsoft PowerToys](https://github.com/microsoft/PowerToys)
 - Windows Terminal
 - Microsoft Teams
 - [FxSound](https://www.fxsound.com). [Source](https://github.com/fxsound2/fxsound-app).
@@ -108,33 +106,25 @@ Windows-specific applications and utilities. Cross-platform tools live under [..
 - yWriter6
 - [Flameshot](https://flameshot.org)
 - Manuskript
-- Notepad++
-    <http://setup-steps.blogspot.com/2013/05/notepad-nppexec-add-java-compiler.html>
 - [Notepad3](https://rizonesoft.com/downloads/notepad3/)
 - ImageGlass
 - Adobe Photoshop
 - Irfanview
 - <https://arc.net> - browser
 - WinCatalog
-- Nodepad3
-- ffmpeg
 - Hyper.is
 - cmder
 - Twitch
 - [Terminus](https://github.com/Eugeny/terminus)
 - Open Live Writer
 - Samsung Data Migration
-- <https://www.strawberrymusicplayer.org>
 - [foobar audio player](https://www.foobar2000.org)
-- [Strawberry Perl](https://strawberryperl.com)
 - Brother printer driver (MFC-J835DW)
 - Autodesk Sketchbook
 - [Descript](https://www.descript.com)
-- [Windows Power Toys](https://github.com/microsoft/PowerToys/releases/)
 - [GrepWin](https://github.com/stefankueng/grepWin)
 - Discord
 - [Multi Commander](http://multicommander.com/)
-- [Open Video Downloader](https://github.com/jely2002/youtube-dl-gui/releases)
 - [Thorium Reader](https://github.com/edrlab/thorium-reader/releases)
 - [freda epub ebook reader](https://www.microsoft.com/en-us/p/freda-epub-ebook-reader/9wzdncrfj43b)
 - Eclipse Installer
@@ -145,18 +135,14 @@ Windows-specific applications and utilities. Cross-platform tools live under [..
 - [Steam](https://store.steampowered.com/about/)
 - [Ubisoft Connect](https://www.ubisoft.com/en-us/)
 - [NVIDIA RTX Voice](https://www.nvidia.com/en-us/geforce/guides/nvidia-rtx-voice-setup-guide/) [[ref](https://www.windowscentral.com/how-enable-rtx-voice-all-nvidia-gpus-including-older-geforce-gtx-cards)]
-- [wget](https://www.gnu.org/software/wget/)
 - [HTTrack](http://www.httrack.com/page/2/en/index.html)
-- [simplewall](https://www.henrypp.org/product/simplewall)
 - ZoneAlarm Free Firewall
 - [Tinywall](https://tinywall.pados.hu) [source](https://github.com/pylorak/TinyWall)
 - [Cairo Desktop](https://cairodesktop.com). [Source](https://github.com/cairoshell/cairoshell).
 - [TablacusExplorer](https://tablacus.github.io/explorer_en.html). [Source](https://github.com/tablacus/TablacusExplorer).
 - [Sigma File Manager](https://sigma-file-manager.vercel.app). [Source](https://github.com/aleksey-hoffman/sigma-file-manager).
-- [Process Hacker](https://processhacker.sourceforge.io)
 - [x64dbg](https://x64dbg.com)
 - [yori](https://github.com/malxau/yori)
-- EaseUS Data Recovery Wizard
 - Files
 - One Commander
 - Sabrent Acronis Clone Disk / Sabrent Acronis True Image

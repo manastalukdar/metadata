@@ -9,9 +9,11 @@ macOS-specific applications. Cross-platform tools live under [../common/](../com
 - [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) `manual`
   - Installed by `setup-macos.sh` via the upstream installer; see [terminals-shells.md](../common/terminals-shells.md).
 - [Double Commander](https://doublecommander.com) `manual`
+  - No Homebrew cask; download the DMG. See [system-utilities.md](../common/system-utilities.md).
 - [Stay](https://cordlessdog.com/stay/) `manual`
 - [kap](https://getkap.co) `manual`
 - [Antidote](https://github.com/mattmc3/antidote) `manual`
+  - zsh plugin manager; see [terminals-shells.md](../common/terminals-shells.md).
 - [AppCleaner](http://freemacsoft.net/appcleaner/) `manual`
 - Pine media player `manual`
 - [Shottr](https://shottr.cc/) `manual`
