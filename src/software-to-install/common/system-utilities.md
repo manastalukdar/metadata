@@ -4,6 +4,7 @@ File managers and transfer, system monitors and cleaners, disk imaging, screen/w
 
 ## Mandatory
 
+- [mise](https://mise.jdx.dev) `manual`
 - [Double Commander](https://doublecommander.com) `dnf:doublecmd-gtk` `apt:doublecmd-gtk`
   - Fedora: not in the official repos, add the upstream OBS repo first [[ref](https://software.opensuse.org/download.html?project=home%3AAlexx2000&package=doublecmd-gtk)]:
 
