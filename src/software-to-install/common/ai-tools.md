@@ -49,3 +49,5 @@ AI coding agents, assistants, AI-first editors, and local model runners.
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) `npm:@google/gemini-cli`
 - [DeepSeek Harness](https://deepseek.com/harness/en/) `npx @deepseek-ai/dsh web`
   - [Code](https://github.com/deepseek-ai/deepseek-harness)
+- [Agent Zero](https://agent-zero.ai/) `manual`
+  - [Code](https://github.com/agent0ai/agent-zero)
