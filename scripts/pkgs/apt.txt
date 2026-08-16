@@ -39,8 +39,6 @@ p7zip-rar
 unzip
 htop
 protobuf-compiler
-fonts-powerline
-fonts-font-awesome
 
 # from common/dev-tools.md
 clang
@@ -97,6 +95,8 @@ polybar
 conky
 redshift
 redshift-gtk
+fonts-powerline
+fonts-font-awesome
 fonts-firacode
 fonts-noto-color-emoji
 

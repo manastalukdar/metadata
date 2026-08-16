@@ -33,8 +33,6 @@ Cross-platform tools (languages, editors, CLI utilities, etc.) live under [../co
     Reset zoom: Ctrl-0
     ```
 
-- [Double Commander](https://doublecommander.com) `dnf:doublecmd-gtk` `apt:doublecmd-gtk`
-  - On Fedora this needs the openSUSE Build Service repo, which is not published for every release; see [fedora/packages.md](fedora/packages.md).
 - [Nautilus My Computer](https://github.com/yannmasoch/nautilus-my-computer) `manual`
 - [Peek](https://github.com/phw/peek) `dnf:peek` `apt:peek` — GIF screen recorder
 
@@ -60,5 +58,27 @@ Cross-platform tools (languages, editors, CLI utilities, etc.) live under [../co
 ### Fonts
 
 - Powerline fonts `dnf:powerline-fonts` `apt:fonts-powerline`
+- Font Awesome `dnf:fontawesome-fonts` `apt:fonts-font-awesome`
 - Fira Code `dnf:fira-code-fonts` `apt:fonts-firacode`
 - Noto color emoji `dnf:google-noto-emoji-color-fonts` `apt:fonts-noto-color-emoji`
+
+## Optional
+
+- [shutter](https://shutter-project.org/): `dnf install shutter`. This is a screenshot tool. Note: Does not work on Wayland. Not recommended.
+- [Notepadqq](https://notepadqq.com/s/) [source](https://github.com/notepadqq/notepadqq)
+- [system-monitoring-center](https://github.com/hakandundar34coding/system-monitoring-center)
+- [Blanket](https://github.com/rafaelmardojai/blanket): Ambient sounds.
+- [SysMonTask](https://github.com/KrispyCamel4u/SysMonTask)
+- [Plots](https://github.com/alexhuntley/Plots/)
+- [drawing](https://github.com/maoschanz/drawing)
+- [Guake Terminal](https://github.com/Guake/guake)
+- [Black Box Terminal](https://gitlab.gnome.org/raggesilver/blackbox)
+- [amberol](https://gitlab.gnome.org/World/amberol): sound and music player that is well integrated with GNOME.
+- <https://xmonad.org/>
+- <https://github.com/swaywm/sway>: `sudo dnf install sway`
+- <https://github.com/Alexays/Waybar>
+- <https://github.com/elkowar/eww>
+- <https://sr.ht/~emersion/grim/>
+- <https://github.com/natpen/awesome-wayland>
+- [qtile](http://www.qtile.org/). [Source](https://github.com/qtile/qtile).
+- [pop shell](https://github.com/pop-os/shell): `sudo dnf install gnome-shell-extension-pop-shell xprop`

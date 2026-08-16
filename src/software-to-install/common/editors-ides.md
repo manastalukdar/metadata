@@ -20,6 +20,8 @@ Traditional code editors and IDEs. AI-first editors and coding agents live in [a
     ```
 
 - Sublime Merge `dnf:sublime-merge` `apt:sublime-merge` `cask:sublime-merge`
+- [Lite XL](https://lite-xl.com/en/) `dnf:lite-xl-nightly` [source](https://github.com/lite-xl/lite-xl)
+  - Fedora only: from the `sentry/lite` copr, enabled by `setup-fedora.sh`. Not packaged for apt or brew.
 - Visual Studio Code editor `dnf:code-insiders` `apt:code-insiders` `cask:visual-studio-code@insiders`
   - The Insiders channel is the one actually used; stable is `code` / `visual-studio-code`.
 - [Neovim](https://github.com/neovim/neovim) `dnf:neovim` `dnf:python3-neovim` `dnf:neovim-qt` `apt:neovim` `apt:python3-neovim` `apt:neovim-qt` `brew-macos:neovim`
@@ -51,15 +53,6 @@ Traditional code editors and IDEs. AI-first editors and coding agents live in [a
 - Jetbrains PyCharm IDE Community Edition
 - [Brackets code editor](https://github.com/brackets-cont/brackets)
 - [Lapce](https://lapce.dev) [source](https://github.com/lapce/lapce)
-- [Lite XL](https://lite-xl.com/en/) [source](https://github.com/lite-xl/lite-xl)
-  - Linux->Fedora
-
-    ```shell
-    # https://lite-xl.com/?/downloads
-    # Packages: https://copr.fedorainfracloud.org/coprs/sentry/lite/packages/
-    sudo dnf copr enable sentry/lite && sudo dnf install lite-xl-nightly
-    ```
-
 - [CudaText](https://cudatext.github.io/index.html)
 - [Zed Editor](https://zed.dev)
 - Bitnami Wordpress stack installer

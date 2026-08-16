@@ -39,8 +39,6 @@ p7zip-plugins
 unzip
 htop
 protobuf-compiler
-powerline-fonts
-fontawesome-fonts
 
 # from common/dev-tools.md
 clang
@@ -55,6 +53,7 @@ gh
 # from common/editors-ides.md
 sublime-text
 sublime-merge
+lite-xl-nightly
 code-insiders
 neovim
 python3-neovim
@@ -71,6 +70,7 @@ ffmpeg
 keepassxc
 
 # from common/system-utilities.md
+doublecmd-gtk
 filezilla
 onedrive
 rsync
@@ -84,7 +84,6 @@ texstudio
 
 # from linux/common.md
 terminator
-doublecmd-gtk
 peek
 gnome-tweaks
 gnome-extensions-app
@@ -97,12 +96,13 @@ polybar
 conky
 redshift
 redshift-gtk
+powerline-fonts
+fontawesome-fonts
 fira-code-fonts
 google-noto-emoji-color-fonts
 
 # from linux/fedora/packages.md
 moosync
-lite-xl-nightly
 
 # --- from pkgs/dnf.extra.txt ---
 flatpak

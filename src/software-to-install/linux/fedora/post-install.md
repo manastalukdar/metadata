@@ -64,7 +64,6 @@ sudo dnf group upgrade --with-optional Multimedia
 
 ## Gnome Tweaks and Gnome Extensions
 
-- Gnome Tweaks: `sudo dnf install gnome-tweaks`
 - [Gnome Extensions](https://extensions.gnome.org)
   - [Option 1](https://flathub.org/apps/details/org.gnome.Extensions)
 
