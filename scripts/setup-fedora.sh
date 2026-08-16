@@ -163,17 +163,20 @@ say "Shell"
     "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 [[ "${SHELL:-}" == *zsh ]] || try chsh -s "$(command -v zsh)"
 
+ensure_shell_init
+
 # ---------------------------------------------------------------------------
 say "Done"
 # ---------------------------------------------------------------------------
-report
+report; rc=$?
 
 cat <<'NOTES'
 
 Next steps (not scripted — they need your credentials or a reboot):
   - Restart your shell, then run: bash scripts/check-versions.sh
   - GitHub SSH key + auth: see src/software-to-install/linux/fedora/packages.md
-  - Restore dotfiles/configs:  bash scripts/restore-configs.sh
+  - Restore dotfiles/configs:  bash scripts/restore-configs.sh <backup-dir>
+      (backups live in ~/config-backups/, newest last: ls -d ~/config-backups/*)
   - OneDrive:                  src/software-to-install/linux/fedora/onedrive.md
   - NVIDIA drivers:            src/software-to-install/linux/fedora/nvidia.md
   - Battery (TLP conflicts with power-profiles-daemon, so it is opt-in):
@@ -181,4 +184,6 @@ Next steps (not scripted — they need your credentials or a reboot):
       sudo systemctl enable tlp
 NOTES
 
-manual_notes
+manual_notes linux
+
+exit "$rc"

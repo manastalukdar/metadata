@@ -84,7 +84,6 @@ texstudio
 
 # from linux/common.md
 terminator
-peek
 gnome-tweaks
 gnome-extensions-app
 gnome-shell-extension-dash-to-dock
@@ -97,9 +96,9 @@ conky
 redshift
 redshift-gtk
 powerline-fonts
-fontawesome-fonts
+fontawesome4-fonts
 fira-code-fonts
-google-noto-emoji-color-fonts
+google-noto-color-emoji-fonts
 
 # from linux/fedora/packages.md
 moosync

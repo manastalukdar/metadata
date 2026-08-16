@@ -64,6 +64,8 @@ Pick one owner per language and be deliberate about it.
 
 *Simplest:* let mise own the defaults. Put the mise activation **last** in `~/.zshrc`, and treat pyenv and nvm as on-demand tools for the occasional project needing a version or build flag mise cannot express.
 
+This is what the setup scripts do: `ensure_shell_init` in [lib-pkgs.sh](../../../scripts/lib-pkgs.sh) appends the `mise activate` line to `~/.zshrc` and `~/.bashrc` after oh-my-zsh has written its template, so mise initializes last. pyenv and nvm are installed but stay inert until you add the init blocks above — add them *before* the `# >>> metadata setup >>>` marker.
+
 *Otherwise:* drop `python`/`node` from `mise.txt` by removing those two `mise:` tags, and let pyenv and nvm own them outright — leaving mise for java, go, rust and gradle.
 
 mise already reads `.nvmrc` and `.python-version`, so per-project pinning works without nvm or pyenv being involved at all.

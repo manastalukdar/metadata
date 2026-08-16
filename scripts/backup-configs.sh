@@ -51,14 +51,18 @@ backup_file "$HOME/.config/starship.toml" "prompt/starship.toml"
 backup_file "$HOME/.gitconfig" "git/gitconfig"
 backup_dir "$HOME/.ssh" "ssh"
 
-# VS Code (cross-platform locations)
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    backup_dir "$HOME/Library/Application Support/Code/User" "vscode"
-elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    backup_dir "$HOME/.config/Code/User" "vscode"
-elif [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "cygwin" ]]; then
-    backup_dir "$APPDATA/Code/User" "vscode"
-fi
+# VS Code (cross-platform locations). Insiders is the channel the setup scripts
+# install, so it gets its own backup rather than being silently skipped.
+for edition in "Code:vscode" "Code - Insiders:vscode-insiders"; do
+    dir="${edition%%:*}"; dest="${edition##*:}"
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        backup_dir "$HOME/Library/Application Support/$dir/User" "$dest"
+    elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        backup_dir "$HOME/.config/$dir/User" "$dest"
+    elif [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "cygwin" ]]; then
+        backup_dir "$APPDATA/$dir/User" "$dest"
+    fi
+done
 
 # Create manifest
 echo "📋 Creating backup manifest..."

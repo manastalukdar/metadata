@@ -150,6 +150,8 @@ say "Shell"
     "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 [[ "${SHELL:-}" == *zsh ]] || try chsh -s "$(command -v zsh)"
 
+ensure_shell_init
+
 # Redshift needs your coordinates; only write a config if there is none.
 if [[ ! -f "$HOME/.config/redshift.conf" ]]; then
     mkdir -p "$HOME/.config"
@@ -170,17 +172,20 @@ fi
 # ---------------------------------------------------------------------------
 say "Done"
 # ---------------------------------------------------------------------------
-report
+report; rc=$?
 
 cat <<'NOTES'
 
 Next steps (not scripted — they need your credentials or a reboot):
   - Restart your shell, then run: bash scripts/check-versions.sh
   - GitHub SSH key + auth: see src/software-to-install/linux/fedora/packages.md
-  - Restore dotfiles/configs:  bash scripts/restore-configs.sh
+  - Restore dotfiles/configs:  bash scripts/restore-configs.sh <backup-dir>
+      (backups live in ~/config-backups/, newest last: ls -d ~/config-backups/*)
 
 Fedora-only packages (Moosync, Lite XL) have no Ubuntu equivalent — build from
 source or fetch a .deb from upstream releases if you want them.
 NOTES
 
-manual_notes
+manual_notes linux
+
+exit "$rc"

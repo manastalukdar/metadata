@@ -51,13 +51,44 @@ instone() {
     xargs -r -n1 "$@" <<<"$pkgs" || warn "$name: some entries failed (see above)"
 }
 
+# manual_notes <linux|macos>
 # Print the tools that no package manager on this platform can install. The list
-# is generated from `manual` tags in the docs by scripts/gen-pkgs.sh.
+# is generated from `manual` tags in the docs by scripts/gen-pkgs.sh, which keeps
+# a "# from <source>" header above each block — that is what scopes the output to
+# the platform, so a Fedora run does not print macOS-only apps.
 manual_notes() {
-    local list="$PKGS/manual.txt"
+    local plat="${1:-}" list="$PKGS/manual.txt"
     [[ -f "$list" ]] || return 0
     say "Not installable by any package manager — install these by hand"
-    awk '{sub(/#.*/, "")} NF { print "  - " $0 }' "$list"
+    awk -v plat="$plat" '
+        /^# from / { keep = ($3 ~ /^common\//) || (plat != "" && index($3, plat "/") == 1); next }
+        {sub(/#.*/, "")} NF && keep { print "  - " $0 }
+    ' "$list"
+}
+
+# ensure_shell_init — put mise and ~/.local/bin on PATH for *future* shells.
+#
+# Must be called AFTER the oh-my-zsh step: its installer writes a fresh ~/.zshrc
+# from the upstream template, which would discard anything appended before it.
+# Without this, everything in mise.txt (node, python, java, go, rust) is on PATH
+# only for the duration of the setup script and looks uninstalled afterwards.
+ensure_shell_init() {
+    say "Shell init"
+    have mise || { warn "mise missing — shell init skipped, nothing to activate"; return 0; }
+    local marker="# >>> metadata setup >>>" rc shell_name
+    for rc in "$HOME/.zshrc" "$HOME/.bashrc"; do
+        [[ "$rc" == *zshrc ]] && shell_name=zsh || shell_name=bash
+        [[ -e "$rc" ]] || touch "$rc"
+        grep -qF "$marker" "$rc" && continue
+        cat >> "$rc" <<EOF
+
+$marker
+export PATH="\$HOME/.local/bin:\$PATH"
+eval "\$(mise activate $shell_name)"
+# <<< metadata setup <<<
+EOF
+        echo "  added mise activation to $rc"
+    done
 }
 
 report() {

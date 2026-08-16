@@ -69,6 +69,8 @@ say "Shell"
     RUNZSH=no CHSH=no sh -c \
     "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+ensure_shell_init
+
 # git needs an absolute path to the kdiff3 bundled inside the .app.
 if [[ -x /Applications/kdiff3.app/Contents/MacOS/kdiff3 ]]; then
     git config --global mergetool.kdiff3.path \
@@ -78,16 +80,19 @@ fi
 # ---------------------------------------------------------------------------
 say "Done"
 # ---------------------------------------------------------------------------
-report
+report; rc=$?
 
 cat <<'NOTES'
 
 Next steps (not scripted — they need your credentials or a restart):
   - Restart your shell, then run: bash scripts/check-versions.sh
   - GitHub SSH key + auth: see src/software-to-install/linux/fedora/packages.md
-  - Restore dotfiles/configs:  bash scripts/restore-configs.sh
+  - Restore dotfiles/configs:  bash scripts/restore-configs.sh <backup-dir>
+      (backups live in ~/config-backups/, newest last: ls -d ~/config-backups/*)
 
 FileZilla was removed from Homebrew; download it from filezilla-project.org.
 NOTES
 
-manual_notes
+manual_notes macos
+
+exit "$rc"

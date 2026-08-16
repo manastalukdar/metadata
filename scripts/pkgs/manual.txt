@@ -34,11 +34,9 @@ Nautilus My Computer
 Gnome extensions installed from extensions.gnome.org
 
 # from macos/packages.md
-ohmyzsh
 Double Commander
 Stay
 kap
-Antidote
 AppCleaner
 Pine media player
 Shottr

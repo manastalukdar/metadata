@@ -53,10 +53,12 @@ restore_dir() {
                 return
             fi
         fi
-        
+
         echo "📁 Restoring: $dest"
-        mkdir -p "$(dirname "$dest")"
-        cp -r "$source" "$dest"
+        # Copy the *contents*: `cp -r "$source" "$dest"` nests the backup inside
+        # an existing destination (~/.config/nvim/nvim) instead of merging.
+        mkdir -p "$dest"
+        cp -r "$source/." "$dest/"
     fi
 }
 
@@ -85,14 +87,27 @@ restore_file "$BACKUP_DIR/prompt/starship.toml" "$HOME/.config/starship.toml"
 # Restore development tools
 restore_file "$BACKUP_DIR/git/gitconfig" "$HOME/.gitconfig"
 
-# Restore VS Code (cross-platform)
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    restore_dir "$BACKUP_DIR/vscode" "$HOME/Library/Application Support/Code/User"
-elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    restore_dir "$BACKUP_DIR/vscode" "$HOME/.config/Code/User"
-elif [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "cygwin" ]]; then
-    restore_dir "$BACKUP_DIR/vscode" "$APPDATA/Code/User"
+# SSH keys. backup-configs.sh saves these, so restoring them is what makes a new
+# machine able to talk to GitHub. Permissions matter: ssh refuses a loose key.
+if [ -d "$BACKUP_DIR/ssh" ]; then
+    restore_dir "$BACKUP_DIR/ssh" "$HOME/.ssh"
+    chmod 700 "$HOME/.ssh"
+    find "$HOME/.ssh" -type f -exec chmod 600 {} +
+    find "$HOME/.ssh" -type f -name '*.pub' -exec chmod 644 {} +
 fi
+
+# Restore VS Code. The setup scripts install the Insiders channel, which keeps
+# its own profile directory, so restore both when the backup has them.
+for edition in "Code:vscode" "Code - Insiders:vscode-insiders"; do
+    dir="${edition%%:*}"; src="${edition##*:}"
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        restore_dir "$BACKUP_DIR/$src" "$HOME/Library/Application Support/$dir/User"
+    elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+        restore_dir "$BACKUP_DIR/$src" "$HOME/.config/$dir/User"
+    elif [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "cygwin" ]]; then
+        restore_dir "$BACKUP_DIR/$src" "$APPDATA/$dir/User"
+    fi
+done
 
 echo "✅ Configuration restore completed!"
 echo "⚠️  Please restart your terminal/applications to apply changes"

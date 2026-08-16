@@ -34,7 +34,8 @@ Cross-platform tools (languages, editors, CLI utilities, etc.) live under [../co
     ```
 
 - [Nautilus My Computer](https://github.com/yannmasoch/nautilus-my-computer) `manual`
-- [Peek](https://github.com/phw/peek) `dnf:peek` `apt:peek` — GIF screen recorder
+- [Peek](https://github.com/phw/peek) `apt:peek` — GIF screen recorder
+  - Retired from Fedora (upstream is archived), so no `dnf:` tag. Kooha above records screen on Wayland there.
 
 ### Desktop environment
 
@@ -58,9 +59,10 @@ Cross-platform tools (languages, editors, CLI utilities, etc.) live under [../co
 ### Fonts
 
 - Powerline fonts `dnf:powerline-fonts` `apt:fonts-powerline`
-- Font Awesome `dnf:fontawesome-fonts` `apt:fonts-font-awesome`
+- Font Awesome `dnf:fontawesome4-fonts` `apt:fonts-font-awesome`
+  - Fedora only packages the v4 fonts; the package is `fontawesome4-fonts`, not `fontawesome-fonts`.
 - Fira Code `dnf:fira-code-fonts` `apt:fonts-firacode`
-- Noto color emoji `dnf:google-noto-emoji-color-fonts` `apt:fonts-noto-color-emoji`
+- Noto color emoji `dnf:google-noto-color-emoji-fonts` `apt:fonts-noto-color-emoji`
 
 ## Optional
 

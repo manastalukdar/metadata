@@ -51,7 +51,6 @@ echo ""
 echo "🗃️ Package Managers:"
 check_version "flatpak" "flatpak --version"
 check_version "brew" "brew --version"
-check_version "snap" "snap --version"
 
 # Editors
 echo ""
