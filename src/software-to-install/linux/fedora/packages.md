@@ -35,17 +35,6 @@ Fedora-specific software and native `dnf`/`copr`/`snap` install recipes. Cross-p
     ffmpeg -version
     ```
 
-### File Explorers
-
-- [Double Commander](https://doublecommander.com) [[ref](https://software.opensuse.org/download.html?project=home%3AAlexx2000&package=doublecmd-gtk)]
-
-    ```shell
-    dnf config-manager --add-repo https://download.opensuse.org/repositories/home:Alexx2000/Fedora_36/home:Alexx2000.repo
-    dnf install doublecmd-gtk
-    ```
-
-- [MuCommander](http://www.mucommander.com)
-
 ### Editors
 
 - Visual Studio Code Insiders: the setup script uses the Microsoft dnf repo (`code-insiders`) rather than snap. Snap alternative: `sudo snap install --classic code-insiders`, updated with `sudo snap refresh code-insiders`.
@@ -203,8 +192,6 @@ Fedora-specific software and native `dnf`/`copr`/`snap` install recipes. Cross-p
 
 - openssh-askpass: `sudo dnf install openssh-askpass`
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh/wiki): `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-- [antibody](https://github.com/mattmc3/antidote)
-- [antigen](https://github.com/zsh-users/antigen): `curl -L git.io/antigen > antigen.zsh`
 - [peek](https://github.com/phw/peek): `sudo dnf install peek`. This is a gif screen recorder.
 - [nvm](https://github.com/nvm-sh/nvm): `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash`
 - [jenv](https://github.com/jenv/jenv)
@@ -225,7 +212,6 @@ Fedora-specific software and native `dnf`/`copr`/`snap` install recipes. Cross-p
 - More fonts
 
   ```shell
-  sudo dnf install powerline-fonts fontawesome-fonts
   sudo dnf install fira-code-fonts
   ```
 
@@ -267,7 +253,6 @@ Fedora-specific software and native `dnf`/`copr`/`snap` install recipes. Cross-p
 
 - [kooha](https://github.com/SeaDve/Kooha). Screen recorder. Optional.
 - [shutter](https://shutter-project.org/): `dnf install shutter`. This is a screenshot tool. Note: Does not work on Wayland. Not recommended.
-- [Audacious media player](https://audacious-media-player.org/)
 - [NotepadNext](https://github.com/dail8859/NotepadNext)
 - [Notepadqq](https://notepadqq.com/s/) [source](https://github.com/notepadqq/notepadqq)
 - [system-monitoring-center](https://github.com/hakandundar34coding/system-monitoring-center)
@@ -280,7 +265,6 @@ Fedora-specific software and native `dnf`/`copr`/`snap` install recipes. Cross-p
 - [Black Box Terminal](https://gitlab.gnome.org/raggesilver/blackbox)
 - [amberol](https://gitlab.gnome.org/World/amberol): sound and music player that is well integrated with GNOME.
 - [pass](https://www.passwordstore.org): `sudo dnf install pass`.
-- [Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager/blob/main/docs/credstores.md)
 - <https://xmonad.org/>
 - <https://github.com/swaywm/sway>: `sudo dnf install sway`
 - <https://github.com/Alexays/Waybar>

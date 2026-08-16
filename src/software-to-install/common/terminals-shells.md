@@ -8,6 +8,11 @@ Terminal emulators, shells, shell frameworks, and prompts.
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) `manual`
   - Installed by the `setup-*.sh` scripts via the upstream installer; not packaged.
   - <https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip>
+- [antidote](https://github.com/mattmc3/antidote) `manual` — zsh plugin manager
+  - Successor to antibody, which is archived; the old `antibody` links point here.
+  - `git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote`
+- [antigen](https://github.com/zsh-users/antigen) `apt:zsh-antigen`
+  - Not packaged for dnf or brew: `curl -L git.io/antigen > antigen.zsh`
 - [nushell](https://github.com/nushell/nushell) `brew:nushell`
   - Homebrew on every platform: Fedora packages it but apt does not, so one source keeps it consistent.
 - [Terax terminal](https://terax.app) `cask:terax` `manual` - [code](https://github.com/crynta/terax-ai)

@@ -51,6 +51,9 @@ libreoffice
 # from common/security-privacy.md
 keepassxc
 
+# from common/system-utilities.md
+onedrive
+
 # from common/terminals-shells.md
 terax
 

@@ -62,6 +62,7 @@ Compilers and build tools, version-control clients and diff/merge tools, databas
 
 - GitKraken
 - [Beyond Compare](https://www.scootersoftware.com) (macOS)
+- [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager). [Credential store options](https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md).
 
 ### Database clients
 

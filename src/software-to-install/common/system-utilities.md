@@ -4,8 +4,20 @@ File managers and transfer, system monitors and cleaners, disk imaging, screen/w
 
 ## Mandatory
 
+- [Double Commander](https://doublecommander.com) `apt:doublecmd-gtk`
+  - Fedora: not in the official repos, add the upstream OBS repo first [[ref](https://software.opensuse.org/download.html?project=home%3AAlexx2000&package=doublecmd-gtk)]:
+
+    ```shell
+    sudo dnf config-manager --add-repo https://download.opensuse.org/repositories/home:Alexx2000/Fedora_36/home:Alexx2000.repo
+    sudo dnf install doublecmd-gtk
+    ```
+
+  - macOS: download the DMG from upstream; no Homebrew cask.
 - FileZilla `dnf:filezilla` `apt:filezilla`
   - No longer available as a Homebrew cask; download from [filezilla-project.org](https://filezilla-project.org) on macOS.
+- Microsoft OneDrive `dnf:onedrive` `apt:onedrive` `cask:onedrive`
+  - Preinstalled on Windows; see [windows/packages.md](../windows/packages.md).
+  - Microsoft ships no official Linux client; `dnf`/`apt` install [abraunegg/onedrive](https://github.com/abraunegg/onedrive), a CLI sync daemon. Setup, multi-account and SharePoint config: [linux/fedora/onedrive.md](../linux/fedora/onedrive.md).
 - [rclone](https://rclone.org) `brew:rclone`
   - Used for Microsoft OneDrive; see [linux/fedora/onedrive.md](../linux/fedora/onedrive.md).
 - [rsync](https://rsync.samba.org) `native:rsync`
@@ -19,6 +31,7 @@ File managers and transfer, system monitors and cleaners, disk imaging, screen/w
 ### File management & transfer
 
 - [Spacedrive](https://www.spacedrive.com). [Source](https://github.com/spacedriveapp/spacedrive).
+- [muCommander](https://www.mucommander.com). Java-based, so one build runs on all three platforms.
 
 ### Maintenance & cleanup
 

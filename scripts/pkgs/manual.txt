@@ -26,6 +26,7 @@ Open Video Downloader (youtube-dl-gui)
 
 # from common/terminals-shells.md
 Oh My Zsh
+antidote — zsh plugin manager
 Terax terminal
 
 # from linux/common.md

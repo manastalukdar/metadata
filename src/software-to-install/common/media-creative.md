@@ -19,6 +19,7 @@ Audio, video, image, and graphics applications, plus media players.
 
 ## Optional
 
+- [Audacious media player](https://audacious-media-player.org/)
 - [ImageMagick](https://imagemagick.org/)
 - [Blender](https://www.blender.org)
 - [Pencil animation](https://www.pencil2d.org), [code](https://github.com/pencil2d/pencil).

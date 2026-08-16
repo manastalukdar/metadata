@@ -24,6 +24,8 @@ Install tags (`native:`, `dnf:`, `cask:`, …) feed [`scripts/pkgs/`](../../../s
 - Protocol Buffers `dnf:protobuf-compiler` `apt:protobuf-compiler` `brew-macos:protobuf`
 - [Nerd Fonts](https://www.nerdfonts.com/font-downloads) `cask:font-meslo-lg-nerd-font` `cask:font-fira-code-nerd-font`
   - Not packaged on Linux; the `setup-*.sh` scripts download Meslo and FiraCode into `~/.local/share/fonts`.
+- Powerline fonts `dnf:powerline-fonts` `apt:fonts-powerline`
+- Font Awesome `dnf:fontawesome-fonts` `apt:fonts-font-awesome`
 - Fonts `manual`
   - Computer Modern: [here](https://www.fontsquirrel.com/fonts/computer-modern), [here](https://www.1001fonts.com/cmu-font.html)
   - Latin Modern Sans Serif: [here](https://www.fontsquirrel.com/fonts/Latin-Modern-Sans), [here](https://www.1001fonts.com/latin-modern-sans-font.html)

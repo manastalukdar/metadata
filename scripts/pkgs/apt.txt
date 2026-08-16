@@ -39,6 +39,8 @@ p7zip-rar
 unzip
 htop
 protobuf-compiler
+fonts-powerline
+fonts-font-awesome
 
 # from common/dev-tools.md
 clang
@@ -67,11 +69,14 @@ ffmpeg
 keepassxc
 
 # from common/system-utilities.md
+doublecmd-gtk
 filezilla
+onedrive
 rsync
 
 # from common/terminals-shells.md
 powershell
+zsh-antigen
 
 # from common/writing-publishing.md
 texlive-latex-extra
@@ -80,7 +85,6 @@ texstudio
 
 # from linux/common.md
 terminator
-doublecmd-gtk
 peek
 gnome-tweaks
 gnome-shell-extension-manager
@@ -93,7 +97,6 @@ polybar
 conky
 redshift
 redshift-gtk
-fonts-powerline
 fonts-firacode
 fonts-noto-color-emoji
 

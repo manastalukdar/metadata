@@ -7,7 +7,7 @@ Windows-specific applications and utilities. Cross-platform tools live under [..
 - 7zip
 - [Windows PowerToys](https://github.com/microsoft/PowerToys)
 - [Rufus](https://rufus.ie/)
-- Microsoft OneDrive
+- Microsoft OneDrive — preinstalled; see [common/system-utilities.md](../common/system-utilities.md)
 - Visual Studio Community Edition
 - Android SDK
 - WinPython (includes Spyder)

@@ -39,6 +39,8 @@ p7zip-plugins
 unzip
 htop
 protobuf-compiler
+powerline-fonts
+fontawesome-fonts
 
 # from common/dev-tools.md
 clang
@@ -70,6 +72,7 @@ keepassxc
 
 # from common/system-utilities.md
 filezilla
+onedrive
 rsync
 
 # from common/terminals-shells.md
@@ -94,7 +97,6 @@ polybar
 conky
 redshift
 redshift-gtk
-powerline-fonts
 fira-code-fonts
 google-noto-emoji-color-fonts
 
