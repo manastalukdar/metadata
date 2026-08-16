@@ -47,3 +47,5 @@ AI coding agents, assistants, AI-first editors, and local model runners.
 - [OpenClaw](https://openclaw.ai) `manual`
   - [Code](https://github.com/openclaw/openclaw)
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) `npm:@google/gemini-cli`
+- [DeepSeek Harness](https://deepseek.com/harness/en/) `npx @deepseek-ai/dsh web`
+  - [Code](https://github.com/deepseek-ai/deepseek-harness)
