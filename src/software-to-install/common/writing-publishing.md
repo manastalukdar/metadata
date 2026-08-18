@@ -48,3 +48,4 @@ Markdown editors, LaTeX/typesetting, long-form authoring, and desktop publishing
 
 - [katvan](https://katvan.app/) [code](https://github.com/IgKh/katvan) `flatpak:app.katvan.Katvan`
 - [typstify](https://typstify.com) [code](https://github.com/typstify/typstify) `manual`
+- [typst-desktop](https://github.com/lucaslrodri/typst-desktop)
