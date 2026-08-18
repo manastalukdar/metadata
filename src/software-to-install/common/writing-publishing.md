@@ -43,3 +43,8 @@ Markdown editors, LaTeX/typesetting, long-form authoring, and desktop publishing
 - [novelWriter](https://novelwriter.io). [source](https://github.com/vkbo/novelWriter)
 - [Stirling pdf](https://stirling.com/download) [code](https://github.com/Stirling-Tools/Stirling-PDF)
 - [NotepadNext](https://github.com/dail8859/NotepadNext)
+
+### Typst Editors
+
+- [katvan](https://katvan.app/) [code](https://github.com/IgKh/katvan) `flatpak:app.katvan.Katvan`
+- [typstify](https://typstify.com) [code](https://github.com/typstify/typstify) `manual`
