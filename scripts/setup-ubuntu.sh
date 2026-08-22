@@ -21,6 +21,8 @@ set -uo pipefail   # deliberately NOT -e: one unavailable package must not abort
 
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib-pkgs.sh"
 
+logtee "$@"   # also write this run to scripts/setup-ubuntu.log
+
 echo "🚀 Starting Ubuntu development environment setup..."
 
 KEYRINGS=/etc/apt/keyrings

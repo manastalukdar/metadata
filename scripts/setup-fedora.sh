@@ -21,6 +21,8 @@ set -uo pipefail   # deliberately NOT -e: one unavailable package must not abort
 
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib-pkgs.sh"
 
+logtee "$@"   # also write this run to scripts/setup-fedora.log
+
 # ---------------------------------------------------------------------------
 # dnf4 / dnf5 compatibility. Fedora 41+ ships dnf5, which renamed both the
 # skip-broken flag and the whole config-manager subcommand syntax.

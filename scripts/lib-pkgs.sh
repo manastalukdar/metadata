@@ -22,6 +22,19 @@ warn() { echo -e "\033[1;33m[warn]\033[0m $*" >&2; FAILED+=("$*"); }
 have() { command -v "$1" >/dev/null 2>&1; }
 try()  { "$@" || warn "failed: $*"; }
 
+# logtee — mirror this run to <script>.log beside the script (gitignored by
+# *.log) while still printing to the terminal. Call it once, early, as
+# `logtee "$@"`. It re-execs the script through `tee` rather than using
+# `exec > >(tee ...)`, so the shell cannot exit before tee flushes the tail —
+# the final report() summary is the part you most need in the log.
+logtee() {
+    [[ -z "${SETUP_LOG:-}" ]] || return 0   # already inside the re-exec
+    local src="${BASH_SOURCE[1]}"
+    export SETUP_LOG="${src%.sh}.log"
+    { exec bash "$src" "$@"; } 2>&1 | tee "$SETUP_LOG"
+    exit "${PIPESTATUS[0]}"
+}
+
 # pkglist <list-name> — print a list's entries, comments and blanks stripped.
 pkglist() { awk '{sub(/#.*/, "")} NF' "$PKGS/$1.txt"; }
 

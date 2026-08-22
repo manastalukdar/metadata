@@ -20,6 +20,8 @@ set -uo pipefail   # deliberately NOT -e: one unavailable cask must not abort a
 
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib-pkgs.sh"
 
+logtee "$@"   # also write this run to scripts/setup-macos.log
+
 echo "🚀 Starting macOS development environment setup..."
 
 # ---------------------------------------------------------------------------
