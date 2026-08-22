@@ -27,7 +27,16 @@
 set -uo pipefail   # deliberately NOT -e: one unavailable package must not abort
                    # a 300-package install. Failures are collected and reported.
 
-source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib-pkgs.sh"
+# The helpers and the package lists in pkgs/ are resolved relative to this file,
+# so the repository has to be on disk. Without this guard a `curl | bash` attempt
+# dies with five confusing "command not found" lines instead of one clear reason.
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib-pkgs.sh" || {
+    echo "Could not load lib-pkgs.sh next to this script." >&2
+    echo "These scripts need the whole repository (they read scripts/pkgs/*.txt), so:" >&2
+    echo "    git clone https://github.com/manastalukdar/metadata.git" >&2
+    echo "    cd metadata && bash scripts/setup-cachyos.sh" >&2
+    exit 1
+}
 
 logtee "$@"   # also write this run to scripts/setup-cachyos.log
 

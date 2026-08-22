@@ -2,31 +2,42 @@
 
 Get your development environment up and running quickly with automated scripts and essential configurations.
 
-## 🚀 One-Command Setup
+## 🚀 Automated Setup
 
-Choose your platform and run the appropriate script:
+Clone the repository, then run the script for your platform:
+
+```bash
+git clone https://github.com/manastalukdar/metadata.git
+cd metadata
+```
 
 ### Linux (Ubuntu)
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-ubuntu.sh)
+bash scripts/setup-ubuntu.sh
 ```
 
 ### Linux (Fedora)
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-fedora.sh)
+bash scripts/setup-fedora.sh
 ```
 
 ### Linux (CachyOS / Arch)
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-cachyos.sh)
+bash scripts/setup-cachyos.sh
 ```
 
-Run as your normal user, not `sudo`: AUR packages cannot be built as root.
+Run as your normal user, not `sudo`: AUR packages cannot be built as root, and the script exits early if you try.
 
 ### macOS
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-macos.sh)
+bash scripts/setup-macos.sh
 ```
+
+### Why a clone, and not `curl | bash`?
+
+The scripts read their package lists from [`scripts/pkgs/`](../scripts/pkgs/) and share helpers in `scripts/lib-pkgs.sh`, both resolved relative to the script on disk. A single script fetched over `curl` has neither, so it fails immediately — there is no one-liner form of this.
+
+Each run is mirrored to `scripts/setup-<platform>.log`, ending with a summary of anything that needed attention.
 
 ## 🔧 Manual Setup
 

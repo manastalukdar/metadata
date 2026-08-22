@@ -8,29 +8,25 @@
 
 ## 🚀 Quick Start
 
-### One-Command Setup
+### Setup
 
-**Ubuntu/Debian:**
+Clone first, then run the script for your platform. The setup scripts read their package lists from [`scripts/pkgs/`](scripts/pkgs/) and share helpers in `scripts/lib-pkgs.sh`, so they need the repository on disk — piping a single script from `curl` cannot work.
+
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-ubuntu.sh)
+git clone https://github.com/manastalukdar/metadata.git
+cd metadata
 ```
 
-**Fedora:**
-```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-fedora.sh)
-```
+| Platform | Command |
+| --- | --- |
+| Ubuntu/Debian | `bash scripts/setup-ubuntu.sh` |
+| Fedora | `bash scripts/setup-fedora.sh` |
+| CachyOS (and other Arch derivatives) | `bash scripts/setup-cachyos.sh` |
+| macOS | `bash scripts/setup-macos.sh` |
 
-**CachyOS (and other Arch derivatives):**
-```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-cachyos.sh)
-```
+Run as your normal user, not with `sudo`. Each script calls `sudo` itself where root is needed; on CachyOS it exits early if you invoke it as root, because AUR packages cannot be built that way.
 
-Run it as your normal user, not with `sudo` — AUR packages cannot be built as root, and the script exits early if you try.
-
-**macOS:**
-```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-macos.sh)
-```
+Every run is mirrored to `scripts/setup-<platform>.log`, including the summary of anything that needed attention. That summary is the part worth reading.
 
 ### Development Containers
 
