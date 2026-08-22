@@ -4,7 +4,7 @@ Terminal emulators, shells, shell frameworks, and prompts.
 
 ## Mandatory
 
-- Powershell Core `dnf:powershell` `apt:powershell` `brew-macos:powershell`
+- Powershell Core `dnf:powershell` `apt:powershell` `aur:powershell-bin` `brew-macos:powershell`
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) `manual`
   - Installed by the `setup-*.sh` scripts via the upstream installer; not packaged.
   - <https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip>
@@ -13,7 +13,7 @@ Terminal emulators, shells, shell frameworks, and prompts.
   - `git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote`
 - [antigen](https://github.com/zsh-users/antigen) `apt:zsh-antigen`
   - Not packaged for dnf or brew: `curl -L git.io/antigen > antigen.zsh`
-- [nushell](https://github.com/nushell/nushell) `brew:nushell`
+- [nushell](https://github.com/nushell/nushell) `brew:nushell` `pacman:nushell`
   - Homebrew on every platform: Fedora packages it but apt does not, so one source keeps it consistent.
 - [Terax terminal](https://terax.app) `cask:terax` `manual` - [code](https://github.com/crynta/terax-ai)
   - macOS is unattended via the `terax` cask, which pulls the vendor DMG.

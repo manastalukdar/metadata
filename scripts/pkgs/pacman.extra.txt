@@ -1,0 +1,22 @@
+# Machine-only plumbing for CachyOS: bootstrap and build dependencies that have
+# no place in the user-facing docs. Appended to the generated pacman.txt.
+#
+# base-devel is what makes paru able to build AUR packages at all, so it has to
+# land before the aur tier runs.
+base-devel
+# pacman-contrib carries paccache, which update-all.sh uses to keep the package
+# cache from growing without bound.
+pacman-contrib
+flatpak
+# No bare `python` entry: mise owns the versioned Python (mise.txt), and listing
+# the system one here would put the same tool in two tiers of one platform —
+# which test-pkgs.sh rejects. python-pip depends on it, so it arrives anyway.
+python-pip
+python-virtualenv
+# Codecs. Fedora gets these from RPM Fusion via a group upgrade; on Arch they
+# are ordinary packages, so they belong here rather than in the setup script.
+gst-plugins-base
+gst-plugins-good
+gst-plugins-bad
+gst-plugins-ugly
+gst-libav

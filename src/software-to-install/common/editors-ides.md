@@ -4,7 +4,7 @@ Traditional code editors and IDEs. AI-first editors and coding agents live in [a
 
 ## Mandatory
 
-- Sublime Text `dnf:sublime-text` `apt:sublime-text` `cask:sublime-text`
+- Sublime Text `dnf:sublime-text` `apt:sublime-text` `aur:sublime-text-4` `cask:sublime-text`
 
   To open command prompt at file root: ctrl + alt + t
   MarkdownEditing Settings
@@ -19,12 +19,12 @@ Traditional code editors and IDEs. AI-first editors and coding agents live in [a
     sudo apt-get install sublime-text
     ```
 
-- Sublime Merge `dnf:sublime-merge` `apt:sublime-merge` `cask:sublime-merge`
-- [Lite XL](https://lite-xl.com/en/) `dnf:lite-xl-nightly` [source](https://github.com/lite-xl/lite-xl)
-  - Fedora only: from the `sentry/lite` copr, enabled by `setup-fedora.sh`. Not packaged for apt or brew.
-- Visual Studio Code editor `dnf:code-insiders` `apt:code-insiders` `cask:visual-studio-code@insiders`
-  - The Insiders channel is the one actually used; stable is `code` / `visual-studio-code`.
-- [Neovim](https://github.com/neovim/neovim) `dnf:neovim` `dnf:python3-neovim` `dnf:neovim-qt` `apt:neovim` `apt:python3-neovim` `apt:neovim-qt` `brew-macos:neovim`
+- Sublime Merge `dnf:sublime-merge` `apt:sublime-merge` `aur:sublime-merge` `cask:sublime-merge`
+- [Lite XL](https://lite-xl.com/en/) `dnf:lite-xl-nightly` `pacman:lite-xl` [source](https://github.com/lite-xl/lite-xl)
+  - Fedora gets the nightly from the `sentry/lite` copr, enabled by `setup-fedora.sh`. Arch has it in `extra`. Not packaged for apt or brew.
+- Visual Studio Code editor `dnf:code-insiders` `apt:code-insiders` `aur:visual-studio-code-insiders-bin` `cask:visual-studio-code@insiders`
+  - The Insiders channel is the one actually used; stable is `code` / `visual-studio-code` / `visual-studio-code-bin`.
+- [Neovim](https://github.com/neovim/neovim) `dnf:neovim` `dnf:python3-neovim` `dnf:neovim-qt` `apt:neovim` `apt:python3-neovim` `apt:neovim-qt` `pacman:neovim` `pacman:python-pynvim` `pacman:neovim-qt` `brew-macos:neovim`
   - [neovim-qt](https://github.com/equalsraf/neovim-qt) is the GUI front end.
 
 ## Optional

@@ -106,6 +106,8 @@ Keep your development environment configurations up-to-date and secure.
 |---------|----------------|-------|
 | apt | `sudo apt update && sudo apt upgrade` | Ubuntu/Debian |
 | dnf | `sudo dnf update` | Fedora |
+| pacman | `sudo pacman -Syu` | CachyOS/Arch — never `-Sy` alone, that is a partial upgrade |
+| paru | `paru -Syu` | CachyOS/Arch — upgrades the repos *and* the AUR in one transaction |
 | brew | `brew update && brew upgrade` | macOS |
 | winget | `winget upgrade --all` | Windows 10+ |
 | npm | `npm update -g` | Global packages |

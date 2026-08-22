@@ -6,9 +6,9 @@ Compilers and build tools, version-control clients and diff/merge tools, databas
 
 ### Compilers & build
 
-- [clang](https://clang.llvm.org/) `dnf:clang` `apt:clang` `brew-macos:llvm`
-- gcc `dnf:gcc` `dnf:gcc-c++`
-  - Ubuntu gets gcc and g++ from `build-essential`; macOS from the Xcode Command Line Tools.
+- [clang](https://clang.llvm.org/) `dnf:clang` `apt:clang` `pacman:clang` `brew-macos:llvm`
+- gcc `dnf:gcc` `dnf:gcc-c++` `pacman:gcc`
+  - Ubuntu gets gcc and g++ from `build-essential`, CachyOS from `base-devel`; macOS from the Xcode Command Line Tools. Arch ships C and C++ in the one `gcc` package, so there is no `gcc-c++` equivalent to tag.
   - [Windows](https://www.msys2.org/wiki/MSYS2-installation/)
 
     [Useful Link](https://www.devdungeon.com/content/how-setup-gcc-msys2-eclipse-windows-c-development)
@@ -32,13 +32,14 @@ Compilers and build tools, version-control clients and diff/merge tools, databas
 
 ### Version control & diff
 
-- kdiff3 `dnf:kdiff3` `apt:kdiff3` `cask:kdiff3`
+- kdiff3 `dnf:kdiff3` `apt:kdiff3` `pacman:kdiff3` `cask:kdiff3`
   - macos
 
     `git config --global mergetool.kdiff3.path /Applications/kdiff3.app/Contents/MacOS/kdiff3`
 
-- meld `dnf:meld` `apt:meld` `cask:meld`
-- GitHub CLI `native:gh`
+- meld `dnf:meld` `apt:meld` `pacman:meld` `cask:meld`
+- GitHub CLI `dnf:gh` `apt:gh` `pacman:github-cli` `brew-macos:gh`
+  - Not `native:` because Arch names the package `github-cli`; the binary is still `gh`.
 - [GitHub Desktop](https://github.com/apps/desktop) `flatpak:io.github.shiftey.Desktop` `cask:github`
   - The flatpak is the community Linux build.
 - [BitComet](https://www.bitcomet.com/en) `manual`

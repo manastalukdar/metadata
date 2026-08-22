@@ -4,8 +4,9 @@ Notes and tools shared across Linux distributions. Distribution-specific package
 
 - [Ubuntu](ubuntu/) — [packages](ubuntu/packages.md), [post-install](ubuntu/post-install.md)
 - [Fedora](fedora/) — [packages](fedora/packages.md), [post-install](fedora/post-install.md), [NVIDIA](fedora/nvidia.md), [OneDrive](fedora/onedrive.md)
+- [CachyOS](cachyos/) — [packages](cachyos/packages.md), [post-install](cachyos/post-install.md)
 
-Cross-platform tools (languages, editors, CLI utilities, etc.) live under [../common/](../common/). This file holds tools that are Linux-only but work on every distribution — desktop apps, GNOME pieces and font packages — so the `dnf:`/`apt:`/`flatpak:` tags are in one place rather than duplicated per distro.
+Cross-platform tools (languages, editors, CLI utilities, etc.) live under [../common/](../common/). This file holds tools that are Linux-only but work on every distribution — desktop apps, GNOME pieces and font packages — so the `dnf:`/`apt:`/`pacman:`/`aur:`/`flatpak:` tags are in one place rather than duplicated per distro.
 
 ## Mandatory
 
@@ -15,7 +16,7 @@ Cross-platform tools (languages, editors, CLI utilities, etc.) live under [../co
 - [Text Pieces](https://github.com/liferooter/textpieces) `flatpak:com.github.liferooter.textpieces` — quick text processing
 - Shortwave `flatpak:de.haeckerfelix.Shortwave` — internet radio
 - [Kooha](https://github.com/SeaDve/Kooha) `flatpak:io.github.seadve.Kooha` — screen recorder, works on Wayland
-- [Terminator](https://github.com/gnome-terminator/terminator) `dnf:terminator` `apt:terminator`
+- [Terminator](https://github.com/gnome-terminator/terminator) `dnf:terminator` `apt:terminator` `pacman:terminator`
 
     ```plaintext
     Create more terminals by:
@@ -35,34 +36,36 @@ Cross-platform tools (languages, editors, CLI utilities, etc.) live under [../co
 
 - [Nautilus My Computer](https://github.com/yannmasoch/nautilus-my-computer) `manual`
 - [Peek](https://github.com/phw/peek) `apt:peek` — GIF screen recorder
-  - Retired from Fedora (upstream is archived), so no `dnf:` tag. Kooha above records screen on Wayland there.
+  - Retired from Fedora (upstream is archived), so no `dnf:` tag, and dropped from the AUR for the same reason, so no `aur:` tag. Kooha above records screen on Wayland there.
 
 ### Desktop environment
 
-- Gnome Tweaks `dnf:gnome-tweaks` `apt:gnome-tweaks`
-- Gnome Extensions app `dnf:gnome-extensions-app` `apt:gnome-shell-extension-manager` `apt:gnome-shell-extension-prefs`
-- Dash to Dock `dnf:gnome-shell-extension-dash-to-dock`
+- Gnome Tweaks `dnf:gnome-tweaks` `apt:gnome-tweaks` `pacman:gnome-tweaks`
+- Gnome Extensions app `dnf:gnome-extensions-app` `apt:gnome-shell-extension-manager` `apt:gnome-shell-extension-prefs` `pacman:extension-manager`
+  - Arch has no `gnome-extensions-app` package — the Extensions app itself ships inside `gnome-shell`. `extension-manager` in `extra` is the same third-party GUI Ubuntu gets from `gnome-shell-extension-manager`.
+- Dash to Dock `dnf:gnome-shell-extension-dash-to-dock` `aur:gnome-shell-extension-dash-to-dock`
   - Ubuntu ships its own Ubuntu Dock; see [How to Bring out Bottom Dock Launcher from Activities View in Fedora Gnome 40](https://fostips.com/bring-out-bottom-dock-fedora-gnome/).
-- Gnome Font Viewer `dnf:gnome-font-viewer` `apt:gnome-font-viewer`
-- Gnome Screenshot `dnf:gnome-screenshot` `apt:gnome-screenshot`
-- Blueman bluetooth manager `dnf:blueman` `apt:blueman`
-- [Ulauncher](https://github.com/Ulauncher/Ulauncher/) `dnf:ulauncher` `apt:ulauncher`
+- Gnome Font Viewer `dnf:gnome-font-viewer` `apt:gnome-font-viewer` `pacman:gnome-font-viewer`
+- Gnome Screenshot `dnf:gnome-screenshot` `apt:gnome-screenshot` `pacman:gnome-screenshot`
+- Blueman bluetooth manager `dnf:blueman` `apt:blueman` `pacman:blueman`
+- [Ulauncher](https://github.com/Ulauncher/Ulauncher/) `dnf:ulauncher` `apt:ulauncher` `aur:ulauncher`
   - Ubuntu needs the `ppa:agornostal/ulauncher` PPA, added by `setup-ubuntu.sh`.
-- [polybar](https://github.com/polybar/polybar) `dnf:polybar` `apt:polybar`
-- [conky](https://github.com/brndnmtthws/conky) `dnf:conky` `apt:conky`
+- [polybar](https://github.com/polybar/polybar) `dnf:polybar` `apt:polybar` `pacman:polybar`
+- [conky](https://github.com/brndnmtthws/conky) `dnf:conky` `apt:conky` `pacman:conky`
   - [Conky – The Fully Customizable System Monitor For Linux](https://www.linuxfordevices.com/tutorials/linux/conky-customizable-system-monitor#Installing-Conky), [lean-conky-config](https://github.com/jxai/lean-conky-config)
-- redshift `dnf:redshift` `dnf:redshift-gtk` `apt:redshift` `apt:redshift-gtk`
+- redshift `dnf:redshift` `dnf:redshift-gtk` `apt:redshift` `apt:redshift-gtk` `pacman:redshift`
   - The setup scripts write a starter `~/.config/redshift.conf`; set `lat`/`lon` to your location.
+  - Arch's `redshift` includes the GTK tray applet, so there is no separate `-gtk` package to tag.
 - Gnome extensions installed from [extensions.gnome.org](https://extensions.gnome.org) `manual`
   - gTile, Screenshot Tool, Search Light, Background Logo.
 
 ### Fonts
 
-- Powerline fonts `dnf:powerline-fonts` `apt:fonts-powerline`
-- Font Awesome `dnf:fontawesome4-fonts` `apt:fonts-font-awesome`
-  - Fedora only packages the v4 fonts; the package is `fontawesome4-fonts`, not `fontawesome-fonts`.
-- Fira Code `dnf:fira-code-fonts` `apt:fonts-firacode`
-- Noto color emoji `dnf:google-noto-color-emoji-fonts` `apt:fonts-noto-color-emoji`
+- Powerline fonts `dnf:powerline-fonts` `apt:fonts-powerline` `pacman:powerline-fonts`
+- Font Awesome `dnf:fontawesome4-fonts` `apt:fonts-font-awesome` `aur:ttf-font-awesome-4`
+  - Fedora only packages the v4 fonts; the package is `fontawesome4-fonts`, not `fontawesome-fonts`. Arch's official package is `otf-font-awesome`, which tracks current upstream (v7 at time of writing), so v4 comes from the AUR to match Fedora and Ubuntu.
+- Fira Code `dnf:fira-code-fonts` `apt:fonts-firacode` `pacman:ttf-fira-code`
+- Noto color emoji `dnf:google-noto-color-emoji-fonts` `apt:fonts-noto-color-emoji` `pacman:noto-fonts-emoji`
 
 ## Optional
 

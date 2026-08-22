@@ -22,6 +22,7 @@ Pocketcasts
 Notion
 
 # from common/system-utilities.md
+mise
 Open Video Downloader (youtube-dl-gui)
 
 # from common/terminals-shells.md

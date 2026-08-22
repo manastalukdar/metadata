@@ -51,6 +51,9 @@ echo ""
 echo "🗃️ Package Managers:"
 check_version "flatpak" "flatpak --version"
 check_version "brew" "brew --version"
+# paru is the AUR tier on CachyOS/Arch; absent everywhere else, which is what
+# the ❌ line correctly reports.
+check_version "paru" "paru --version"
 
 # Editors
 echo ""

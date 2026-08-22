@@ -9,9 +9,9 @@ Audio, video, image, and graphics applications, plus media players.
 - GIMP `flatpak:org.gimp.GIMP` `cask:gimp`
 - Inkscape `flatpak:org.inkscape.Inkscape` `cask:inkscape`
 - [Krita](https://krita.org/en/) `flatpak:org.kde.krita` `cask:krita`
-- VLC Media player `dnf:vlc` `apt:vlc` `cask:vlc`
-  - On Fedora this needs RPM Fusion; see [linux/fedora/post-install.md](../linux/fedora/post-install.md).
-- [ffmpeg](https://ffmpeg.org/) `dnf:ffmpeg` `apt:ffmpeg` `brew-macos:ffmpeg`
+- VLC Media player `dnf:vlc` `apt:vlc` `pacman:vlc` `cask:vlc`
+  - On Fedora this needs RPM Fusion; see [linux/fedora/post-install.md](../linux/fedora/post-install.md). Arch ships it in `extra` with no extra repo.
+- [ffmpeg](https://ffmpeg.org/) `dnf:ffmpeg` `apt:ffmpeg` `pacman:ffmpeg` `brew-macos:ffmpeg`
 - Strawberry music player `flatpak:org.strawberrymusicplayer.strawberry` `cask:strawberry`
 - DaVinci Resolve `manual`
 - Pocketcasts `manual`

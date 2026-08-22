@@ -12,7 +12,7 @@ AI coding agents, assistants, AI-first editors, and local model runners.
 - [PI coding agent](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent) `npm:@mariozechner/pi-coding-agent`
 - [OpenSpec](https://github.com/Fission-AI/OpenSpec) `npm:@fission-ai/openspec`
 - [Claude Swap](https://github.com/realiti4/claude-swap) `manual`
-- [Herdr](https://herdr.dev) [code](https://github.com/ogulcancelik/herdr) `brew:herdr`
+- [Herdr](https://herdr.dev) [code](https://github.com/ogulcancelik/herdr) `brew:herdr` `aur:herdr-bin`
 
 ## Optional
 

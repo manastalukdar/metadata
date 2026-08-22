@@ -20,8 +20,8 @@ pyenv and nvm are installed alongside it; see [Version managers](#version-manage
 - nodejs `mise:node@lts`
   - `corepack enable` is run by the setup scripts, which provides yarn and pnpm.
 
-- DotNet Core `dnf:dotnet-sdk-9.0` `apt:dotnet-sdk-9.0`
-  - From the Microsoft prod repo on both distros.
+- DotNet Core `dnf:dotnet-sdk-9.0` `apt:dotnet-sdk-9.0` `pacman:dotnet-sdk`
+  - From the Microsoft prod repo on Fedora and Ubuntu. Arch's `dotnet-sdk` in `extra` is unversioned and tracks the current release, so it is not pinned to 9.x the way the other two are.
 
 - gradle `mise:gradle@latest`
 - [uv](https://github.com/astral-sh/uv) `mise:uv@latest` — fast Python package & project manager
@@ -32,9 +32,9 @@ pyenv and nvm are installed alongside it; see [Version managers](#version-manage
 
 ### Version managers
 
-Installed from Homebrew on all three platforms: apt has no `nvm` package, and Homebrew keeps one source rather than a different recipe per distro (the same reason nushell uses it).
+Installed from Homebrew on Fedora, Ubuntu and macOS: apt has no `nvm` package, and Homebrew keeps one source rather than a different recipe per distro (the same reason nushell uses it). Arch has both in `extra`, so CachyOS takes them from `pacman` and skips Homebrew entirely.
 
-- [pyenv](https://github.com/pyenv/pyenv) `brew:pyenv`
+- [pyenv](https://github.com/pyenv/pyenv) `brew:pyenv` `pacman:pyenv`
   - Shell init, needed before `pyenv` works — add to `~/.zshrc`:
 
     ```shell
@@ -45,7 +45,7 @@ Installed from Homebrew on all three platforms: apt has no `nvm` package, and Ho
 
   - Building a Python needs the usual headers and libs (`zlib`, `bzip2`, `readline`, `sqlite`, `openssl`, `libffi` dev packages). See [pyenv's wiki](https://github.com/pyenv/pyenv/wiki#suggested-build-environment).
   - Windows: [pyenv-win](https://github.com/pyenv-win/pyenv-win); run `pyenv update` after installing.
-- [nvm](https://github.com/nvm-sh/nvm) `brew:nvm`
+- [nvm](https://github.com/nvm-sh/nvm) `brew:nvm` `pacman:nvm`
   - Shell init — Homebrew does not wire this up, so add to `~/.zshrc`:
 
     ```shell

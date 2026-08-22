@@ -19,6 +19,8 @@ if [[ "${OSTYPE:-}" == "linux-gnu"* ]]; then
         PLATFORM="ubuntu"
     elif have dnf; then
         PLATFORM="fedora"
+    elif have pacman; then
+        PLATFORM="cachyos"
     else
         PLATFORM="linux"
     fi
@@ -42,6 +44,24 @@ case $PLATFORM in
     "fedora")
         try sudo dnf upgrade --refresh -y
         try sudo dnf autoremove -y
+        ;;
+    "cachyos")
+        # paru upgrades the repos and the AUR in one transaction; plain pacman
+        # would leave AUR packages behind, which is how partial upgrades start.
+        if have paru; then
+            try paru -Syu --noconfirm
+        else
+            try sudo pacman -Syu --noconfirm
+            warn "paru missing — AUR packages were not upgraded"
+        fi
+        # Orphan removal has no --noconfirm-able equivalent of `autoremove`, and
+        # `pacman -Rns` errors out on an empty argument list, hence the guard.
+        orphans="$(pacman -Qtdq 2>/dev/null)"
+        # shellcheck disable=SC2086  # deliberate word splitting: one arg per package
+        [[ -z "$orphans" ]] || try sudo pacman -Rns --noconfirm $orphans
+        # Keep the last 3 versions of each package; the cache is otherwise
+        # unbounded and is the usual reason /var fills up on Arch.
+        have paccache && try sudo paccache -rk3
         ;;
     "macos")
         ;;   # handled by the Homebrew step below

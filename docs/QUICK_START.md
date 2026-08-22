@@ -16,6 +16,13 @@ bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/
 bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-fedora.sh)
 ```
 
+### Linux (CachyOS / Arch)
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-cachyos.sh)
+```
+
+Run as your normal user, not `sudo`: AUR packages cannot be built as root.
+
 ### macOS
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-macos.sh)

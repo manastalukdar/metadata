@@ -61,9 +61,13 @@ check_overlap() {
     [[ -z "$overlap" ]] \
         || fail "$platform: same tool in multiple tiers: $(xargs <<<"$overlap")"
 }
-check_overlap fedora dnf snap flatpak mise brew-common
-check_overlap ubuntu apt snap flatpak mise brew-common
-check_overlap macos  brew-macos brew-cask mise brew-common
+check_overlap fedora  dnf snap flatpak mise brew-common
+check_overlap ubuntu  apt snap flatpak mise brew-common
+check_overlap macos   brew-macos brew-cask mise brew-common
+# No brew-common here: setup-cachyos.sh does not install Homebrew, because Arch
+# carries the tools that tier exists to supply on dnf/apt. pacman and aur are
+# separate tiers of the same platform, so an id in both would install twice.
+check_overlap cachyos pacman aur snap flatpak mise
 
 # Every generated list must be reachable from a setup script, or it is dead
 # weight that quietly stops being maintained. .extra.txt files are consumed

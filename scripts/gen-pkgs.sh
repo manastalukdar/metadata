@@ -14,8 +14,10 @@
 #
 # Recognized managers:
 #
-#   native        same package name from dnf, apt and brew (expands to all 3)
+#   native        same package name from dnf, apt, pacman and brew (all 4)
 #   dnf apt       distro packages (use when the names differ)
+#   pacman        Arch/CachyOS official repos (core, extra, cachyos)
+#   aur           Arch User Repository, built by paru
 #   brew-macos    a formula macOS needs because Linux gets it from dnf/apt
 #   brew          a formula every platform needs
 #   cask          macOS GUI app
@@ -41,10 +43,15 @@ CHECK=0
 
 # manager tag -> list file(s) it feeds
 declare -A TARGETS=(
-    [dnf]="dnf" [apt]="apt" [flatpak]="flatpak" [snap]="snap"
+    [dnf]="dnf" [apt]="apt" [pacman]="pacman" [aur]="aur"
+    [flatpak]="flatpak" [snap]="snap"
     [mise]="mise" [npm]="npm" [uv]="uv" [brew]="brew-common"
     [brew-macos]="brew-macos" [cask]="brew-cask"
-    [native]="dnf apt brew-macos"
+    # `native:` means "same id everywhere", so it must name a package that really
+    # does carry that id in all four. Arch renames more than the others do
+    # (pandoc -> pandoc-cli, gh -> github-cli); those tools spell out the four
+    # tags individually instead of using `native:`.
+    [native]="dnf apt pacman brew-macos"
     [manual]="manual"
 )
 
@@ -169,7 +176,7 @@ emit() {
     fi
 }
 
-LISTS=(dnf apt flatpak snap mise npm uv brew-common brew-macos brew-cask manual)
+LISTS=(dnf apt pacman aur flatpak snap mise npm uv brew-common brew-macos brew-cask manual)
 for list in "${LISTS[@]}"; do
     emit "$list" "$(build "$list")"
 done

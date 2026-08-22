@@ -33,9 +33,13 @@ See [software-to-install/README.md](../src/software-to-install/README.md) for th
 - [Common Tools](../src/software-to-install/common/) - Organized by function (languages, editors, AI tools, CLI utilities, etc.)
 
 ### 🐧 Linux
+- [Cross-distro notes](../src/software-to-install/linux/common.md)
 - [Ubuntu Setup](../scripts/setup-ubuntu.sh) (Automated)
 - [Ubuntu Manual](../src/software-to-install/linux/ubuntu/)
+- [Fedora Setup](../scripts/setup-fedora.sh) (Automated)
 - [Fedora Manual](../src/software-to-install/linux/fedora/)
+- [CachyOS Setup](../scripts/setup-cachyos.sh) (Automated)
+- [CachyOS Manual](../src/software-to-install/linux/cachyos/)
 
 ### 🍎 macOS
 - [macOS Setup](../scripts/setup-macos.sh) (Automated)

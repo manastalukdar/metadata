@@ -13,12 +13,19 @@ File managers and transfer, system monitors and cleaners, disk imaging, screen/w
     sudo dnf install doublecmd-gtk
     ```
 
-- FileZilla `dnf:filezilla` `apt:filezilla`
+  - Deliberately **not** tagged for CachyOS. `doublecmd-gtk2` is the only Double Commander package in the AUR (no Qt build, no Flathub build either), and it compiles Pascal — which means pulling `lazarus`, a 1.36 GB Pascal IDE, on every version bump. Krusader below fills the same role from the official repos instead.
+- [Krusader](https://krusader.org) `pacman:krusader`
+  - The orthodox twin-panel file manager on CachyOS, standing in for Double Commander above. Same Total Commander lineage; in `extra`, so it never builds from source.
+  - It is a KDE app, so on a GNOME desktop it pulls KDE Frameworks 6 and Qt6 — about 145 MB across its direct dependencies. That is a one-time permanent cost, traded against re-fetching a 1.36 GB compiler on every Double Commander upgrade.
+  - Only tagged for CachyOS: Fedora and Ubuntu keep Double Commander, so nothing changes there.
+  - Optional extras it will use if present, most of which this repo already installs: `7zip`, `kdiff3`, `rsync`, `kde-cli-tools` (root mode and file associations).
+- FileZilla `dnf:filezilla` `apt:filezilla` `pacman:filezilla`
   - No longer available as a Homebrew cask; download from [filezilla-project.org](https://filezilla-project.org) on macOS.
-- Microsoft OneDrive `dnf:onedrive` `apt:onedrive` `cask:onedrive`
+- Microsoft OneDrive `dnf:onedrive` `apt:onedrive` `aur:onedrive-abraunegg` `cask:onedrive`
   - Preinstalled on Windows; see [windows/packages.md](../windows/packages.md).
-  - Microsoft ships no official Linux client; `dnf`/`apt` install [abraunegg/onedrive](https://github.com/abraunegg/onedrive), a CLI sync daemon. Setup, multi-account and SharePoint config: [linux/fedora/onedrive.md](../linux/fedora/onedrive.md).
-- [rclone](https://rclone.org) `brew:rclone`
+  - Microsoft ships no official Linux client; `dnf`/`apt`/the AUR install [abraunegg/onedrive](https://github.com/abraunegg/onedrive), a CLI sync daemon. Setup, multi-account and SharePoint config: [linux/fedora/onedrive.md](../linux/fedora/onedrive.md) (the client is the same, so that guide applies on CachyOS too).
+  - The AUR package compiles the D sources, so it needs a D compiler as a build dependency and takes a few minutes to upgrade — see [linux/cachyos/post-install.md](../linux/cachyos/post-install.md#upgrading-the-aur-packages-that-compile).
+- [rclone](https://rclone.org) `brew:rclone` `pacman:rclone`
   - Used for Microsoft OneDrive: [rclone OneDrive setup](https://rclone.org/onedrive/), and [linux/fedora/onedrive.md](../linux/fedora/onedrive.md).
 - [rsync](https://rsync.samba.org) `native:rsync`
   - Preinstalled on all three platforms, but tagged anyway: macOS ships Apple's fork rather than upstream rsync, and installing the formula puts a current 3.x on `PATH` ahead of it.

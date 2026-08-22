@@ -81,6 +81,39 @@ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 # Or use pyenv for version management
 ```
 
+### CachyOS/Arch
+
+Distro-specific notes also live in [linux/cachyos/post-install.md](../src/software-to-install/linux/cachyos/post-install.md).
+
+#### Setup script exits immediately
+**Problem**: `Run this as your normal user, not root`
+
+**Solution**: Drop the `sudo`. `makepkg` refuses to build as root, so `setup-cachyos.sh` bails out before it installs anything rather than failing on all 15 AUR packages. It calls `sudo` itself where root is needed.
+
+#### Signature or keyring errors during upgrade
+**Problem**: `signature from ... is marginal trust` / `invalid or corrupted package`
+
+**Solution**:
+```bash
+sudo pacman -Sy archlinux-keyring cachyos-keyring
+sudo pacman -Syu
+```
+
+#### Package database lock
+**Problem**: `unable to lock database`
+
+**Solution**: Make sure no other pacman is running, then `sudo rm /var/lib/pacman/db.lck`.
+
+#### An AUR package fails to build
+**Problem**: One entry in `pkgs/aur.txt` fails while the rest succeed
+
+**Solution**: The setup script retries the batch one package at a time and reports the failures at the end, so the run is not lost. For the individual package, `paru -S --rebuild <pkg>`; if it still fails, the AUR comments page for that package is where the fix surfaces first.
+
+#### Partial upgrade breakage
+**Problem**: Newly installed programs fail with missing `.so` files
+
+**Solution**: You ran `pacman -Sy` (or installed a package after a bare `-Sy`) without upgrading. Fix with a full `sudo pacman -Syu` and never refresh without upgrading again.
+
 ### macOS
 
 #### Homebrew Installation Issues

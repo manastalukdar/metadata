@@ -20,6 +20,13 @@ bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/
 bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-fedora.sh)
 ```
 
+**CachyOS (and other Arch derivatives):**
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-cachyos.sh)
+```
+
+Run it as your normal user, not with `sudo` — AUR packages cannot be built as root, and the script exits early if you try.
+
 **macOS:**
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-macos.sh)
@@ -63,7 +70,7 @@ metadata/
     │   └── windows-terminal/  # Windows Terminal
     ├── software-to-install/   # Installation guides
     │   ├── common/           # Cross-platform tools, by category
-    │   ├── linux/            # Linux-specific (Ubuntu, Fedora)
+    │   ├── linux/            # Linux-specific (Ubuntu, Fedora, CachyOS)
     │   ├── macos/            # macOS-specific
     │   └── windows/          # Windows-specific
     ├── development/          # Development notes

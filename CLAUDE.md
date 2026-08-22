@@ -27,7 +27,7 @@ This is a **development environment metadata repository** containing:
 
 ### `/src/software-to-install/` - Installation Guides
 - `common/` - Cross-platform tools organized by function (languages, editors, AI tools, CLI utilities, dev tools, media, etc.)
-- `linux/` - Linux distributions (`common.md`, plus `ubuntu/` and `fedora/`, each with `packages.md` + `post-install.md`; Fedora also has `nvidia.md` and `onedrive.md`)
+- `linux/` - Linux distributions (`common.md`, plus `ubuntu/`, `fedora/` and `cachyos/`, each with `packages.md` + `post-install.md`; Fedora also has `nvidia.md` and `onedrive.md`)
 - `macos/` - macOS-specific software (`packages.md` + `post-install.md`)
 - `windows/` - Windows-specific software (`packages.md` + `post-install.md`)
 - See `src/software-to-install/README.md` for the routing rule (where a tool goes) and the Mandatory/Optional section conventions.
@@ -122,6 +122,15 @@ bash scripts/backup-configs.sh
 # Test Ubuntu setup in container
 docker run -it ubuntu:22.04 bash
 # Then run: curl -fsSL https://raw.githubusercontent.com/manastalukdar/metadata/main/scripts/setup-ubuntu.sh | bash
+
+# Test CachyOS/Arch setup in container. The AUR tier needs a non-root user with
+# passwordless sudo, since makepkg refuses to build as root:
+docker run -it archlinux:base-devel bash -c '
+  pacman -Sy --noconfirm sudo git
+  useradd -m build && echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+  su - build'
+# Then run: curl -fsSL .../scripts/setup-cachyos.sh | bash
+# Note: this tests the Arch path, not the CachyOS repos (no CachyOS base image).
 
 # Check script syntax
 shellcheck scripts/*.sh

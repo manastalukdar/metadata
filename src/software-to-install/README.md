@@ -28,11 +28,14 @@ software-to-install/
 │   ├── ubuntu/
 │   │   ├── packages.md
 │   │   └── post-install.md
-│   └── fedora/
+│   ├── fedora/
+│   │   ├── packages.md
+│   │   ├── post-install.md
+│   │   ├── nvidia.md
+│   │   └── onedrive.md
+│   └── cachyos/
 │       ├── packages.md
-│       ├── post-install.md
-│       ├── nvidia.md
-│       └── onedrive.md
+│       └── post-install.md
 ├── macos/
 │   ├── packages.md
 │   └── post-install.md
@@ -56,8 +59,9 @@ Tools are annotated with inline install tags naming the package manager and the 
 
 | Tag | Meaning |
 | --- | --- |
-| `native:` | same package name from dnf, apt **and** brew — expands to all three |
-| `dnf:` `apt:` | distro packages, for when the names differ |
+| `native:` | same package name from dnf, apt, pacman **and** brew — expands to all four |
+| `dnf:` `apt:` `pacman:` | distro packages, for when the names differ |
+| `aur:` | Arch User Repository, built by `paru` — for what the official Arch repos lack |
 | `brew-macos:` | a formula macOS needs because Linux gets it from dnf/apt |
 | `brew:` | a formula every platform needs |
 | `cask:` | macOS GUI app |
@@ -85,7 +89,7 @@ bash scripts/test-pkgs.sh    # verifies the lists parse and match these docs
 
 Mandatory entries with no tag at all are collected into [`pkgs/untagged.txt`](../../scripts/pkgs/untagged.txt) and printed by both scripts. It is committed, so `git diff` shows when a new Mandatory bullet arrives without a tag. An empty list is the goal; it does not fail the build, because "not tagged yet" is a to-do, not a broken state.
 
-The OS `packages.md` files are *recipe documentation* — they describe repo setup and per-distro install commands for tools owned by `common/`, and deliberately carry no tags for those, so a package name is never written in two places. They tag only OS-exclusive software (e.g. Fedora's `moosync`).
+The OS `packages.md` files are *recipe documentation* — they describe repo setup and per-distro install commands for tools owned by `common/`, and deliberately carry no tags for those, so a package name is never written in two places. They tag only OS-exclusive software (e.g. Fedora's `moosync`, CachyOS's `moosync-bin`).
 
 Plumbing with no place in user-facing docs (`ca-certificates`, `build-essential`, …) lives in hand-written `pkgs/<list>.extra.txt` files that the generator appends.
 
@@ -93,25 +97,29 @@ Plumbing with no place in user-facing docs (`ca-certificates`, `build-essential`
 
 Most lists are cross-platform, so a tool usually only needs adding in one place:
 
-| List | Fedora | Ubuntu | macOS |
-| --- | :-: | :-: | :-: |
-| `dnf.txt` — OS/system packages | ✅ | | |
-| `apt.txt` — OS/system packages | | ✅ | |
-| `flatpak.txt` — GUI apps | ✅ | ✅ | |
-| `brew-cask.txt` — GUI apps | | | ✅ |
-| `brew-macos.txt` — CLI tools Linux gets from dnf/apt | | | ✅ |
-| `snap.txt` — last resort, currently empty | ✅ | ✅ | |
-| `mise.txt` — runtimes and version-pinned dev CLIs | ✅ | ✅ | ✅ |
-| `npm.txt` — node global CLIs | ✅ | ✅ | ✅ |
-| `uv.txt` — python CLI tools | ✅ | ✅ | ✅ |
-| `brew-common.txt` — CLI tools no other tier carries | ✅ | ✅ | ✅ |
-| `manual.txt` — printed, not installed | ✅ | ✅ | ✅ |
-| `untagged.txt` — to-do list, installs nothing | — | — | — |
+| List | Fedora | Ubuntu | CachyOS | macOS |
+| --- | :-: | :-: | :-: | :-: |
+| `dnf.txt` — OS/system packages | ✅ | | | |
+| `apt.txt` — OS/system packages | | ✅ | | |
+| `pacman.txt` — OS/system packages | | | ✅ | |
+| `aur.txt` — what the Arch repos lack, built by `paru` | | | ✅ | |
+| `flatpak.txt` — GUI apps | ✅ | ✅ | ✅ | |
+| `brew-cask.txt` — GUI apps | | | | ✅ |
+| `brew-macos.txt` — CLI tools Linux gets from dnf/apt | | | | ✅ |
+| `snap.txt` — last resort, currently empty | ✅ | ✅ | | |
+| `mise.txt` — runtimes and version-pinned dev CLIs | ✅ | ✅ | ✅ | ✅ |
+| `npm.txt` — node global CLIs | ✅ | ✅ | ✅ | ✅ |
+| `uv.txt` — python CLI tools | ✅ | ✅ | ✅ | ✅ |
+| `brew-common.txt` — CLI tools no other tier carries | ✅ | ✅ | | ✅ |
+| `manual.txt` — printed, not installed | ✅ | ✅ | ✅ | ✅ |
+| `untagged.txt` — to-do list, installs nothing | — | — | — | — |
+
+CachyOS is the exception to "`brew-common.txt` is cross-platform": that tier exists because dnf and apt lack a handful of CLI tools, and the Arch repos do not, so those tools carry `pacman:` tags and `setup-cachyos.sh` installs no Homebrew at all. `snap.txt` is empty and would be AUR-only on Arch, so it is not wired up there either.
 
 ## Where does a tool go? (routing rule)
 
 - **`common/` is a tool's home.** If a tool runs on more than one OS, it belongs in the matching `common/` category, with its canonical cross-platform install method (Homebrew, SDKman, npm, etc.). Short per-OS install snippets may be nested as sub-bullets under the tool.
-- **An OS directory holds OS-*exclusive* software** (e.g. PowerToys on Windows, Rectangle on macOS) **and genuinely OS-specific install recipes** that differ materially from the cross-platform path (e.g. Fedora `dnf`/`copr` repo setups). Prefer linking back to `common/` over duplicating a tool's description.
+- **An OS directory holds OS-*exclusive* software** (e.g. PowerToys on Windows, Rectangle on macOS) **and genuinely OS-specific install recipes** that differ materially from the cross-platform path (e.g. Fedora `dnf`/`copr` repo setups, CachyOS `chwd` driver detection). Prefer linking back to `common/` over duplicating a tool's description.
 - **`packages.md`** = things you install. **`post-install.md`** = OS/system configuration after install. Self-contained topics get their own file (e.g. Fedora's `nvidia.md`, `onedrive.md`).
 
 ## Section conventions
